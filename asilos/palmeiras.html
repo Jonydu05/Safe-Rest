@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/asilos.css">
+    <link href="../css/estilo.css" rel="stylesheet">
+
+    <link rel="icon" href="../img/logo2.png">
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/carousel-asilo.js" defer></script>
+
+    <title>Jardim das Palmeiras</title>
+</head>
+
+<body>
+    <header id="header">
+
+        <div id="teste">
+            <a href="../index.html"><img src="../img/logo2.png" alt="" id="logo"></a>
+            <a href="../index.html"><pre id="safeRest">Safe
+&Rest</pre></a>
+        </div>
+
+        <nav id="nav">
+    
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">Menu
+                <span id="hamburguer"></span>
+            </button>
+    
+            <ul id="menu" role="menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="../contato.html">Contate-nos</a></li>
+                <li><a href="../cadastro.html">Cadastro | Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- fim nav -->
+
+    <div class="container-asilo">
+        <div class="slider">
+            <div class="slides">
+                <!-- radio button -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!-- radio button -->
+                <!-- imagens -->
+                <div class="slide first">
+                    <img src="../img/palmeiras/foto1.png" alt="imagem 1" style="height: 800px;">
+                </div>
+                <div class="slide">
+                    <img src="../img/palmeiras/foto2.png" alt="imagem 2">
+                </div>
+                <div class="slide">
+                    <img src="../img/palmeiras/foto3.png" alt="imagem 3">
+                </div>
+                <!-- imagens -->
+
+                <!-- navigation -->
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        </div>
+        <div class="info">
+            <h2 class="titulo">Jardim das Palmeiras</h2>
+            <p class="descricao">O Residencial Jardim das Palmeiras, um lar para idosos, com mais de 22 anos de experiência no ramo. Tendo uma equipe formada por bons profissionais em diversas áreas. Atualmente agindo com duas unidades, uma no Alto da Boa Vista que é um bairro nobre situado no distrito de Santo Amaro, na zona sul da capital paulista. E outra unidade posicionada no extremo leste do Estado de São Paulo na Região Administrativa de São José dos Campos que fica entre São Paulo e Rio de Janeiro.</p>
+            <div class="contato">
+                <h3>Unidade 1</h3>
+                <p class="localizacao">
+                    <strong> Localização: </strong>Av. Ver. José Diniz, 1448 - Alto da Boa Vista - São Paulo – SP <br><br>
+                    <span> <ion-icon name="logo-whatsapp"></ion-icon> (11) 5531-5447 </span>
+                </p>
+
+                <h3>Unidade 2</h3>
+                <p class="localizacao">
+                    <strong> Localização: </strong> R. Maurício Diamante, 188 - Centro - São José dos Campos – SP <br><br>
+                    <span> <ion-icon name="logo-whatsapp"></ion-icon> (12) 3922-7294 </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- começo do rodapé -->
+    <footer style="clear: both;">
+        <p>
+            <a href="../index.html"> Home </a>
+            <a href="../sobre-nos.html"> Sobre Nós </a>
+            <a href="../contato.html"> Contato </a>
+            <a href="../cadastro.html"> Cadastre-se </a>
+        </p>
+        <br>
+        <p>2022 - Safe&Rest &copy; - Todos os direitos reservados </p>
+    </footer>
+
+    <!-- fim do rodapé -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
