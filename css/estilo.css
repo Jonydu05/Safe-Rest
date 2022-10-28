@@ -213,10 +213,29 @@ ul {
 /*Rodapé*/
 
 footer {
+	position: relative;
+	display: flex;
 	background-color: #004998;
 	padding: 20px 0 30px 0;
 	text-align: center;
 	color: var(--branco-gelo);
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+footer div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer div p {
+	margin-left: 30px;
+}
+
+footer img {
+	width: 7rem;
 }
 
 footer p a {
