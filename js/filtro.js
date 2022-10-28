@@ -1,11 +1,17 @@
-const asilos = [
-    {esplendor: '5'},
-    {horto: '4.7'},
-    {reluz: '5'},
-    {saojudas: '4.8'},
-    {serenidade: '5'},
-    {sonhos: '5'},
-    {vivace: '4.2'},
-    {vovoAna: '3.9'},
-    {vovoTeca: '5'},
-]
+for(i of document.querySelectorAll('[search]')){
+    try{
+        busca(i,document.querySelector("."+i.getAttribute('search')))
+    }catch(e){}
+  }
+  
+  function busca(input_field,div){
+    input_field.onkeyup=function(e){
+        for(di of div.children){
+            r  = new RegExp(this.value,"g")
+            if(di.getAttribute("nome").toLowerCase().match(r) != null)
+                di.style.removeProperty('display')
+            else
+                di.style.display = "none"
+        }
+    }
+  }
