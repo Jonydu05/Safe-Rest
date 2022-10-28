@@ -1,154 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/estilo.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/css/cadastro.css" />
 
-  <link href="css/estilo.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/cadastro.css">
-  
-  <link rel="icon" href="img/logo2.png">
+		<link rel="icon" href="img/logo2.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 
-  <script src="/js/script.js" defer></script>
+		<script src="/js/script.js" defer></script>
 
-  <title>Cadastro | Login</title>
-</head>
+		<title>Cadastro | Login</title>
+	</head>
 
-<body>
-  <header id="header">
+	<body>
+		<header id="header">
+			<div id="teste">
+				<a href="index.html"><img src="img/logo2.png" alt="" id="logo" /></a>
+				<a href="index.html">
+					<pre id="safeRest">
+Safe
+&amp;Rest</pre
+					>
+				</a>
+			</div>
 
-    <div id="teste">
-      <a href="index.html"><img src="img/logo2.png" alt="" id="logo"></a>
-      <a href="index.html">
-        <pre id="safeRest">Safe
-&amp;Rest</pre>
-      </a>
-    </div>
+			<nav id="nav">
+				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+					Menu
+					<span id="hamburguer"></span>
+				</button>
 
-    <nav id="nav">
+				<ul id="menu" role="menu">
+					<li><a href="index.html">Início</a></li>
+					<li><a href="sobre-nos.html">Sobre Nós</a></li>
+					<li><a href="contato.html">Contate-nos</a></li>
+					<li><a href="cadastro.html">Cadastro | Entrar</a></li>
+				</ul>
+			</nav>
+		</header>
 
-      <button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu"
-        aria-haspopup="true">Menu
-        <span id="hamburguer"></span>
-      </button>
+		<div id="div-cadastro">
+			<!-- Card cadastro -->
 
-      <ul id="menu" role="menu">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre-nos.html">Sobre Nós</a></li>
-        <li><a href="contato.html">Contate-nos</a></li>
-        <li><a href="cadastro.html">Cadastro | Entrar</a></li>
-      </ul>
-    </nav>
+			<div class="card">
+				<div class="card-title">
+					<h2 class="card-heading">
+						<span>Vamos começar,</span>
+						<small>Deixe-nos criar sua conta :)</small>
+					</h2>
+				</div>
 
-  </header>
+				<form class="card-form">
+					<div class="input">
+						<input type="text" class="input-field" name="nome" placeholder="José Euclides" required />
+						<label class="input-label">Nome</label>
+					</div>
 
-  <div id="div-cadastro">
+					<div class="input">
+						<input type="email" class="input-field" name="email" placeholder="jose.euclides@email.com" required />
+						<label class="input-label">Email</label>
+					</div>
 
-    <!-- Card cadastro -->
-    
-    <div class="card">
+					<div class="input">
+						<input type="password" class="input-field" name="senha" required />
+						<label class="input-label">Senha</label>
+					</div>
 
-      <div class="card-title">
+					<div class="action">
+						<button class="action-button">Cadastrar</button>
+					</div>
+				</form>
 
-        <h2 class="card-heading">
+				<div class="card-info">
+					<p>Ao se cadastrar, você concorda com nossos<a href="#">Termos e Condições</a></p>
+				</div>
+			</div>
 
-          <span>Vamos começar,</span>
-          <small>Deixe-nos criar sua conta :)</small>
-        </h2>
-      </div>
+			<!-- fim card cadastro -->
 
-      <form class="card-form">
+			<!-- car login  -->
 
-        <div class="input">
-          <input type="text" class="input-field" name="nome" placeholder="José Euclides" required/>
-          <label class="input-label">Nome</label>
-        </div>
+			<div class="card" id="card-login">
+				<div class="card-title">
+					<h2 class="card-heading">
+						<span>Bem-vindo de volta!</span>
+					</h2>
+				</div>
 
-        <div class="input">
-          <input type="email" class="input-field" name="email" placeholder="jose.euclides@email.com" required/>
-          <label class="input-label">Email</label>
-        </div>
+				<form class="card-form">
+					<div class="input">
+						<input type="email" class="input-field" name="email" placeholder="jose.euclides@email.com" required />
+						<label class="input-label">Email</label>
+					</div>
 
-        <div class="input">
-          <input type="password" class="input-field" name="senha" required/>
-          <label class="input-label">Senha</label>
-        </div>
+					<div class="input">
+						<input type="password" class="input-field" name="senha" required />
+						<label class="input-label">Senha</label>
+					</div>
 
-        <div class="action">
-          <button class="action-button">Cadastrar</button>
-        </div>
+					<div class="action">
+						<button class="action-button">Login</button>
+					</div>
+				</form>
 
-      </form>
+				<div class="card-info">
+					<p>
+						<a href="#" class="link-asilos">Esqueci a senha</a>
+					</p>
+				</div>
 
-      <div class="card-info">
-        <p>Ao se cadastrar, você concorda com nossos<a href="#">Termos e Condições</a></p>
-      </div>
-
-    </div>
-
-    <!-- fim card cadastro -->
-
-    <!-- car login  -->
-
-    <div class="card" id="card-login">
-
-      <div class="card-title">
-
-        <h2 class="card-heading">
-
-          <span>Bem-vindo de volta!</span>
-        </h2>
-      </div>
-
-      <form class="card-form">
-
-        <div class="input">
-          <input type="email" class="input-field" name="email" placeholder="jose.euclides@email.com" required/>
-          <label class="input-label">Email</label>
-        </div>
-
-        <div class="input">
-          <input type="password" class="input-field" name="senha" required/>
-          <label class="input-label">Senha</label>
-        </div>
-
-        <div class="action">
-          <button class="action-button">Login</button>
-        </div>
-
-      </form>
-
-      <div class="card-info">
-        <p>
-          <a href="#" class="link-asilos">Esqueci a senha</a>
-        </p>
-      </div>
-
-      <!-- fim card login -->
-
-    </div>
-
-  </div>
-  <!-- começo do rodapé -->
-  <footer style="clear: both;">
-    <p>
-      <a href="index.html"> Home </a>
-      <a href="sobre-nos.html"> Sobre Nós </a>
-      <a href="contato.html"> Contato </a>
-      <a href="cadastro.html"> Cadastre-se </a>
-    </p>
-    <br>
-    <p>2022 - Safe&amp;Rest &copy; - Todos os direitos reservados </p>
-  </footer>
-  <!-- fim do rodapé -->
-  </div>
-
-</body>
-
+				<!-- fim card login -->
+			</div>
+		</div>
+		<!-- começo do rodapé -->
+		<footer style="clear: both">
+			<p>
+				<a href="index.html"> Home </a>
+				<a href="sobre-nos.html"> Sobre Nós </a>
+				<a href="contato.html"> Contato </a>
+				<a href="cadastro.html"> Cadastre-se </a>
+			</p>
+			<br />
+			<p>2022 - Safe&amp;Rest &copy; - Todos os direitos reservados</p>
+		</footer>
+		<!-- fim do rodapé -->
+	</body>
 </html>

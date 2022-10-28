@@ -23,7 +23,7 @@
 	transition: 1s;
 }
 
-.card:hover{
+.card:hover {
 	transition: 1.5s;
 	transform: scale(1.1, 1.1);
 	background-size: 310px;
@@ -82,7 +82,7 @@
 
 /* Configurações ActioncsCard */
 
-.actionsCard{
+.actionsCard {
 	padding: 20px;
 }
 

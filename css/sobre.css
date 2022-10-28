@@ -12,7 +12,7 @@
 }
 
 .container h2 {
-	font-family: 'montserrat', Helvetica, Arial, sans-serif;
+	font-family: "montserrat", Helvetica, Arial, sans-serif;
 	color: white;
 	margin: 20px;
 	opacity: 0;
@@ -47,7 +47,7 @@
 	position: relative;
 }
 
-.card:hover{
+.card:hover {
 	transition: 1.7s;
 	transform: scale(1.1, 1.1);
 	background-size: 310px;
@@ -56,13 +56,13 @@
 /* Card Diego */
 
 .card-diego {
-	background: url('../img/pessoas/diego.jpg') center center no-repeat;
+	background: url("../img/pessoas/diego.jpg") center center no-repeat;
 	background-size: 300px;
 	transition: 1s;
 }
 
 .card-diego:hover {
-	background: url('../img/pessoas/diego.jpg') center no-repeat;
+	background: url("../img/pessoas/diego.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -78,13 +78,13 @@
 /* Card Guilherme */
 
 .card-guilherme {
-	background: url('../img/pessoas/guilherme.jpg') center center no-repeat;
+	background: url("../img/pessoas/guilherme.jpg") center center no-repeat;
 	background-size: 300px;
 	transition: 1s;
 }
 
 .card-guilherme:hover {
-	background: url('../img/pessoas/guilherme.jpg') center no-repeat;
+	background: url("../img/pessoas/guilherme.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -99,13 +99,13 @@
 /* Card Henrique */
 
 .card-henrique {
-	background: url('../img/pessoas/henrique.jpg') center center no-repeat;
+	background: url("../img/pessoas/henrique.jpg") center center no-repeat;
 	background-size: 300px;
 	transition: 1s;
 }
 
 .card-henrique:hover {
-	background: url('../img/pessoas/henrique.jpg') center no-repeat;
+	background: url("../img/pessoas/henrique.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -120,13 +120,13 @@
 /* Card Joao */
 
 .card-joao {
-	background: url('../img/pessoas/joao.jpg') center center no-repeat;
+	background: url("../img/pessoas/joao.jpg") center center no-repeat;
 	background-size: 300px;
 	transition: 1s;
 }
 
 .card-joao:hover {
-	background: url('../img/pessoas/joao.jpg') center no-repeat;
+	background: url("../img/pessoas/joao.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -141,13 +141,13 @@
 /* Card Kaique */
 
 .card-kaique {
-	background: url('../img/pessoas/kaique.jpg') center center no-repeat;
+	background: url("../img/pessoas/kaique.jpg") center center no-repeat;
 	background-size: 300px;
 	transition: 1s;
 }
 
 .card-kaique:hover {
-	background: url('../img/pessoas/kaique.jpg') center no-repeat;
+	background: url("../img/pessoas/kaique.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -162,13 +162,13 @@
 /* Card Kauan */
 
 .card-kauan {
-	background: url('../img/pessoas/kauan.jpg') center center no-repeat;
+	background: url("../img/pessoas/kauan.jpg") center center no-repeat;
 	background-size: 300px;
 	transition: 1s;
 }
 
 .card-kauan:hover {
-	background: url('../img/pessoas/kauan.jpg') center no-repeat;
+	background: url("../img/pessoas/kauan.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -183,13 +183,13 @@
 /* Card Luiz */
 
 .card-luiz {
-	background: url('../img/pessoas/luiz.jpg') center center no-repeat;
+	background: url("../img/pessoas/luiz.jpg") center center no-repeat;
 	background-size: 300px;
 	transition: 1s;
 }
 
 .card-luiz:hover {
-	background: url('../img/pessoas/luiz.jpg') center no-repeat;
+	background: url("../img/pessoas/luiz.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -204,13 +204,13 @@
 /* Card Rafael */
 
 .card-rafael {
-	background: url('../img/pessoas/rafael.jpg') center center no-repeat;
+	background: url("../img/pessoas/rafael.jpg") center center no-repeat;
 	background-size: 300px;
-  transition: 1s;
+	transition: 1s;
 }
 
 .card-rafael:hover {
-	background: url('../img/pessoas/rafael.jpg') center no-repeat;
+	background: url("../img/pessoas/rafael.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -225,13 +225,13 @@
 /* Card Rafaela */
 
 .card-rafaela {
-	background: url('../img/pessoas/rafaela.jpg') center center no-repeat;
+	background: url("../img/pessoas/rafaela.jpg") center center no-repeat;
 	background-size: 300px;
-  transition: 1s;
+	transition: 1s;
 }
 
 .card-rafaela:hover {
-	background: url('../img/pessoas/rafaela.jpg') center no-repeat;
+	background: url("../img/pessoas/rafaela.jpg") center no-repeat;
 	background-size: 300px;
 }
 
@@ -246,13 +246,13 @@
 /* Card Vinicius */
 
 .card-vinicius {
-	background: url('../img/pessoas/vinicius.jpg') center center no-repeat;
+	background: url("../img/pessoas/vinicius.jpg") center center no-repeat;
 	background-size: 300px;
-  transition: 1s;
+	transition: 1s;
 }
 
 .card-vinicius:hover {
-	background: url('../img/pessoas/vinicius.jpg') center no-repeat;
+	background: url("../img/pessoas/vinicius.jpg") center no-repeat;
 	background-size: 300px;
 }
 
