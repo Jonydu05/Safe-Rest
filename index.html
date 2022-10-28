@@ -25,12 +25,16 @@
 			<!-- prettier-ignore -->
 			<div id="teste">
 				<a href="../index.html"><img src="../img/logo2.png" alt="" id="logo" /></a>
-				<a href="../index.html"><pre id="safeRest">Safe
+				<a href="../index.html">
+					<pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 			</div>
 
-			<div id="div-pesquisa">
-				<input search="asilos" class="input-pesquisa" placeholder="Buscar asilos..." />
+			<div id="div-search">
+				<input search="asilos" class="input-search" id="search-nav" placeholder="Buscar asilos..." />
+				<button class="btn-search">
+					<ion-icon name="search-outline"></ion-icon>
+				</button>
 			</div>
 
 			<nav id="nav">
@@ -40,10 +44,12 @@
 				</button>
 
 				<ul id="menu" role="menu">
-					<li><input type="search" search="asilos" class="input-pesquisa" id="pesquisa-mobile" placeholder="Buscar asilos..." /></li>
+					<li>
+						<input type="search" search="asilos" class="input-search" id="search-mobile" placeholder="Buscar asilos..." />
+					</li>
 					<li><a href="index.html">Início</a></li>
-					<li><a href="sobre-nos.html">Sobre Nós</a></li>
-					<li><a href="contato.html">Contate-nos</a></li>
+					<li><a href="sobre-nos.html">Sobre</a></li>
+					<li><a href="contato.html">Contato</a></li>
 					<li><a href="cadastro.html">Cadastro | Entrar</a></li>
 				</ul>
 			</nav>
@@ -319,11 +325,13 @@
 			<br />
 			<!-- prettier-ignore -->
 			<div>
-				<span><img src="img/logo3.png" alt="" /></span>
-				<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados </p>
-			</div>
+			<span><img src="img/logo3.png" alt="" /></span>
+			<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados </p>
+		</div>
 		</footer>
-
 		<!-- fim do rodapé -->
+
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
 </html>

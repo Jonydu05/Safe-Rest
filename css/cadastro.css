@@ -161,7 +161,7 @@ input {
 	}
 	.card {
 		margin: 20px;
-		max-width: fit-content;
+		max-width: 90%;
 	}
 	#card-login .card-title {
 		padding-bottom: 35%;
