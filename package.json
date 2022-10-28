@@ -1,0 +1,23 @@
+{
+	"name": "safe-rest",
+	"version": "1.0.0",
+	"description": "Site que busca facilitar a comunicação das pessoas com os asilos.",
+	"keywords": [
+		"asilos",
+		"busca"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Jonydu05/Safe-Rest"
+	},
+	"author": "João Cardoso <joaog.zamp@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Jonydu05/Safe-Rest/issues"
+	},
+	"homepage": "https://github.com/Jonydu05/Safe-Rest#readme",
+	"prettier": {
+		"printWidth": 200,
+		"useTabs": true
+	}
+}

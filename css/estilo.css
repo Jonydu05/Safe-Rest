@@ -20,8 +20,7 @@ body {
   background: linear-gradient(#F6F2FD, #69B3E7);
 }
 
-body,
-ul {
+body, ul {
   margin: 0px;
   padding: 0px;
 }
@@ -84,6 +83,10 @@ ul {
 #nav a:hover {
   color: var(--complementar1);
   transition: 200ms;
+}
+
+#pesquisa-mobile{
+  display: none;
 }
 
 /* Configurações Botão burguer */
@@ -159,6 +162,14 @@ ul {
   #nav.active #hamburguer::after {
     transform: rotate(-135deg);
     top: -7px;
+  }
+  #pesquisa-mobile{
+    display: block;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, .05);
+  }
+  #div-pesquisa{
+    display: none;
   }
 }
 
