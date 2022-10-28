@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 
+
 :root {
   --fundo: #F6F2FD;
   --azul-escuro: #2F5169;
@@ -14,7 +15,8 @@
 /* Configuração Inicial */
 
 body {
-  font-family: 'montserrat', serif;
+  font-family: 'Montserrat', serif;
+  font-size: 18px;
   background: linear-gradient(#F6F2FD, #69B3E7);
 }
 
@@ -199,8 +201,6 @@ ul {
   display: flex;
   align-items: center;
 }
-
-
 
 /*Rodapé*/
 

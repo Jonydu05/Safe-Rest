@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="css/estilo.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/cadastro.css">
+  
   <link rel="icon" href="img/logo2.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,33 +50,89 @@
 
   <div id="div-cadastro">
 
-    <form action="" method="get" class="forms-cadastro">
-      <p>
-        <label for="nome">Nome: <input type="text" name="" id="nome"></label>
-      </p>
-      <p>
-        <label for="sobrenome">Sobrenome: <input type="text" name="" id="sobrenome"> </label>
-      </p>
-      <p>
-        <label for="user">Usuário: <input type="text" name="" id="user"></label>
-      </p>
-      <p>
-        <label for="idade">Idade: <input type="number" name="" id="idade"></label>
-      </p>
-      <p>
-        <label for="email">Email: <input type="email" name="" id="email"> </label>
-      </p>
-      <p>
-        <label for="senha">Senha: <input type="password" name="" id="senha"></label>
-      </p>
-      <button type="reset">Cancelar</button>
-      <button type="submit">Enviar</button>
+    <!-- Card cadastro -->
+    
+    <div class="card">
 
-    </form>
+      <div class="card-title">
+
+        <h2 class="card-heading">
+
+          <span>Vamos começar,</span>
+          <small>Deixe-nos criar sua conta :)</small>
+        </h2>
+      </div>
+
+      <form class="card-form">
+
+        <div class="input">
+          <input type="text" class="input-field" name="nome" placeholder="José Euclides" required/>
+          <label class="input-label">Nome</label>
+        </div>
+
+        <div class="input">
+          <input type="email" class="input-field" name="email" placeholder="jose.euclides@email.com" required/>
+          <label class="input-label">Email</label>
+        </div>
+
+        <div class="input">
+          <input type="password" class="input-field" name="senha" required/>
+          <label class="input-label">Senha</label>
+        </div>
+
+        <div class="action">
+          <button class="action-button">Cadastrar</button>
+        </div>
+
+      </form>
+
+      <div class="card-info">
+        <p>Ao se cadastrar, você concorda com nossos<a href="#">Termos e Condições</a></p>
+      </div>
+
+    </div>
+
+    <!-- fim card cadastro -->
+
+    <!-- car login  -->
+
+    <div class="card" id="card-login">
+
+      <div class="card-title">
+
+        <h2 class="card-heading">
+
+          <span>Bem-vindo de volta!</span>
+        </h2>
+      </div>
+
+      <form class="card-form">
+
+        <div class="input">
+          <input type="email" class="input-field" name="email" placeholder="jose.euclides@email.com" required/>
+          <label class="input-label">Email</label>
+        </div>
+
+        <div class="input">
+          <input type="password" class="input-field" name="senha" required/>
+          <label class="input-label">Senha</label>
+        </div>
+
+        <div class="action">
+          <button class="action-button">Login</button>
+        </div>
+
+      </form>
+
+      <div class="card-info">
+        
+      </div>
+
+      <!-- fim card login -->
+
+    </div>
 
   </div>
-
-
   <!-- começo do rodapé -->
   <footer style="clear: both;">
     <p>
