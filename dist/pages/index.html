@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href="css/estilo.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/cards.css" />
+		<link rel="icon" href="img/logo2.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+		<script src="/js/script.js" defer></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script>
+		<script src="/js/filtro.js" async></script>
+
+		<title>Início</title>
+	</head>
+
+	<body>
+		<header id="header">
+			<!-- prettier-ignore -->
+			<div id="teste">
+				<a href="../index.html"><img src="../img/logo2.png" alt="" id="logo" /></a>
+				<a href="../index.html">
+					<pre id="safeRest">Safe
+&amp;Rest</pre> </a>
+			</div>
+
+			<div id="div-search">
+				<input search="asilos" class="input-search" id="search-nav" placeholder="Buscar asilos..." />
+				<button class="btn-search">
+					<ion-icon name="search-outline"></ion-icon>
+				</button>
+			</div>
+
+			<nav id="nav">
+				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+					Menu
+					<span id="hamburguer"></span>
+				</button>
+
+				<ul id="menu" role="menu">
+					<li>
+						<input type="search" search="asilos" class="input-search" id="search-mobile" placeholder="Buscar asilos..." />
+					</li>
+					<li><a href="index.html">Início</a></li>
+					<li><a href="sobre-nos.html">Sobre</a></li>
+					<li><a href="contato.html">Contato</a></li>
+					<li><a href="cadastro.html">Cadastro | Entrar</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Começo conteúdo -->
+
+
+		<!-- começo do rodapé -->
+		<footer>
+			<p>
+				<a href="index.html"> Home </a>
+				<a href="sobre-nos.html"> Sobre Nós </a>
+				<a href="contato.html"> Contato </a>
+				<a href="cadastro.html"> Cadastre-se </a>
+			</p>
+			<br />
+			<div>
+			<span><img src="img/logo3.png" alt="" /></span>
+			<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados </p>
+		</div>
+		</footer>
+		<!-- fim do rodapé -->
+
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>
