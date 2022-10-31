@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+	--fundo: #f6f2fd;
+	--azul-escuro: #2f5169;
+	--azul-bebe: #69b3e7;
+	--azul-claro: #a5d1f1;
+	--branco-gelo: #d2e8f8;
+	--azul-forte: #004998;
+	--complementar1: #9c6c27;
+	--complementar2: #e8b468;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* iOS Reset  */
+input {
+	appearance: none;
+	border-radius: 0;
+}
+
+#div-cadastro {
+	font-family: "dm sans", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.card {
+	margin: 50px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 425px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(9, 9, 9, 0.2);
+	padding: 0.75rem;
+}
+
+.card-title {
+	padding-bottom: 25%;
+	position: relative;
+}
+
+.card-heading {
+	position: absolute;
+	left: 10%;
+	top: 15%;
+	right: 10%;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--complementar1);
+	line-height: 1.222;
+}
+
+.card-heading small {
+	display: block;
+	font-size: 0.75em;
+	font-weight: 400;
+	margin-top: 0.25em;
+}
+
+.card-form {
+	padding: 2rem 1rem 0;
+}
+
+.input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.input-label {
+	color: #8597a3;
+	position: absolute;
+	top: 1.5rem;
+	transition: 0.25s ease;
+}
+
+.input-field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #eee;
+	font: inherit;
+	font-size: 1.125rem;
+	padding: 0.25rem 0;
+}
+.input-field:focus,
+.input-field:valid {
+	outline: none;
+	border-bottom-color: var(--azul-forte);
+}
+.input-label {
+	color: var(--azul-forte);
+	transform: translateY(-1.5rem);
+}
+
+.action {
+	margin-top: 2rem;
+}
+
+.action-button {
+	font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+	width: 100%;
+	font-weight: 500;
+	background-color: var(--azul-forte);
+	border-radius: 6px;
+	color: #fff;
+	border: 0;
+	transition: .2s;
+}
+
+.action-button:hover {
+	transition: .2s;
+	cursor: pointer;
+	background-color: var(--azul-escuro);
+}
+
+.card-info {
+	padding: 1rem 1rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #8597a3;
+}
+.card-info a {
+	display: block;
+	color: var(--azul-forte);
+	text-decoration: none;
+}
+
+#card-login .card-title {
+	padding-bottom: 15%;
+}
+
+@media (max-width: 800px) {
+	.card-title {
+		padding-bottom: 40%;
+	}
+	#div-cadastro {
+		display: block;
+	}
+	.card {
+		margin: 20px;
+		max-width: 90%;
+	}
+	#card-login .card-title {
+		padding-bottom: 35%;
+	}
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="../css/asilos.css" />
+		<link href="../css/estilo.css" rel="stylesheet" />
+
+		<link rel="icon" href="../img/logo2.png" />
+
+		<script src="../js/script.js" defer></script>
+		<script src="../js/carousel-asilo.js" defer></script>
+
+		<title>Esplendor Residencial Sênior</title>
+	</head>
+
+	<body>
+		<header id="header">
+			<!-- prettier-ignore -->
+			<div id="teste">
+				<a href="../index.html"><img src="../img/logo2.png" alt="" id="logo" /></a>
+				<a href="../index.html"><pre id="safeRest">Safe
+&amp;Rest</pre> </a>
+			</div>
+
+			<nav id="nav">
+				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+					Menu
+					<span id="hamburguer"></span>
+				</button>
+
+				<ul id="menu" role="menu">
+					<li><a href="../index.html">Início</a></li>
+					<li><a href="../sobre-nos.html" class="ativo">Sobre Nós</a></li>
+					<li><a href="../contato.html">Contate-nos</a></li>
+					<li><a href="../cadastro.html">Cadastro | Entrar</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- fim nav -->
+
+		<div class="container-asilo">
+			<div class="slider">
+				<div class="slides">
+					<!-- radio button -->
+					<input type="radio" name="radio-btn" id="radio1" />
+					<input type="radio" name="radio-btn" id="radio2" />
+					<input type="radio" name="radio-btn" id="radio3" />
+					<!-- radio button -->
+					<!-- imagens -->
+					<div class="slide first">
+						<img src="https://lh3.ggpht.com/p/AF1QipMlb3aGLjs8nB4JLEl0qUptPV94RpB-3u0obAx2=s1536" alt="imagem 1" />
+					</div>
+					<div class="slide">
+						<img src="../img/esplendor/foto2.png" alt="imagem 2" />
+					</div>
+					<div class="slide">
+						<img src="../img/esplendor/foto3.png" alt="imagem 3" />
+					</div>
+					<!-- imagens -->
+
+					<!-- navigation -->
+
+					<div class="nav-auto">
+						<div class="auto-btn1"></div>
+						<div class="auto-btn2"></div>
+						<div class="auto-btn3"></div>
+					</div>
+				</div>
+
+				<div class="manual-navigation">
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+				</div>
+			</div>
+			<div class="info">
+				<h2 class="titulo">Esplendor Residencial Sênior</h2>
+				<p class="descricao">
+					Próximo a um dos bairros com uma das mais elevadas expectativas de vida em São Paulo o Esplendor Residencial Sênior fica situado no bairro da Vila Carrão, Zona Leste de São Paulo. Seu
+					posicionamento estratégico permite fácil localização e acesso a habitação e cuidado a cidadãos de idade avançada. Sendo assim, o Esplendor Residencial Sênior é a habitação ideal para o idoso
+					que precisa de cuidados especiais, desde alimentação, entretenimento ou atendimento médico ou acompanhamento constante, garantindo a segurança para a família inteira.
+				</p>
+				<div class="contato">
+					<p class="localizacao"><strong> Localização: </strong> Rua Nunes Balboa, 622 V. Carrão, S. Paulo</p>
+					<ion-icon name="call-outline"></ion-icon> (11) 2097-0440 <br />
+					<ion-icon name="logo-whatsapp"></ion-icon> (11) 98693-6991
+				</div>
+			</div>
+		</div>
+
+		<!-- começo do rodapé -->
+		<footer style="clear: both">
+			<p>
+				<a href="../index.html"> Home </a>
+				<a href="../sobre-nos.html"> Sobre Nós </a>
+				<a href="../contato.html"> Contato </a>
+				<a href="../cadastro.html"> Cadastre-se </a>
+			</p>
+			<br />
+			<p>2022 - Safe&Rest &copy; - Todos os direitos reservados</p>
+		</footer>
+
+		<!-- fim do rodapé -->
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>
