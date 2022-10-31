@@ -1,18 +1,18 @@
-import asilos from './asilos';
+import cards from './cards';
 import { mostrarTudo } from "./mostrar"; 
 
 export function searchInKeyUp(event) {
   const searched = event.target.value;
 
-  const asilosFound = asilosPesquisa(searched);
+  const cardsFound = cardsPesquisa(searched);
 
-  asilosFound.length > 0
-    ? mostrarTudo(asilosFound)
+  cardsFound.length > 0
+    ? mostrarTudo(cardsFound)
     : (listDiv.innerHTML = "Nenhum asilo encontrado :(");
 }
 
-export function asilosPesquisa(searched) {
-  return asilos.filter((asilo) => {
-    return asilo.titulo.toLowerCase().includes(searched.toLowerCase());
+export function cardsPesquisa(searched) {
+  return cards.filter((card) => {
+    return card.titulo.toLowerCase().includes(searched.toLowerCase());
   });
 }

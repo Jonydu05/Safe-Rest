@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="../css/asilos.css" />
+		<link href="../css/estilo.css" rel="stylesheet" />
+
+		<link rel="icon" href="../img/logo2.png" />
+
+		<script src="../js/script.js" defer></script>
+		<script src="../js/carousel-asilo.js" defer></script>
+
+		<title>Lar e Residencial Reluz</title>
+	</head>
+
+	<body>
+		<header id="header">
+			<!-- prettier-ignore -->
+			<div id="teste">
+				<a href="../index.html"><img src="../img/logo2.png" alt="" id="logo" /></a>
+				<a href="../index.html"><pre id="safeRest">Safe
+&amp;Rest</pre> </a>
+			</div>
+
+			<nav id="nav">
+				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+					Menu
+					<span id="hamburguer"></span>
+				</button>
+
+				<ul id="menu" role="menu">
+					<li><a href="../index.html">Início</a></li>
+					<li><a href="../sobre-nos.html" class="ativo">Sobre Nós</a></li>
+					<li><a href="../contato.html">Contate-nos</a></li>
+					<li><a href="../cadastro.html">Cadastro | Entrar</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- fim nav -->
+
+		<div class="container-asilo">
+			<div class="slider">
+				<div class="slides">
+					<!-- radio button -->
+					<input type="radio" name="radio-btn" id="radio1" />
+					<input type="radio" name="radio-btn" id="radio2" />
+					<input type="radio" name="radio-btn" id="radio3" />
+					<!-- radio button -->
+					<!-- imagens -->
+					<div class="slide first">
+						<img src="../img/reluz/foto1.jpg" alt="imagem 1" />
+					</div>
+					<div class="slide">
+						<img src="../img/reluz/foto2.jpg" alt="imagem 2" />
+					</div>
+					<div class="slide">
+						<img src="../img/reluz/foto3.jpg" alt="imagem 3" />
+					</div>
+					<!-- imagens -->
+
+					<!-- navigation -->
+
+					<div class="nav-auto">
+						<div class="auto-btn1"></div>
+						<div class="auto-btn2"></div>
+						<div class="auto-btn3"></div>
+					</div>
+				</div>
+
+				<div class="manual-navigation">
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+				</div>
+			</div>
+			<div class="info">
+				<h2 class="titulo">Lar e Residencial Reluz</h2>
+				<p class="descricao">
+					Somos profissionais da área de saúde. Somos pais, filhos, netos, sobrinhos, pessoas comuns, que vivem as angústias e os prazeres do convívio com seus familiares mais velhos. Desejamos
+					acolher aqueles que cuidaram de nós e abrir espaço para reflexões, informações e novas atitudes no que diz respeito à maturidade. Somos cuidadores do amor, sentimos na pele as imensas
+					dificuldades para encontrar soluções e oferecer aos nossos idosos espaços de cuidados especiais, profissionais adequados, a melhor forma de dar mais conforto, segurança, bem-estar.
+				</p>
+				<div class="contato">
+					<p class="localizacao"><strong>Localização:</strong> Rua Franco Paulista, 181 - água Fria - São Paulo - Zona Norte</p>
+					<ion-icon name="call-outline"></ion-icon> (11) 2950-5497 <br />
+				</div>
+			</div>
+		</div>
+
+		<!-- começo do rodapé -->
+		<footer style="clear: both">
+			<p>
+				<a href="../index.html"> Home </a>
+				<a href="../sobre-nos.html"> Sobre Nós </a>
+				<a href="../contato.html"> Contato </a>
+				<a href="../cadastro.html"> Cadastre-se </a>
+			</p>
+			<br />
+			<p>2022 - Safe&Rest &copy; - Todos os direitos reservados</p>
+		</footer>
+
+		<!-- fim do rodapé -->
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>

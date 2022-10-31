@@ -1,4 +1,4 @@
-const asilos = [
+const cards = [
   {
     id: '1',
     titulo: 'Casa Luz do Caminho',
@@ -97,4 +97,4 @@ const asilos = [
   }
 ]
 
-export default asilos
+export default cards

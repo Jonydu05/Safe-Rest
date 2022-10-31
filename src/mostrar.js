@@ -1,33 +1,33 @@
-import asilos from './asilos';
+import cards from './cards';
 import { listDiv } from "./seletores";
 
 
-export function mostrarTudo(asilos) {
-  mostrar(asilos);
+export function mostrarTudo(cards) {
+  mostrar(cards);
 }
 
-export function mostrar(asilos) {
+export function mostrar(cards) {
   let list = "";
 
-  if (asilos.length <= 0) {
+  if (cards.length <= 0) {
     list += `<div id='no-product'>Nenhum asilo disponível</div>`;
   } else {
-    asilos.forEach((asilos) => {
+    cards.forEach((cards) => {
       list += `
       <div class="card">
 
       <div class="card-header">
-        <img src="${asilos.img}" />
+        <img src="${cards.img}" />
       </div>
     
       <div class="card-body">
-        <h3>${asilos.titulo}</h3>
-        <p>${asilos.descricao} </p>
+        <h3>${cards.titulo}</h3>
+        <p>${cards.descricao} </p>
       </div>
     
       <div class="actionsCard">
-        <button class="actions"><a href="${asilos.btnSite}" class="link-asilos">Ver mais</a></button>
-        <button class="actions"><a href="${asilos.btnMaps}" target="_blank" class="link-asilos">Ver no Google Maps</a></button>
+        <button class="actions"><a href="${cards.btnSite}" class="link-cards">Ver mais</a></button>
+        <button class="actions"><a href="${cards.btnMaps}" target="_blank" class="link-cards">Ver no Google Maps</a></button>
       </div>
       
     </div>
