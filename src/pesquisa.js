@@ -12,7 +12,7 @@ export function searchInKeyUp(event) {
 }
 
 export function asilosPesquisa(searched) {
-  return asilos.filter((lanche) => {
-    return asilo.title.toLowerCase().includes(searched.toLowerCase());
+  return asilos.filter((asilo) => {
+    return asilo.titulo.toLowerCase().includes(searched.toLowerCase());
   });
 }

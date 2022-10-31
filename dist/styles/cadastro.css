@@ -126,14 +126,13 @@ input {
 	border-radius: 6px;
 	color: #fff;
 	border: 0;
-}
-
-.action-button:focus {
-	outline: 0;
+	transition: .2s;
 }
 
 .action-button:hover {
-	text-shadow: #2f5169;
+	transition: .2s;
+	cursor: pointer;
+	background-color: var(--azul-escuro);
 }
 
 .card-info {

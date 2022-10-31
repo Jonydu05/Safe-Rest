@@ -43,7 +43,7 @@ const asilos = [
     id: '6',
     titulo: 'Espaço Serenidade',
     img: 'https://lh3.googleusercontent.com/ZFpLeiF5EoRSUFa4GyP1-BXsEb_ureZ6vPdfyp3YsN9JzQ2qqtCkjhjM-_Yl2upIc7RLwuluA7cuQgTPJpbyhZnRsAFAbkmPFtv3hxt0px4Vym0jf-olhvMW4-atFrYHiF0vkSbKQMkx1faSX2fBUVw4eSatBBD6EVIzCmNvtJNAbSIruSCiKUjZXowKk6aWh8wOxqNrbjXSfRbD0Ti65WdJ4xZYIfeT5JCGZjq9VcRGH4XlKzDF5-Pp_FJbNVGl__kG7hYPT5f3Bybn-oKHeZinKrcpaWKVixJO2t7vpzIcLpTsbr05HGyqnJ3H0Om5AWfReu1tKpLZqnEl_13Okww1CiihEysJ4_GXEPCwh7QKPVFG63wdbI2-MZ8_elcE-gkn7kr4nwoQuxvG_cULYvlKuRXZqk2F1O6jXJkWTnNxeW5pWtuDrM8VRCxCUKJlqZg8IufYPLKDpScXzKpD-wRnhindk2UkDPGYFfXbZlblc0xtD3Xa8j1j0AtO8IgQCxOmSX0l0lgdFMwhKCCfDJMyRChGSqoHiNsYgTGKoBnu0y0hX23p6jpESPe8ZJksUE2ckgsj32Ar0bGJgrcuXCWWAmEHfub4sI3HBu9HgycwY6vWM9GotnhaBN_KTztC9PM2lqxkHg7kTyIej2hOdLkTJRDSIyymrdK5Ub66sZ4gMLWrkqCw7C8dbOxwp7kH1Grppa0ANZDCG04qtURW9uepBPQyOXlOEV3Wlgt6VJG0u9fBj8QhM_cS2WReCoYoD0EYmlCGKYOYUpZqfmlUwW0DNSX4a9W-JivCjEjZ_AB_l9rEcSrxv-ML4gv3P-k3exIaUExqNKoz-pikHEzd-JH438XnU1GGlwK3YNpNHzoo2W-whbpn5Zsa0eaiQrOO8AXCrAsxDODbS524RVnLqhMjhk1iTVkGPuwwpzczIn65RUDwnGJbSWuIMqRGORK5hZvrrP0PB_RKVyankMsxWQrZlBuAgf2oa93hS5nuacpveeAbf9yQK9EAi0yaAwa2eXlj3vSeq52-NKgXqVpUeA_jImL7jjwHiA8P0N2HWmOgFDXBcNk8RVhzbBVJc0PdToePtKqpFRL3b_A-MRdxlh7XQgVCIi2nTPxM6Hxx6C9DUXwfAC1NeSo7PoVHgHjzy65-fkMS4pQOd0d72P9l25RMZ0zhP8ixhtVAkw=w1032-h581-no?authuser=8',
-    descricao: ': Estamos localizados em área nobre e privilegiada, ao lado do Parque Celso Daniel, em Santo André/SP...',
+    descricao: 'Estamos localizados em área nobre e privilegiada, ao lado do Parque Celso Daniel, em Santo André/SP...',
     btnSite: '',
     btnMaps: 'https://goo.gl/maps/nKC4z7yBMfrrRRgi9'
   },
@@ -88,23 +88,7 @@ const asilos = [
     btnMaps: 'https://goo.gl/maps/kbiBrBGKSaAfhZNB8'
   },
   {
-    id: '12',
-    titulo: '',
-    img: '',
-    descricao: '',
-    btnSite: '',
-    btnMaps: ''
-  },
-  {
-    id: '13',
-    titulo: '',
-    img: '',
-    descricao: '',
-    btnSite: '',
-    btnMaps: ''
-  },
-  {
-    id: '14',
+    id: '',
     titulo: '',
     img: '',
     descricao: '',
