@@ -4,6 +4,13 @@
 	box-sizing: border-box;
 }
 
+#list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .container {
 	margin-top: 50px;
 	display: flex;
@@ -24,7 +31,7 @@
 }
 
 .card:hover {
-	transition: 1.5s;
+	transition: 1s;
 	transform: scale(1.1, 1.1);
 	background-size: 310px;
 }
