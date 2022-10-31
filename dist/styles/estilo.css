@@ -84,9 +84,7 @@ ul {
 }
 
 /* Configurações Botão burguer */
-#btn-mobile,
-#btn-search-mobile,
-#search-mobile {
+#btn-mobile{
 	display: none;
 }
 
@@ -157,25 +155,7 @@ ul {
 		transform: rotate(-135deg);
 		top: -7px;
 	}
-
-	#search-mobile {
-		display: block;
-		margin: 0 1rem;
-		border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-	}
-
-	#div-search,
-	#search-nav,
-	.btn-search {
-		display: none;
-	}
-
-	#search-mobile {
-		border-radius: 5px;
-	}
 }
-
-
 
 /*Configurações Página Sobre*/
 .link-asilos {
@@ -216,44 +196,6 @@ ul {
 }
 
 /* barra de pesquisa */
-#div-search {
-	display: flex;
-	align-items: center;
-}
-
-.input-search {
-	outline: none;
-	border-radius: 5px 0 0 5px;
-	min-width: 250px;
-	max-width: 450px;
-	height: 40px;
-	font-size: 16px;
-	border: none;
-	margin: 10px;
-	margin-right: 0;
-	padding: 10px;
-}
-
-.btn-search {
-	width: 40px;
-	height: 40px;
-	border-radius: 0 5px 5px 0;
-	border: none;
-	background-color: #bf8330;
-	color: black;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-.btn-search:hover {
-	background-color: #cc9f5c;
-}
-
-.btn-search:active {
-	background-color: #e6b367;
-	outline: 1px solid black;
-}
-
 #no-product {
   min-height: 100px;
   display: flex;
