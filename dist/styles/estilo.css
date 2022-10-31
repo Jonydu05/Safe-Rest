@@ -157,6 +157,12 @@ ul {
 	}
 }
 
+@media (max-width:600px){
+	header #search{
+		display: none;
+	}
+}
+
 /*Configurações Página Sobre*/
 .link-asilos {
 	text-decoration: none;

@@ -5,7 +5,7 @@
 }
 
 #list {
-  margin-top: 50px;
+  margin-top: auto;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -108,4 +108,11 @@
 
 .link-asilos:hover {
 	color: var(--complementar1);
+}
+
+
+@media (max-width: 800px) {
+	.card{
+		width: 320px;
+	}
 }
