@@ -26,7 +26,7 @@ export function mostrar(cards) {
       </div>
     
       <div class="actionsCard">
-        <button class="actions"><a href="${cards.btnSite}" class="link-asilos">Ver mais</a></button>
+        <button class="actions"><a href="asilos.html" class="link-asilos">Ver mais</a></button>
         <button class="actions"><a href="${cards.btnMaps}" target="_blank" class="link-asilos">Ver no Google Maps</a></button>
       </div>
       
