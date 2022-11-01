@@ -163,44 +163,6 @@ ul {
 	}
 }
 
-/*Configurações Página Sobre*/
-.link-asilos {
-	text-decoration: none;
-	color: var(--azul-forte);
-}
-
-.link-asilos:hover {
-	color: var(--complementar1);
-}
-
-#info-sobre {
-	align-items: center;
-	justify-content: space-between;
-	margin: 50px;
-}
-
-.quem-somos {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-}
-
-#img-quem {
-	margin-left: 75px;
-	width: 500px;
-}
-
-#txt-quem {
-	margin-left: 50px;
-	margin-bottom: 115px;
-	font-size: 20px;
-}
-
-#div-quem {
-	display: flex;
-	align-items: center;
-}
-
 /* barra de pesquisa */
 #no-product {
   min-height: 100px;
@@ -234,6 +196,16 @@ ul {
   transition: 1s;
   width: 70%;
   height: 50px;
+}
+
+/* configurações link */
+.link-asilos {
+	text-decoration: none;
+	color: var(--azul-forte);
+}
+
+.link-asilos:hover {
+	color: var(--complementar1);
 }
 
 /*Rodapé*/

@@ -1,285 +1,106 @@
-.container {
-	height: 1px;
-	width: 100vw;
-	max-height: 800px;
-	max-width: 1280px;
-	min-height: 500px;
-	min-width: 1000px;
-	display: flex;
-	justify-content: space-around;
+#info-sobre {
 	align-items: center;
-	margin: 0 auto;
+	justify-content: space-between;
+	margin: 50px;
 }
 
-.container h2 {
-	font-family: "montserrat", Helvetica, Arial, sans-serif;
-	color: white;
-	margin: 20px;
-	opacity: 0;
+.quem-somos {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
 }
 
-.border {
-	height: 369px;
-	width: 290px;
-	background: transparent;
-	border-radius: 10px;
-	transition: border 1s;
-	position: relative;
-}
-
-.border:hover {
-	border: 1px solid white;
-	transition: 500ms;
-}
-
-.card {
-	height: 379px;
-	width: 300px;
-	background: grey;
-	border-radius: 10px;
-	transition: background 0.8s;
-	overflow: hidden;
-	background: black;
-	box-shadow: 0 70px 63px -60px #000;
+#img-quem {
+	margin-left: 50px;
+	width: 400px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
 }
 
-.card:hover {
-	transition: 1.7s;
+#txt-quem {
+	display: flex;
+	margin-left: 50px;
+	margin-bottom: 115px;
+	font-size: 20px;
+}
+
+#div-quem {
+	display: flex;
+	align-items: center;
+}
+
+.pessoas{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.card{
+	margin: 33px;
+  background-color: #d2e8f8;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+	transition: 1s;
+}
+
+.card:hover{
+	transition: 1s;
 	transform: scale(1.1, 1.1);
 	background-size: 310px;
 }
 
-/* Card Diego */
-
-.card-diego {
-	background: url("../assets/img/pessoas/diego.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-diego:hover {
-	background: url("../assets/img/pessoas/diego.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-diego h2 {
-	opacity: 1;
-	transition: opacity 2s;
-}
-
-.card-diego .fa {
-	opacity: 1;
-}
-
-/* Card Guilherme */
-
-.card-guilherme {
-	background: url("../assets/img/pessoas/guilherme.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-guilherme:hover {
-	background: url("../assets/img/pessoas/guilherme.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-guilherme h2 {
-	opacity: 1;
-}
-
-.card-guilherme .fa {
-	opacity: 1;
-}
-
-/* Card Henrique */
-
-.card-henrique {
-	background: url("../assets/img/pessoas/henrique.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-henrique:hover {
-	background: url("../assets/img/pessoas/henrique.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-henrique h2 {
-	opacity: 1;
-}
-
-.card-henrique .fa {
-	opacity: 1;
-}
-
-/* Card Joao */
-
-.card-joao {
-	background: url("../assets/img/pessoas/joao.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-joao:hover {
-	background: url("../assets/img/pessoas/joao.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-joao h2 {
-	opacity: 1;
-}
-
-.card-joao .fa {
-	opacity: 1;
-}
-
-/* Card Kaique */
-
-.card-kaique {
-	background: url("../assets/img/pessoas/kaique.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-kaique:hover {
-	background: url("../assets/img/pessoas/kaique.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-kaique h2 {
-	opacity: 1;
-}
-
-.card-kaique .fa {
-	opacity: 1;
-}
-
-/* Card Kauan */
-
-.card-kauan {
-	background: url("../assets/img/pessoas/kauan.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-kauan:hover {
-	background: url("../assets/img/pessoas/kauan.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-kauan h2 {
-	opacity: 1;
-}
-
-.card-kauan .fa {
-	opacity: 1;
-}
-
-/* Card Luiz */
-
-.card-luiz {
-	background: url("../assets/img/pessoas/luiz.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-luiz:hover {
-	background: url("../assets/img/pessoas/luiz.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-luiz h2 {
-	opacity: 1;
-}
-
-.card-luiz .fa {
-	opacity: 1;
-}
-
-/* Card Rafael */
-
-.card-rafael {
-	background: url("../assets/img/pessoas/rafael.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-rafael:hover {
-	background: url("../assets/img/pessoas/rafael.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-rafael h2 {
-	opacity: 1;
-}
-
-.card-rafael .fa {
-	opacity: 1;
-}
-
-/* Card Rafaela */
-
-.card-rafaela {
-	background: url("../assets/img/pessoas/rafaela.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-rafaela:hover {
-	background: url("../assets/img/pessoas/rafaela.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-rafaela h2 {
-	opacity: 1;
-}
-
-.card-rafaela .fa {
-	opacity: 1;
-}
-
-/* Card Vinicius */
-
-.card-vinicius {
-	background: url("../assets/img/pessoas/vinicius.jpg") center center no-repeat;
-	background-size: 300px;
-	transition: 1s;
-}
-
-.card-vinicius:hover {
-	background: url("../assets/img/pessoas/vinicius.jpg") center no-repeat;
-	background-size: 300px;
-}
-
-.card-vinicius h2 {
-	opacity: 1;
-}
-
-.card-vinicius .fa {
-	opacity: 1;
-}
-
-/* Fim Cards */
-
-.fa {
-	opacity: 0;
-	transition: opacity 1s;
-}
-
-.icons {
-	position: absolute;
-	fill: #fff;
-	color: #fff;
-	height: 130px;
-	top: 226px;
-	width: 50px;
+.banner{
+	height: 350px;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.name{
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
+
+#guilherme{
+	background: url(../assets/img/pessoas/guilherme.jpg) center/cover no-repeat;
+}
+
+#diego{
+	background: url(../assets/img/pessoas/diego.jpg) center/cover no-repeat;
+}
+
+#henrique{
+	background: url(../assets/img/pessoas/henrique.jpg) center/cover no-repeat;
+}
+
+#joao{
+	background: url(../assets/img/pessoas/joao.jpg) center/cover no-repeat;
+}
+
+#kaique{
+	background: url(../assets/img/pessoas/kaique.jpg) center/cover no-repeat;
+}
+
+#kauan{
+	background: url(../assets/img/pessoas/kauan.jpg) center/cover no-repeat;
+}
+
+#luiz{
+	background: url(../assets/img/pessoas/luiz.jpg) center/cover no-repeat;
+}
+
+#rafael{
+	background: url(../assets/img/pessoas/rafael.jpg) center/cover no-repeat;
+}
+
+#rafaela{
+	background: url(../assets/img/pessoas/rafaela.jpg) center/cover no-repeat;
+}
+
+#vinicius{
+	background: url(../assets/img/pessoas/vinicius.jpg) center/cover no-repeat;
 }
