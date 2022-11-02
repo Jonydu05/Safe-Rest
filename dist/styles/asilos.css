@@ -106,3 +106,15 @@
 	margin: 30px;
 	display: block;
 }
+
+#contato-palmeiras{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: baseline;
+	align-items: center;
+	margin-bottom: 75px;
+}
+
+footer{
+	clear: both;
+}

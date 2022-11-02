@@ -1,19 +1,14 @@
-import cards from './cards';
+import cards from "./cards";
 import { listDiv } from "./seletores";
 
-
-export function mostrarTudo(cards) {
-  mostrar(cards);
-}
-
 export function mostrar(cards) {
-  let list = "";
+	let list = "";
 
-  if (cards.length <= 0) {
-    list += `<div id='no-product'>Nenhum asilo disponível</div>`;
-  } else {
-    cards.forEach((cards) => {
-      list += `
+	if (cards.length <= 0) {
+		list += `<div id='no-product'>Nenhum asilo disponível</div>`;
+	} else {
+		cards.forEach((cards) => {
+			list += `
       <div class="card">
 
       <div class="card-header">
@@ -26,7 +21,7 @@ export function mostrar(cards) {
       </div>
     
       <div class="actionsCard">
-        <button class="actions"><a href="asilos.html" class="link-asilos">Ver mais</a></button>
+        <button class="actions"><a href="${cards.btnSite}" class="link-asilos">Ver mais</a></button>
         <button class="actions"><a href="${cards.btnMaps}" target="_blank" class="link-asilos">Ver no Google Maps</a></button>
       </div>
       
@@ -35,8 +30,8 @@ export function mostrar(cards) {
     </div>
 
       `;
-    });
-  }
+		});
+	}
 
-  listDiv.innerHTML = list;
+	listDiv.innerHTML = list;
 }

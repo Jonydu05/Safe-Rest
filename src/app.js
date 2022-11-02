@@ -1,13 +1,13 @@
 import { search } from "./seletores";
 import { searchInKeyUp } from "./pesquisa";
-import { mostrarTudo} from "./mostrar";
+import { mostrar } from "./mostrar";
 import cards from "./cards";
-import _ from 'lodash';
+import _ from "lodash";
 
 export function pesquisaSite() {
-  search.addEventListener("keyup", _.debounce(searchInKeyUp, 400));
+	search.addEventListener("keyup", _.debounce(searchInKeyUp, 400));
 }
 
-pesquisaSite() 
+pesquisaSite();
 
-mostrarTudo(cards);
+mostrar(cards);
