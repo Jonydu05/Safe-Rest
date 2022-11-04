@@ -35,3 +35,5 @@ export function mostrar(cards) {
 
 	listDiv.innerHTML = list;
 }
+
+document.get
