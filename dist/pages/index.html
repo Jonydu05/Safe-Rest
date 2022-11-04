@@ -6,11 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link href="../styles/estilo.css" rel="stylesheet" />
-		<link rel="stylesheet" href="../styles/cards.css" />
+		<link rel="stylesheet" href="../styles/contato.css" />
+		<link rel="stylesheet" href="../styles/home.css" />
 
 		<link rel="icon" href="../assets/img/logo2.png" />
 
-
+		<script src="https://kit.fontawesome.com/da55f0765a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 		<title>Início</title>
 	</head>
 
@@ -19,14 +21,9 @@
 			<!-- prettier-ignore -->
 			<div id="teste">
 				<a href="index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-				<a href="index.html">
-					<pre id="safeRest">Safe
+				<a href="index.html"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 			</div>
-
-			<div id="search">
-        <input type="text" class="form-control" placeholder="Buscar..." id="searchInput"/>
-      </div>
 
 			<nav id="nav">
 				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
@@ -36,24 +33,56 @@
 
 				<ul id="menu" role="menu">
 					<li><a href="index.html">Início</a></li>
+					<li><a href="asilos.html">Asilos</a></li>
 					<li><a href="sobre.html">Sobre</a></li>
 					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro | Entrar</a></li>
+					<li><a href="cadastro.html">Cadastro</a></li>
 				</ul>
 			</nav>
 		</header>
-		<!-- Começo conteúdo -->
 
-		<div class="container">
+    <div class="wrapper">
+      <main>
+        <section class="module parallax parallax-1">
+          <h1 class="area-1">Safe & Rest</h1>
+        </section>
 
-      <div id="list"></div>
+        <section class="module content">
+          <div class="container area-2">
+            <h2>Qual nosso objetivo?</h2>
+            <p>
+							Nosso objetivo é ajudar as pessoas que estão em dúvida, em qual casa de repouso escolher, disponibilizando algumas ferramentas que criamos, para auxiliá-las nesse processo - que acreditamos ser extramamente importante na vida dos idosos - para ter um grande leque de opções e não se arrepender e ter que trocar depois de ter contactado o asilo.
+            </p>
+            <p>
+							Para isso criamos algumas ferramentas, que são, a pesquisa por casas de repouso, avaliações de clientes, entre outros.
+            </p>
+          </div>
+        </section>
 
+        <section class="module parallax parallax-2">
+          <h1 class="area-3">É gratuito?</h1>
+        </section>
+
+        <section class="module content">
+          <div class="container area-4">
+            <h2>Como acessar?</h2>
+            <p>
+              Sim! É completamente gratuito! Tudo que você tem que fazer é clicar no botão abaixo e já vai poder ver os asilos! <br>
+							<span class="texto">PS: lá em cima, na barra de navegação também tem um botão para ver os asilos :)</span>
+            </p>
+						<div class="container-btn">
+							<button class="btn-asilo"><a href="asilos.html" class="link-asilos">Ver Asilos!</a></button>
+						</div>
+          </div>
+        </section>
+      </main>
     </div>
 
 		<!-- começo do rodapé -->
 		<footer>
 			<p>
-				<a href="index.html"> Início </a>
+				<a href="index.html"> Home </a>
+				<a href="asilos.html">Asilos</a>
 				<a href="sobre.html"> Sobre </a>
 				<a href="contato.html"> Contato </a>
 				<a href="cadastro.html"> Cadastro </a>
@@ -65,8 +94,9 @@
 			</div>
 		</footer>
 		<!-- fim do rodapé -->
+		<script src="../../src/scroll.js"></script>
 		<script src="../../src/menu.js"></script>
-		<script src="../app.js"></script>
+		<script src="../../src/carousel-asilo.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
