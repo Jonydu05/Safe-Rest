@@ -9,7 +9,6 @@ const stylesHandler = "style-loader";
 const config = {
   entry: {
     app: "/src/app.js",
-    appAsilo: "/src/appAsilos.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
