@@ -210,6 +210,7 @@ ul {
 
 /*Rodapé*/
 footer {
+	margin-top: auto;
 	position: relative;
 	display: flex;
 	background-color: #004998;
