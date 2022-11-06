@@ -9,8 +9,6 @@ Site que busca facilitar a comunicação das pessoas com os asilos.
 
 # TODO
 
-# FAZER O MODAL DOS CARDS NA PAG ASILOS
-
 # FAZER A INTEGRAÇÃO DOS OUTROS SCRIPTS COM O WEBPACK
 
 # FAZER O CAROUSEL DENOVO

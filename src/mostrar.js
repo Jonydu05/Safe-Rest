@@ -9,7 +9,7 @@ export function mostrar(cards) {
 	} else {
 		cards.forEach((cards) => {
 			list += `
-      <div class="card">
+      <div class="card" id="card-modal">
 
       <div class="card-header">
         <img src="${cards.img}" />
@@ -35,5 +35,3 @@ export function mostrar(cards) {
 
 	listDiv.innerHTML = list;
 }
-
-document.get
