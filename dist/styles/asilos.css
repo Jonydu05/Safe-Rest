@@ -1,14 +1,63 @@
-.info {
-	margin: 30px;
-	display: block;
+.carousel {
+	height: 700px;
+	perspective: 600px;
+	transform: translateY(-100px);
 }
 
-#contato-palmeiras{
+.carousel .carousel-item {
+	cursor: grab;
+	width: 400px;
+}
+
+.carousel .carousel-item:active {
+	cursor: grabbing;
+}
+
+.carousel .carousel-item img {
+	width: 100%;
+}
+
+.carousel .carousel-item h3 {
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 2em;
+	font-weight: bold;
+	margin: -5px 0 0;
+	padding: 10px 5px;
+	text-align: center;
+}
+
+.asilos{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: baseline;
-	align-items: center;
-	margin-bottom: 75px;
+	justify-content: space-between;
+}
+
+/* .slider img{
+	margin: 50px;
+	max-width: 50vw;
+} */
+
+.info {
+	max-width: 60%;
+	padding: 15px;
+	margin: 30px;
+	flex-flow: column;
+	word-wrap: break-word;
+}
+
+.asilos ul{
+	list-style: none;
+	margin: 20px;
+}
+
+.asilos li{
+	margin: 10px;
+}
+
+@media (max-width: 600px) {
+	.asilos{
+		flex-direction: column;
+	}
 }
 
 footer{

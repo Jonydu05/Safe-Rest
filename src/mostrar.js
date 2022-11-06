@@ -9,7 +9,7 @@ export function mostrar(cards) {
 	} else {
 		cards.forEach((cards) => {
 			list += `
-      <div class="card" id="card-modal">
+      <div class="card">
 
       <div class="card-header">
         <img src="${cards.img}" />

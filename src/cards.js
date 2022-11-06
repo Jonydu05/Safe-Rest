@@ -87,13 +87,13 @@ const cards = [
 		btnSite: "../asilos/vivace.html",
 		btnMaps: "https://goo.gl/maps/kbiBrBGKSaAfhZNB8",
 	},
-	// {
-	// 	id: "",
-	// 	titulo: "",
-	// 	img: "",
-	// 	descricao: "",
-	// 	btnMaps: "",
-	// },
+	{
+		id: "",
+		titulo: "",
+		img: "",
+		descricao: "",
+		btnMaps: "",
+	},
 ];
 
 export default cards;
