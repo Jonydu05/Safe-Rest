@@ -1,14 +1,25 @@
-let count = 1;
-document.getElementById("radio1").checked = true;
-
-setInterval(function () {
-	nextImage();
-}, 5000);
-
-function nextImage() {
-	count++;
-	if (count > 4) {
-		count = 1;
-	}
-	document.getElementById("radio" + count).checked = true;
-}
+$('.carousel').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+  autoplaySpeed: 2000,
+	infinite: true,
+	dots: true,
+  adaptiveHeight: true,
+	responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});

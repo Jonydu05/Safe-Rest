@@ -4,15 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<link href="../styles/estilo.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../styles/estilo.css"/>
 		<link rel="stylesheet" href="../styles/asilos.css" />
-
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 		<link rel="icon" href="../assets/img/logo2.png" />
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<script src="https://kit.fontawesome.com/da55f0765a.js" crossorigin="anonymous"></script>
-
 		<title>Casa Luz do Caminho</title>
 	</head>
 
@@ -30,7 +26,6 @@
 					Menu
 					<span id="hamburguer"></span>
 				</button>
-
 				<ul id="menu" role="menu">
 					<li><a href="../pages/index.html">Início</a></li>
 					<li><a href="../pages/asilos.html">Asilos</a></li>
@@ -43,17 +38,8 @@
 		<!-- fim nav -->
 		<div class="asilos">
 			<div class="carousel">
-				<div class="carousel-item">
-					<img src="https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Dog" title="Dog">
-				</div>
-				
-				<div class="carousel-item">
-					<img src="https://images.pexels.com/photos/1485637/pexels-photo-1485637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Dog" title="Dog">
-				</div>
-				
-				<div class="carousel-item">
-					<img src="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Dog" title="Dog">
-				</div>
+				<div><img src="../assets/img/caminho/foto1.jpg" alt=""></div>
+				<div><img src="../assets/img/caminho/foto2.jpg" alt=""></div>
 			</div>
 			<div class="info">
 				<h2 class="titulo">Casa Luz do Caminho</h2>
@@ -66,7 +52,7 @@
 					<ul>
 						<li><ion-icon name="call-outline"></ion-icon> (11) 2232-3264 <br /></li>
 						<li><ion-icon name="mail-outline"></ion-icon> contato@casaluzdocaminho.org.br <br /></li>
-						<li><ion-icon name="globe-outline"></ion-icon> <a href="https://casaluzdocaminho.org.br/" class="link-asilos">https://casaluzdocaminho.org.br/</a></li>
+						<li><ion-icon name="globe-outline"></ion-icon> <a href="https://casaluzdocaminho.org.br/" class="link-asilos">https://casaluzdocaminho.org.br</a></li>
 					</ul>
 				</div>
 			</div>
@@ -81,21 +67,18 @@
 				<a href="../pages/cadastro.html"> Cadastro </a>
 			</p>
 			<br />
-			<p>2022 - Safe&Rest &copy; - Todos os direitos reservados</p>
+			<div>
+				<span><img src="../assets/img/logo3.png" alt="" /></span>
+				<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
+			</div>
 		</footer>
 
 		<!-- fim do rodapé -->
-
-		<script>
-			$(document).ready(function () {
-				$(".carousel").carousel();
-			});
-		</script>
-
 		<script src="../../src/menu.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="../../src/carousel-asilo.js"></script>
 	</body>
 </html>

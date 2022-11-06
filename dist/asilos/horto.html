@@ -5,14 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link href="../styles/estilo.css" rel="stylesheet" />
-		<link rel="stylesheet" href="../styles/contato.css" />
+		<link rel="stylesheet" href="../styles/estilo.css" />
 		<link rel="stylesheet" href="../styles/asilos.css" />
-
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-
-		<script src="https://kit.fontawesome.com/da55f0765a.js" crossorigin="anonymous"></script>
-
 		<title>Clínica de Repouso Horto Florestal</title>
 	</head>
 
@@ -42,40 +39,11 @@
 		</header>
 		<!-- fim nav -->
 
-		<div class="container-asilo">
-			<div class="slider">
-				<div class="slides">
-					<!-- radio button -->
-					<input type="radio" name="radio-btn" id="radio1" />
-					<input type="radio" name="radio-btn" id="radio2" />
-					<input type="radio" name="radio-btn" id="radio3" />
-					<!-- radio button -->
-					<!-- imagens -->
-					<div class="slide first">
-						<img src="../assets/img/horto/foto1.jpeg" alt="imagem 1" />
-					</div>
-					<div class="slide">
-						<img src="../assets/img/horto/foto2.png" alt="imagem 2" />
-					</div>
-					<div class="slide">
-						<img src="../assets/img/horto/foto3.png" alt="imagem 3" />
-					</div>
-					<!-- imagens -->
-
-					<!-- navigation -->
-
-					<div class="nav-auto">
-						<div class="auto-btn1"></div>
-						<div class="auto-btn2"></div>
-						<div class="auto-btn3"></div>
-					</div>
-				</div>
-
-				<div class="manual-navigation">
-					<label for="radio1" class="manual-btn"></label>
-					<label for="radio2" class="manual-btn"></label>
-					<label for="radio3" class="manual-btn"></label>
-				</div>
+		<div class="asilos">
+			<div class="carousel">
+				<div><img src="../assets/img/horto/foto1.jpeg" alt="" /></div>
+				<div><img src="../assets/img/horto/foto2.png" alt="" /></div>
+				<div><img src="../assets/img/horto/foto3.png" alt="" /></div>
 			</div>
 			<div class="info">
 				<h2 class="titulo">Clínica de Repouso Horto Florestal</h2>
@@ -86,8 +54,10 @@
 				</p>
 				<div class="contato">
 					<p class="localizacao"><strong> Localização: </strong>Av. Luis Carlos Gentile de Laet, 452 - Horto Florestal – São Paulo</p>
-					<ion-icon name="call-outline"></ion-icon> (11) 2203-0701 | (11) 2203-0801 <br />
-					<ion-icon name="logo-whatsapp"></ion-icon> (11) 93463-3205
+					<ul>
+						<li><ion-icon name="call-outline"></ion-icon> (11) 2203-0701 | (11) 2203-0801</li>
+						<li><ion-icon name="logo-whatsapp"></ion-icon> (11) 93463-3205</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -97,16 +67,23 @@
 			<p>
 				<a href="../pages/index.html"> Início </a>
 				<a href="../pages/asilos.html">Asilos</a>
-				<a href="../pages/sobre-nos.html"> Sobre </a>
+				<a href="../pages/sobre.html"> Sobre </a>
 				<a href="../pages/contato.html"> Contato </a>
 				<a href="../pages/cadastro.html"> Cadastro </a>
 			</p>
 			<br />
-			<p>2022 - Safe&Rest &copy; - Todos os direitos reservados</p>
+			<div>
+				<span><img src="../assets/img/logo3.png" alt="" /></span>
+				<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
+			</div>
 		</footer>
 
 		<!-- fim do rodapé -->
+		<script src="../../src/menu.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="../../src/carousel-asilo.js"></script>
 	</body>
 </html>
