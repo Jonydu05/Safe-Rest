@@ -16,6 +16,8 @@ export function mostrar(cards) {
       </div>
     
       <div class="card-body">
+        <span class="tag rating"><ion-icon name="star"></ion-icon> ${cards.star}</span>
+
         <h3>${cards.titulo}</h3>
         <p>${cards.descricao} </p>
       </div>

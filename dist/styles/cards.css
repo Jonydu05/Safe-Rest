@@ -5,10 +5,10 @@
 }
 
 #list {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+	margin-top: auto;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .container {
@@ -57,6 +57,20 @@
 	margin: 0 0 0px;
 }
 
+.tag {
+	background: #cccccc;
+	border-radius: 50px;
+	font-size: 12px;
+	margin: 0;
+	color: #fff;
+	padding: 2px 10px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.rating {
+	background-color: #f6f2fd;
+	color: #9c6c27;
+}
 
 /* Configurações ActioncsCard */
 
@@ -81,9 +95,8 @@
 	color: var(--complementar1);
 }
 
-
 @media (max-width: 800px) {
-	.card{
+	.card {
 		width: 300px;
 	}
 }
