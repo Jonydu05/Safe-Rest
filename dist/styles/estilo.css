@@ -13,9 +13,10 @@
 
 /* Configuração Inicial */
 body {
+	min-height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: "Montserrat", Arial, serif;
+	font-family: "Montserrat", Arial, sans-serif;
 	font-size: 18px;
 	background: linear-gradient(#f6f2fd, #69b3e7);
 }
@@ -214,6 +215,7 @@ p{
 
 /* configurações link */
 .link-asilos {
+	font-family: 'dm sans', arial, sans-serif;
 	text-decoration: none;
 	color: var(--azul-forte);
 }
