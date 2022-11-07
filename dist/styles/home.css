@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   color: #201010;
-  word-wrap: break-word;
   overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 h1{
@@ -32,10 +32,16 @@ main {
 
 .container {
   font-family: 'dm sans', sans-serif;
-  width: 100%;
   max-width: 760px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.container *{
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 section.module p {
@@ -104,7 +110,7 @@ section.module.parallax h1 {
 .container-btn{
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 

@@ -21,12 +21,6 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-}
-
-/* iOS Reset  */
 input {
 	appearance: none;
 	border-radius: 0;
@@ -40,7 +34,7 @@ input {
 }
 
 .card {
-	margin: 50px;
+	margin: 50px auto;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -159,10 +153,16 @@ input {
 		display: block;
 	}
 	.card {
-		margin: 20px;
+		margin: 20px auto;
 		max-width: 90%;
 	}
 	#card-login .card-title {
 		padding-bottom: 35%;
+	}
+}
+
+@media (max-width: 350px){
+	.card-title {
+		padding-bottom: 60%;
 	}
 }

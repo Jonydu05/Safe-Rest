@@ -4,8 +4,6 @@ import { mostrar } from "./mostrar";
 export function searchInKeyUp(event) {
 	const searched = event.target.value;
 
-	console.log(searched);
-
 	const cardsFound = cardsPesquisa(searched);
 
 	cardsFound.length > 0 ? mostrar(cardsFound) : (listDiv.innerHTML = "Nenhum asilo encontrado :(");

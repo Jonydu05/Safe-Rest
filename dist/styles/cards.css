@@ -19,7 +19,7 @@
 }
 
 .card {
-	cursor: pointer;
+	cursor: context-menu;
 	font-size: 1.3rem;
 	margin: 20px;
 	margin-bottom: 45px;
@@ -65,7 +65,6 @@
 	color: #fff;
 	padding: 2px 10px;
 	text-transform: uppercase;
-	cursor: pointer;
 }
 .rating {
 	background-color: #f6f2fd;
@@ -84,19 +83,16 @@
 	color: #004998;
 }
 
-/* Configurações Texto, links, etc*/
-
-.link-asilos {
-	text-decoration: none;
-	color: var(--azul-forte);
-}
-
-.link-asilos:hover {
-	color: var(--complementar1);
-}
-
+/* Configurações outras*/
 @media (max-width: 800px) {
 	.card {
 		width: 300px;
+	}
+}
+
+
+@media (max-width: 350px){
+	.card{
+		width: 230px;
 	}
 }

@@ -26,6 +26,10 @@ ul {
 	padding: 0px;
 }
 
+p{
+	text-align: justify;
+}
+
 /* Configuração Logo */
 #logo {
 	max-width: 100px;
@@ -84,7 +88,7 @@ ul {
 }
 
 /* Configurações Botão burguer */
-#btn-mobile{
+#btn-mobile,  .search-mobile{
 	display: none;
 }
 
@@ -155,15 +159,16 @@ ul {
 		transform: rotate(-135deg);
 		top: -7px;
 	}
-}
-
-@media (max-width:600px){
 	header #search{
 		display: none;
 	}
+	.search-mobile{
+		display: block;
+}
 }
 
 /* barra de pesquisa */
+
 #no-product {
   min-height: 100px;
   display: flex;
@@ -198,6 +203,15 @@ ul {
   height: 50px;
 }
 
+.search-mobile{
+	margin: 0 1rem;
+	width: 30%;
+}
+
+.search-mobile:focus{
+	width: 50%;
+}
+
 /* configurações link */
 .link-asilos {
 	text-decoration: none;
@@ -229,7 +243,7 @@ footer div {
 }
 
 footer div p {
-	margin-left: 30px;
+	margin: 20px auto;
 }
 
 footer img {

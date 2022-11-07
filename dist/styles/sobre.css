@@ -1,31 +1,26 @@
 #info-sobre {
+	margin: 50px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+#div-quem{
+	margin: 0 auto;
+	max-width: 100%;
+	display: flex;
+	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
-	margin: 50px;
 }
 
-.quem-somos {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
+#txt-quem{
+	margin: 50px auto;
+	max-width: 50%;
 }
 
-#img-quem {
-	margin-left: 50px;
-	width: 400px;
-	display: flex;
-}
-
-#txt-quem {
-	display: flex;
-	margin-left: 50px;
-	margin-bottom: 115px;
-	font-size: 20px;
-}
-
-#div-quem {
-	display: flex;
-	align-items: center;
+#img-quem{
+	margin: 0 auto;
+	max-width: 40vw;
 }
 
 .pessoas{
@@ -35,7 +30,7 @@
 }
 
 .card{
-	margin: 33px;
+	margin: 30px auto;
   background-color: #d2e8f8;
   width: 350px;
   display: flex;
@@ -63,6 +58,21 @@
     text-align: center;
     padding: 15px;
     margin: 0;
+}
+
+@media (max-width: 600px) {
+	#div-quem{
+		flex-flow: column wrap;
+	}
+	#img-quem{
+		max-width: 60vw;
+	}
+	#txt-quem{
+		max-width: 100%;
+	}
+	.banner{
+		height: 200px;
+	}
 }
 
 #guilherme{
