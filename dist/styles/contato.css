@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Vollkorn&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Vollkorn&display=swap");
 
 #container-contato {
 	display: flex;
@@ -24,7 +24,7 @@
 	padding: 3px;
 }
 
-#div-msg{
+#div-msg {
 	width: 50%;
 }
 
@@ -40,7 +40,9 @@
 	box-sizing: border-box;
 	font-family: "dm sans", sans-serif;
 	position: relative;
+	transition: 0.3s;
 }
+
 .form h2 {
 	margin: 10px 0;
 	padding-bottom: 10px;
@@ -73,7 +75,6 @@
 .form button {
 	padding: 8px 12px;
 	margin: 8px 0 0;
-
 	font-family: "dm sans", sans-serif;
 	border: 2px solid #9c6c27;
 	background: 0;
@@ -83,7 +84,7 @@
 	border-radius: 5px;
 }
 .form button:hover {
-	background: #e8b468;
+	background: #9c6c27;
 	color: #f6f2fd;
 }
 .form div {
@@ -92,28 +93,48 @@
 	right: -20px;
 	background: #2f5169;
 	color: #fff;
-	width: 320px;
+	width: 300px;
 	padding: 16px 4px 16px 0;
 	border-radius: 6px;
 	font-size: 13px;
 	box-shadow: 10px 10px 40px -14px #000;
+	transition: 0.3s;
 }
 .form span {
 	margin: 0 5px 0 15px;
 }
 
 @media (max-width: 600px) {
-	#div-msg{
+	#div-msg {
 		width: 100%;
 	}
 }
 
+.form div ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+
+@media (max-width: 500px) {
+	.form {
+		width: 300px;
+	}
+	.form div {
+		bottom: -30px;
+		right: 45px;
+		width: 200px;
+	}
+	.form div ul {
+		flex-direction: column;
+	}
+}
 #local-contato {
 	margin: 50px;
 	flex-grow: 1;
 }
 
-#local-contato iframe{
+#local-contato iframe {
 	height: 40vh;
 }
 
