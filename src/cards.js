@@ -83,7 +83,7 @@ const cards = [
 	{
 		id: "10",
 		titulo: "Residencial Vila dos Sonhos",
-		img: "../assets/img/sem-imagem.png",
+		img: "../assets/img/sonhos/foto1.png",
 		star: 5,
 		descricao: "Conheça a Casa de Repouso Residencial Vila dos Sonhos, nosso foco é atender você com serviços inovadores...",
 		btnSite: "../asilos/sonhos.html",
@@ -98,14 +98,15 @@ const cards = [
 		btnSite: "../asilos/vivace.html",
 		btnMaps: "https://goo.gl/maps/kbiBrBGKSaAfhZNB8",
 	},
-	// {
-	// 	id: "",
-	// 	titulo: "",
-	// 	img: "",
-	// star: "",
-	// 	descricao: "",
-	// 	btnMaps: "",
-	// },
+	{
+		id: "12",
+		titulo: "Residencial Vovó Ana",
+		img: "../assets/img/vovoana/foto1.png",
+		star: "4.3",
+		descricao: "Nossa equipe multidisciplinar formada por profissionais com o melhor perfil para atender pessoas está pronta...",
+		btnSite: "../asilos/vovoAna.html",
+		btnMaps: "https://goo.gl/maps/QGANTpiyyywUQ1u46",
+	 },
 ];
 
 export default cards;

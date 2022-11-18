@@ -23,11 +23,11 @@
 				<input type="text" class="form-control" placeholder="Buscar..." id="searchInput" />
 			</div>
 			<!-- Começo nav -->
-			<nav id="nav">
+			<nav class="nav">
 				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
 					<span id="hamburguer"></span>
 				</button>
-				<ul id="menu" role="menu">
+				<ul class="menu" role="menu">
 					<input type="text" class="form-control search-mobile" placeholder="Buscar..." id="inputMobile" />
 					<li><a href="index.html">Início</a></li>
 					<li><a href="asilos.html">Asilos</a></li>
@@ -38,22 +38,23 @@
 			</nav>
 		</header>
 		<!-- Começo conteúdo -->
-		<div class="container">
+		<main class="container">
 			<div id="list"></div>
-		</div>
+		</main>
 		<!-- começo do rodapé -->
 		<footer>
-			<p>
-				<a href="index.html"> Home </a>
-				<a href="asilos.html">Asilos</a>
-				<a href="sobre.html"> Sobre </a>
-				<a href="contato.html"> Contato </a>
-				<a href="cadastro.html"> Cadastro </a>
-			</p>
-			<br />
+			<nav class="nav">
+				<ul class="menu">
+					<li><a href="index.html">Início</a></li>
+					<li><a href="asilos.html">Asilos</a></li>
+					<li><a href="sobre.html">Sobre</a></li>
+					<li><a href="contato.html">Contato</a></li>
+					<li><a href="cadastro.html">Cadastro</a></li>
+				</ul>
+			</nav>
 			<div>
-				<span><img src="../assets/img/logo3.png" alt="" /></span>
-				<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
+			<img src="../assets/img/logo3.png" alt="" />
+			<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
 			</div>
 		</footer>
 		<!-- fim do rodapé -->

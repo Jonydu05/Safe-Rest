@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Vollkorn&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Vollkorn&display=swap");
 
 :root {
 	--fundo: #f6f2fd;
@@ -27,7 +27,7 @@ ul {
 	padding: 0px;
 }
 
-p{
+p {
 	text-align: justify;
 }
 
@@ -72,29 +72,35 @@ p{
 	font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
-#menu {
+#header a:hover{
+	color: var(--complementar1);
+	transition: 200ms;
+}
+
+.menu {
 	display: flex;
 	list-style: none;
 	gap: 1rem;
 }
 
-#menu a {
+.menu a {
 	display: block;
 	padding: 0.5rem;
 }
 
-#nav a:hover {
+.nav a:hover {
 	color: var(--complementar1);
 	transition: 200ms;
 }
 
 /* Configurações Botão burguer */
-#btn-mobile,  .search-mobile{
+#btn-mobile,
+.search-mobile {
 	display: none;
 }
 
 @media (max-width: 800px) {
-	#menu {
+	.menu {
 		display: block;
 		position: absolute;
 		width: 100%;
@@ -108,13 +114,13 @@ p{
 		overflow-y: hidden;
 	}
 
-	#nav.active #menu {
+	.nav.active .menu {
 		height: calc(100vh - 70px);
 		visibility: visible;
 		overflow-y: auto;
 	}
 
-	#menu a {
+	.menu a {
 		padding: 1rem 0;
 		margin: 0 1rem;
 		border-bottom: 2px solid rgba(0, 0, 0, 0.05);
@@ -148,74 +154,74 @@ p{
 		position: relative;
 	}
 
-	#nav.active #hamburguer {
+	.nav.active #hamburguer {
 		border-top-color: transparent;
 	}
 
-	#nav.active #hamburguer::before {
+	.nav.active #hamburguer::before {
 		transform: rotate(135deg);
 	}
 
-	#nav.active #hamburguer::after {
+	.nav.active #hamburguer::after {
 		transform: rotate(-135deg);
 		top: -7px;
 	}
-	header #search{
+	header #search {
 		display: none;
 	}
-	.search-mobile{
+	.search-mobile {
 		display: block;
-}
+	}
 }
 
 /* barra de pesquisa */
 
 #no-product {
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--complementar1);
-  font-size: 30px;
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--complementar1);
+	font-size: 30px;
 }
 
 #search {
-  margin: 10px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	margin: 10px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .form-control {
-  border: none;
-  border-radius: 10px;
-  width: 50%;
-  height: 40px;
-  font-size: 18px;
-  transition: 1s;
-  padding: 10px;
+	border: none;
+	border-radius: 10px;
+	width: 50%;
+	height: 40px;
+	font-size: 18px;
+	transition: 1s;
+	padding: 10px;
 }
 
 .form-control:focus {
-  transition: 1s;
-  width: 70%;
-  height: 50px;
+	transition: 1s;
+	width: 70%;
+	height: 50px;
 }
 
-.search-mobile{
+.search-mobile {
 	margin: 0 1rem;
 	width: 30%;
 }
 
-.search-mobile:focus{
+.search-mobile:focus {
 	width: 50%;
 }
 
 /* configurações link */
 .link-asilos {
-	font-family: 'dm sans', arial, sans-serif;
+	font-family: "dm sans", arial, sans-serif;
 	text-decoration: none;
 	color: var(--azul-forte);
 }
@@ -225,17 +231,22 @@ p{
 }
 
 /*Rodapé*/
+
 footer {
-	margin-top: auto;
-	position: relative;
+	justify-content: space-between;
 	display: flex;
+	align-items: center;
+	flex-flow: column;
 	background-color: #004998;
 	padding: 20px 0 30px 0;
-	text-align: center;
 	color: #d2e8f8;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
+}
+
+footer a {
+	box-sizing: border-box;
+	color: #d2e8f8;
+	text-decoration: none;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 footer div {
@@ -244,20 +255,6 @@ footer div {
 	align-items: center;
 }
 
-footer div p {
-	margin: 20px auto;
-}
-
 footer img {
 	width: 7rem;
-}
-
-footer p a {
-	padding: 2px 10px 2px 10px;
-	text-decoration: none;
-	color: #d2e8f8;
-}
-
-footer a:hover {
-	color: var(--complementar1);
 }
