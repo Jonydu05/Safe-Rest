@@ -7,78 +7,66 @@
 
 		<link rel="stylesheet" href="../styles/estilo.css" />
 		<link rel="stylesheet" href="../styles/asilos.css" />
-		<link rel="stylesheet" href="../styles/cards.css" />
-
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-		<title>Casa Luz do Caminho</title>
+		<title>Gardenville</title>
 	</head>
 
 	<body>
 		<header id="header">
 			<!-- prettier-ignore -->
 			<div id="teste">
-				<a href="../pages/index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-				<a href="../pages/index.html"><pre id="safeRest">Safe
+			<a href="../pages/index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+			<a href="../pages/index.php"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
-			</div>
+		</div>
 
 			<nav class="nav">
 				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
 					<span id="hamburguer"></span>
 				</button>
 				<ul class="menu" role="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php">Sobre</a></li>
+					<li><a href="../pages/contato.php">Contato</a></li>
+					<li><a href="../pages/login/register.php">Cadastro</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- fim nav -->
-		<main class="asilos">
+
+		<div class="asilos">
 			<div class="carousel">
-				<div><img src="../assets/img/caminho/foto1.jpg" alt="" /></div>
-				<div><img src="../assets/img/caminho/foto2.jpg" alt="" /></div>
+				<div><img src="../assets/img/garden/foto1.jpg" alt="" /></div>
+				<div><img src="../assets/img/garden/foto2.jpg" alt="" /></div>
+				<div><img src="../assets/img/garden/foto3.jpg" alt="" /></div>
 			</div>
-			<section class="info">
-				<h2 class="titulo">Casa Luz do Caminho</h2>
-        <span class="tag rating"><ion-icon name="star"></ion-icon> 5</span>
+			<div class="info">
+				<h2 class="titulo">Gardenville</h2>
 				<p class="descricao">
-					A casa luz do caminho tem por objetivo fornecer a esses irmãozinhos tudo que eles podem esperar de um verdadeiro lar: alimentação adequada, recreação, assistência médica e odontológica
-					(utilizamos o SUS ou atendimento voluntário) e, acima de tudo, muito amor, carinho e respeito.
+					Um residencial para idosos em todos os níveis de necessidades. Tudo aqui foi pensado e desenvolvido para que os moradores se sintam em casa. Por isso, nossas instalações e serviços foram
+					desenhados para valorizar a privacidade e seu bem-estar individual. Nosso atendimento é personalizado de acordo com as necessidades e preferências pessoais de cada morador.
 				</p>
-				<section class="contato">
-					<p class="localizacao"><strong> Localização: </strong> Rua Domingos José Ferreira, 80 – Mandaqui, São Paulo - Zona Norte</p>
+				<div class="contato">
+					<p class="localizacao"><strong> Localização: </strong> Rua Itá, 381 – Horto Florestal, São Paulo - Zona Norte</p>
 					<ul>
-						<li><ion-icon name="call-outline"></ion-icon> (11) 2232-3264</li>
-						<li><ion-icon name="mail-outline"></ion-icon> contato@casaluzdocaminho.org.br</li>
+						<li><ion-icon name="logo-whatsapp"></ion-icon> (11) 93463-5474</li>
 					</ul>
-				</section>
-			</section>
-			
-			<section class="com">
+				</div>
+			</div>
+		</div>
 
-				<h1>Comentarios e avaliacoes</h1>
-
-
-
-
-
-			</section>
-
-		</main>
 		<!-- começo do rodapé -->
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
-					<li><a href="../pages/index.html">Início</a></li>
-					<li><a href="../pages/asilos.html">Asilos</a></li>
-					<li><a href="../pages/sobre.html"> Sobre </a></li>
-					<li><a href="../pages/contato.html"> Contato </a></li>
-					<li><a href="../pages/cadastro.html"> Cadastro </a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php"> Sobre </a></li>
+					<li><a href="../pages/contato.php"> Contato </a></li>
+					<li><a href="../pages/login/register.php"> Cadastro </a></li>
 				</ul>
 			</nav>
 			<div>

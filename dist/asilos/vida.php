@@ -10,15 +10,15 @@
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-		<title>Vivace Perdizes</title>
+		<title>Residencial Mais Vida</title>
 	</head>
 
 	<body>
 		<header id="header">
 			<!-- prettier-ignore -->
 			<div id="teste">
-			<a href="../pages/index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-			<a href="../pages/index.html"><pre id="safeRest">Safe
+			<a href="../pages/index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+			<a href="../pages/index.php"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 		</div>
 
@@ -27,31 +27,34 @@
 					<span id="hamburguer"></span>
 				</button>
 				<ul class="menu" role="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php">Sobre</a></li>
+					<li><a href="../pages/contato.php">Contato</a></li>
+					<li><a href="../pages/login/register.php">Cadastro</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- fim nav -->
+
 		<div class="asilos">
 			<div class="carousel">
-				<div><img src="../assets/img/vivace/foto1.png" alt="" /></div>
-				<div><img src="../assets/img/vivace/foto2.png" alt="" /></div>
-				<div><img src="../assets/img/vivace/foto3.png" alt="" /></div>
+				<div><img src="../assets/img/vida/foto1.jpg" alt="" /></div>
+				<div><img src="../assets/img/vida/foto2.jpeg" alt="" /></div>
+				<div><img src="../assets/img/vida/foto3.jpeg" alt="" /></div>
+				<div><img src="../assets/img/vida/foto4.jpeg" alt="" /></div>
 			</div>
 			<div class="info">
-				<h2 class="titulo">Vivace Perdizes - Residencial para Idosos</h2>
+				<h2 class="titulo">Residencial Mais Vida</h2>
 				<p class="descricao">
-					A Casa de Repouso Vivace foi especialmente idealizada e projetada para oferecer aos hóspedes um ambiente familiar, de paz, sossego e tranquilidade. Unindo o conforto necessário para o
-					bem-estar do idoso e um tratamento médico de excelência para garantir sua saúde e integração social.
+					A Casa de Repouso Mais Vida funciona em regime residencial e acolhe idosos de ambos os sexos, faixa etária acima de 60 anos, se dedica a acolher idosos para fins de possibilitar que o
+					acolhido seja fortalecido e estimulado a exercer seu papel no mundo. Acolher idosos garantindo proteção, integridade, felicidade e principalmente assegurar seus direitos fundamentais, nos
+					termos de Lei nº 10.741/94
 				</p>
 				<div class="contato">
-					<p class="localizacao"><strong> Localização: </strong>Rua Ministro Ferreira Alves, 90 – Perdizes - São Paulo</p>
+					<p class="localizacao"><strong> Localização: </strong> R. Afonso Celso, 338 – Vila Mariana, São Paulo – Zona norte</p>
 					<ul>
-						<li><ion-icon name="call-outline"></ion-icon> (11) 5642-4040</li>
+						<li><ion-icon name="call-outline"></ion-icon> (11) 5081-4059</li>
 					</ul>
 				</div>
 			</div>
@@ -61,11 +64,11 @@
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
-					<li><a href="../pages/index.html">Início</a></li>
-					<li><a href="../pages/asilos.html">Asilos</a></li>
-					<li><a href="../pages/sobre.html"> Sobre </a></li>
-					<li><a href="../pages/contato.html"> Contato </a></li>
-					<li><a href="../pages/cadastro.html"> Cadastro </a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php"> Sobre </a></li>
+					<li><a href="../pages/contato.php"> Contato </a></li>
+					<li><a href="../pages/login/register.php"> Cadastro </a></li>
 				</ul>
 			</nav>
 			<div>

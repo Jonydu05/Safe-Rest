@@ -10,15 +10,15 @@
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-		<title>Casa de Repouso Vovó Teca</title>
+		<title>Esplendor Residencial Sênior</title>
 	</head>
 
 	<body>
 		<header id="header">
 			<!-- prettier-ignore -->
 			<div id="teste">
-			<a href="../pages/index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-			<a href="../pages/index.html"><pre id="safeRest">Safe
+			<a href="../pages/index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+			<a href="../pages/index.php"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 		</div>
 
@@ -27,28 +27,34 @@
 					<span id="hamburguer"></span>
 				</button>
 				<ul class="menu" role="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php">Sobre</a></li>
+					<li><a href="../pages/contato.php">Contato</a></li>
+					<li><a href="../pages/cadastro.php">Cadastro</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- fim nav -->
+
 		<div class="asilos">
 			<div class="carousel">
-				<div><img src="../assets/img/vovoteca/foto1.png" alt="" /></div>
-				<div><img src="../assets/img/vovoteca/foto2.png" alt="" /></div>
-				<div><img src="../assets/img/vovoteca/foto3.png" alt="" /></div>
+				<div><img src="../assets/img/esplendor/foto1.png" alt="" /></div>
+				<div><img src="../assets/img/esplendor/foto2.png" alt="" /></div>
+				<div><img src="../assets/img/esplendor/foto3.png" alt="" /></div>
 			</div>
 			<div class="info">
-				<h2 class="titulo">Casa de Repouso Vovó Teca</h2>
-				<p class="descricao">A Casa de Repouso Vovó Teca é um lugar acolhedor e com profissionais dedicados e bem qualificados.</p>
+				<h2 class="titulo">Esplendor Residencial Sênior</h2>
+				<p class="descricao">
+					Próximo a um dos bairros com uma das mais elevadas expectativas de vida em São Paulo o Esplendor Residencial Sênior fica situado no bairro da Vila Carrão, Zona Leste de São Paulo. Seu
+					posicionamento estratégico permite fácil localização e acesso a habitação e cuidado a cidadãos de idade avançada. Sendo assim, o Esplendor Residencial Sênior é a habitação ideal para o idoso
+					que precisa de cuidados especiais, desde alimentação, entretenimento ou atendimento médico ou acompanhamento constante, garantindo a segurança para a família inteira.
+				</p>
 				<div class="contato">
-					<p class="localizacao"><strong> Localização: </strong>Rua Bela Vista do Paraíso, 38 - Freguesia do Ó São Paulo - SP - Zona Norte</p>
+					<p class="localizacao"><strong> Localização: </strong> Rua Nunes Balboa, 622 V. Carrão, S. Paulo</p>
 					<ul>
-						<li><ion-icon name="call-outline"></ion-icon> (11) 3476-8603</li>
+						<li><ion-icon name="call-outline"></ion-icon> (11) 2097-0440</li>
+						<li><ion-icon name="logo-whatsapp"></ion-icon> (11) 98693-6991</li>
 					</ul>
 				</div>
 			</div>
@@ -58,11 +64,11 @@
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
-					<li><a href="../pages/index.html">Início</a></li>
-					<li><a href="../pages/asilos.html">Asilos</a></li>
-					<li><a href="../pages/sobre.html"> Sobre </a></li>
-					<li><a href="../pages/contato.html"> Contato </a></li>
-					<li><a href="../pages/cadastro.html"> Cadastro </a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php"> Sobre </a></li>
+					<li><a href="../pages/contato.php"> Contato </a></li>
+					<li><a href="../pages/login/register.php"> Cadastro </a></li>
 				</ul>
 			</nav>
 			<div>
@@ -70,6 +76,7 @@
 				<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
 			</div>
 		</footer>
+
 		<!-- fim do rodapé -->
 		<script src="../../src/menu.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

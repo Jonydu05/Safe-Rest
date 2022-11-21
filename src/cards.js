@@ -5,7 +5,7 @@ const cards = [
 		img: "../assets/img/caminho/foto1.jpg",
 		star: 5,
 		descricao: "A casa luz do caminho tem por objetivo fornecer a esses irmãozinhos tudo que eles podem esperar de um verdadeiro lar...",
-		btnSite: "../asilos/caminho.html",
+		btnSite: "../asilos/caminho.php",
 		btnMaps: "https://g.page/casaluzdocaminho_asilo?share",
 	},
 	{
@@ -14,7 +14,7 @@ const cards = [
 		img: "../assets/img/ciai/foto1.jpg",
 		star: 4.5,
 		descricao: "Criado há mais de 30 anos, o Centro Integrado de Atendimento ao Idoso se tornou uma referência em residência permanente...",
-		btnSite: "../asilos/ciai.html",
+		btnSite: "../asilos/ciai.php",
 		btnMaps: "https://goo.gl/maps/K5PNdWzcnX4vQqPE8",
 	},
 	{
@@ -23,7 +23,7 @@ const cards = [
 		img: "../assets/img/esplendor/foto1.png",
 		star: 5,
 		descricao: "Próximo a um dos bairros com uma das mais elevadas expectativas de vida em São Paulo o Esplendor Residencial Sênior...",
-		btnSite: "../asilos/esplendor.html",
+		btnSite: "../asilos/esplendor.php",
 		btnMaps: "https://goo.gl/maps/PW4xmMtdXEEtkfEj8",
 	},
 	{
@@ -32,7 +32,7 @@ const cards = [
 		img: "../assets/img/garden/foto1.jpg",
 		star: 4.5,
 		descricao: "Um residencial para idosos em todos os níveis de necessidades. Tudo aqui foi pensado e desenvolvido para que os moradores...",
-		btnSite: "../asilos/garden.html",
+		btnSite: "../asilos/garden.php",
 		btnMaps: "https://goo.gl/maps/aNohMvsPwVKfVYoE6",
 	},
 	{
@@ -41,7 +41,7 @@ const cards = [
 		img: "../assets/img/horto/foto1.jpeg",
 		star: 4.7,
 		descricao: "A Clínica de Repouso Horto Florestal, fundada em 1972 pelo médico Dr. Chafik Curi, cuida de pessoas em diferentes condições de saúde...",
-		btnSite: "../asilos/horto.html",
+		btnSite: "../asilos/horto.php",
 		btnMaps: "https://goo.gl/maps/xvk3wpV5krTLse788",
 	},
 	{
@@ -50,7 +50,7 @@ const cards = [
 		img: "../assets/img/serenidade/foto1.jpeg",
 		star: 5,
 		descricao: "Estamos localizados em área nobre e privilegiada, ao lado do Parque Celso Daniel, em Santo André/SP...",
-		btnSite: "../asilos/serenidade.html",
+		btnSite: "../asilos/serenidade.php",
 		btnMaps: "https://goo.gl/maps/nKC4z7yBMfrrRRgi9",
 	},
 	{
@@ -59,7 +59,7 @@ const cards = [
 		img: "../assets/img/saoJudas/foto1.png",
 		star: 4.8,
 		descricao: " A São Judas Residence é um espaço totalmente dedicado para idosos e oferece um conceito diferenciado...",
-		btnSite: "../asilos/saoJudas.html",
+		btnSite: "../asilos/saoJudas.php",
 		btnMaps: "https://goo.gl/maps/zThfYVB58r9BRwnb7",
 	},
 	{
@@ -68,7 +68,7 @@ const cards = [
 		img: "../assets/img/palmeiras/foto3.png",
 		star: 5,
 		descricao: "O Residencial Jardim das Palmeiras, um lar para idosos, com mais de 22 anos de experiência no ramo... ",
-		btnSite: "../asilos/palmeiras.html",
+		btnSite: "../asilos/palmeiras.php",
 		btnMaps: "https://goo.gl/maps/KPS7SyqDGkFdg6sz8",
 	},
 	{
@@ -77,7 +77,7 @@ const cards = [
 		img: "../assets/img/vida/foto1.jpg",
 		star: 4.7,
 		descricao: "A Mais Vida Casa de Repouso funciona em regime residencial e acolhe idosos de ambos os sexos, faixa etária acima de 60 anos...",
-		btnSite: "../asilos/vida.html",
+		btnSite: "../asilos/vida.php",
 		btnMaps: "https://goo.gl/maps/Vz8zKk4QBcHqLexp9",
 	},
 	{
@@ -86,7 +86,7 @@ const cards = [
 		img: "../assets/img/sonhos/foto1.png",
 		star: 5,
 		descricao: "Conheça a Casa de Repouso Residencial Vila dos Sonhos, nosso foco é atender você com serviços inovadores...",
-		btnSite: "../asilos/sonhos.html",
+		btnSite: "../asilos/sonhos.php",
 		btnMaps: "https://goo.gl/maps/AgGkoUQgcEssCS9Y9",
 	},
 	{
@@ -95,7 +95,7 @@ const cards = [
 		img: "../assets/img/vivace/foto1.png",
 		star: 4.2,
 		descricao: "A Casa de Repouso Vivace foi especialmente idealizada e projetada para oferecer aos hóspedes um ambiente familiar...",
-		btnSite: "../asilos/vivace.html",
+		btnSite: "../asilos/vivace.php",
 		btnMaps: "https://goo.gl/maps/kbiBrBGKSaAfhZNB8",
 	},
 	{
@@ -104,7 +104,7 @@ const cards = [
 		img: "../assets/img/vovoana/foto1.png",
 		star: "4.3",
 		descricao: "Nossa equipe multidisciplinar formada por profissionais com o melhor perfil para atender pessoas está pronta...",
-		btnSite: "../asilos/vovoAna.html",
+		btnSite: "../asilos/vovoAna.php",
 		btnMaps: "https://goo.gl/maps/QGANTpiyyywUQ1u46",
 	 },
 ];

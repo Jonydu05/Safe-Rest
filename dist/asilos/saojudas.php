@@ -10,15 +10,15 @@
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-		<title>Lar e Residencial Reluz</title>
+		<title>São Judas Residence</title>
 	</head>
 
 	<body>
 		<header id="header">
 			<!-- prettier-ignore -->
 			<div id="teste">
-			<a href="../pages/index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-			<a href="../pages/index.html"><pre id="safeRest">Safe
+			<a href="../pages/index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+			<a href="../pages/index.php"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 		</div>
 
@@ -27,32 +27,31 @@
 					<span id="hamburguer"></span>
 				</button>
 				<ul class="menu" role="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php">Sobre</a></li>
+					<li><a href="../pages/contato.php">Contato</a></li>
+					<li><a href="../pages/login/register.php">Cadastro</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- fim nav -->
 		<div class="asilos">
 			<div class="carousel">
-				<div><img src="../assets/img/reluz/foto1.jpg" alt="" /></div>
-				<div><img src="../assets/img/reluz/foto2.jpg" alt="" /></div>
-				<div><img src="../assets/img/reluz/foto3.jpg" alt="" /></div>
+				<div><img src="../assets/img/saoJudas/foto1.png" alt="" /></div>
+				<div><img src="../assets/img/saoJudas/foto2.png" alt="" /></div>
+				<div><img src="../assets/img/saoJudas/foto3.png" alt="" /></div>
 			</div>
 			<div class="info">
-				<h2 class="titulo">Lar e Residencial Reluz</h2>
+				<h2 class="titulo">São Judas Residence</h2>
 				<p class="descricao">
-					Somos profissionais da área de saúde. Somos pais, filhos, netos, sobrinhos, pessoas comuns, que vivem as angústias e os prazeres do convívio com seus familiares mais velhos. Desejamos
-					acolher aqueles que cuidaram de nós e abrir espaço para reflexões, informações e novas atitudes no que diz respeito à maturidade. Somos cuidadores do amor, sentimos na pele as imensas
-					dificuldades para encontrar soluções e oferecer aos nossos idosos espaços de cuidados especiais, profissionais adequados, a melhor forma de dar mais conforto, segurança, bem-estar.
+					A São Judas Residence é um espaço totalmente dedicado para idosos e oferece um conceito diferenciado, com ambiente acolhedor e equipe especializada. Localizado em Santo André, um município
+					brasileiro da Região do Grande ABC, localizado na Zona Sudeste da Grande São Paulo, parte da Região Metropolitana de São Paulo.
 				</p>
 				<div class="contato">
-					<p class="localizacao"><strong>Localização:</strong> Rua Franco Paulista, 181 - água Fria - São Paulo - Zona Norte</p>
+					<p class="localizacao"><strong> Localização: </strong>Rua Vitória Régia, 1204 - 09080-320 – Santo André – SP</p>
 					<ul>
-						<li><ion-icon name="call-outline"></ion-icon> (11) 2950-5497</li>
+						<li><ion-icon name="call-outline"></ion-icon> (11) 4421-4377 | (11) 4473-2630</li>
 					</ul>
 				</div>
 			</div>
@@ -62,11 +61,11 @@
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
-					<li><a href="../pages/index.html">Início</a></li>
-					<li><a href="../pages/asilos.html">Asilos</a></li>
-					<li><a href="../pages/sobre.html"> Sobre </a></li>
-					<li><a href="../pages/contato.html"> Contato </a></li>
-					<li><a href="../pages/cadastro.html"> Cadastro </a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php"> Sobre </a></li>
+					<li><a href="../pages/contato.php"> Contato </a></li>
+					<li><a href="../pages/login/register.php"> Cadastro </a></li>
 				</ul>
 			</nav>
 			<div>

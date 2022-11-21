@@ -10,15 +10,15 @@
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-		<title>Jardim das Palmeiras</title>
+		<title>Residencial Vovó Ana</title>
 	</head>
 
 	<body>
 		<header id="header">
 			<!-- prettier-ignore -->
 			<div id="teste">
-			<a href="../pages/index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-			<a href="../pages/index.html"><pre id="safeRest">Safe
+			<a href="../pages/index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+			<a href="../pages/index.php"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 		</div>
 
@@ -27,33 +27,32 @@
 					<span id="hamburguer"></span>
 				</button>
 				<ul class="menu" role="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php">Sobre</a></li>
+					<li><a href="../pages/contato.php">Contato</a></li>
+					<li><a href="../pages/login/register.php">Cadastro</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- fim nav -->
 		<div class="asilos">
 			<div class="carousel">
-				<div><img src="../assets/img/palmeiras/foto1.png" alt="" /></div>
-				<div><img src="../assets/img/palmeiras/foto2.png" alt="" /></div>
-				<div><img src="../assets/img/palmeiras/foto3.png" alt="" /></div>
+				<div><img src="../assets/img/vovoana/foto1.png" alt="" /></div>
+				<div><img src="../assets/img/vovoana/foto2.png" alt="" /></div>
+				<div><img src="../assets/img/vovoana/foto3.png" alt="" /></div>
 			</div>
 			<div class="info">
-				<h2 class="titulo">Jardim das Palmeiras</h2>
+				<h2 class="titulo">Residencial Vovó Ana</h2>
 				<p class="descricao">
-					O Residencial Jardim das Palmeiras, um lar para idosos, com mais de 22 anos de experiência no ramo. Tendo uma equipe formada por bons profissionais em diversas áreas. Atualmente agindo com
-					duas unidades, uma no Alto da Boa Vista que é um bairro nobre situado no distrito de Santo Amaro, na zona sul da capital paulista. E outra unidade posicionada no extremo leste do Estado de
-					São Paulo na Região Administrativa de São José dos Campos que fica entre São Paulo e Rio de Janeiro.
+					Nossa equipe multidisciplinar formada por profissionais com o melhor perfil para atender pessoas está pronta para cuidar do idoso de uma maneira única suprindo suas necessidades e anseios.
+					Em nosso residencial o carinho e o compromisso com a família do idoso faz o nosso jeito de cuidar ser especial.
 				</p>
 				<div class="contato">
-					<h3>Unidade 1</h3>
-					<p class="localizacao"><strong> Localização: </strong>Av. Ver. José Diniz, 1448 - Alto da Boa Vista - São Paulo – SP</p>
+					<p class="localizacao"><strong> Localização: </strong>Rua Leao XIII, 521 - Jardim São Bento - Zona Norte</p>
 					<ul>
-						<li><ion-icon name="logo-whatsapp"></ion-icon> (11) 5531-5447</li>
+						<li><ion-icon name="call-outline"></ion-icon> (11) 2239-1618</li>
+						<li><ion-icon name="logo-whatsapp"></ion-icon> (11) 93496-4661</li>
 					</ul>
 				</div>
 			</div>
@@ -63,11 +62,11 @@
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
-					<li><a href="../pages/index.html">Início</a></li>
-					<li><a href="../pages/asilos.html">Asilos</a></li>
-					<li><a href="../pages/sobre.html"> Sobre </a></li>
-					<li><a href="../pages/contato.html"> Contato </a></li>
-					<li><a href="../pages/cadastro.html"> Cadastro </a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php"> Sobre </a></li>
+					<li><a href="../pages/contato.php"> Contato </a></li>
+					<li><a href="../pages/login/register.php"> Cadastro </a></li>
 				</ul>
 			</nav>
 			<div>
@@ -75,7 +74,6 @@
 				<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
 			</div>
 		</footer>
-
 		<!-- fim do rodapé -->
 		<script src="../../src/menu.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

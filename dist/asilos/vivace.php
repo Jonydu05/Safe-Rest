@@ -10,15 +10,15 @@
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-		<title>Clínica de Repouso Horto Florestal</title>
+		<title>Vivace Perdizes</title>
 	</head>
 
 	<body>
 		<header id="header">
 			<!-- prettier-ignore -->
 			<div id="teste">
-			<a href="../pages/index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-			<a href="../pages/index.html"><pre id="safeRest">Safe
+			<a href="../pages/index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+			<a href="../pages/index.php"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 		</div>
 
@@ -27,34 +27,31 @@
 					<span id="hamburguer"></span>
 				</button>
 				<ul class="menu" role="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php">Sobre</a></li>
+					<li><a href="../pages/contato.php">Contato</a></li>
+					<li><a href="../pages/login/register.php">Cadastro</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- fim nav -->
-
 		<div class="asilos">
 			<div class="carousel">
-				<div><img src="../assets/img/horto/foto1.jpeg" alt="" /></div>
-				<div><img src="../assets/img/horto/foto2.png" alt="" /></div>
-				<div><img src="../assets/img/horto/foto3.png" alt="" /></div>
+				<div><img src="../assets/img/vivace/foto1.png" alt="" /></div>
+				<div><img src="../assets/img/vivace/foto2.png" alt="" /></div>
+				<div><img src="../assets/img/vivace/foto3.png" alt="" /></div>
 			</div>
 			<div class="info">
-				<h2 class="titulo">Clínica de Repouso Horto Florestal</h2>
+				<h2 class="titulo">Vivace Perdizes - Residencial para Idosos</h2>
 				<p class="descricao">
-					A Clínica de Repouso Horto Florestal, fundada em 1972 pelo médico Dr. Chafik Curi, cuida de pessoas em diferentes condições de saúde. Com amor, respeito e profissionalismo, oferece aos seus
-					residentes um verdadeiro lar. É provavelmente a região urbana com maior densidade de área verde no município. Junta-se à vegetação das ruas e terrenos as extensas matas do Horto Florestal e
-					do Parque Estadual da Cantareira, que ficam em volta - parte do parque pertence ao distrito vizinho Mandaqui.
+					A Casa de Repouso Vivace foi especialmente idealizada e projetada para oferecer aos hóspedes um ambiente familiar, de paz, sossego e tranquilidade. Unindo o conforto necessário para o
+					bem-estar do idoso e um tratamento médico de excelência para garantir sua saúde e integração social.
 				</p>
 				<div class="contato">
-					<p class="localizacao"><strong> Localização: </strong>Av. Luis Carlos Gentile de Laet, 452 - Horto Florestal – São Paulo</p>
+					<p class="localizacao"><strong> Localização: </strong>Rua Ministro Ferreira Alves, 90 – Perdizes - São Paulo</p>
 					<ul>
-						<li><ion-icon name="call-outline"></ion-icon> (11) 2203-0701 | (11) 2203-0801</li>
-						<li><ion-icon name="logo-whatsapp"></ion-icon> (11) 93463-3205</li>
+						<li><ion-icon name="call-outline"></ion-icon> (11) 5642-4040</li>
 					</ul>
 				</div>
 			</div>
@@ -64,11 +61,11 @@
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
-					<li><a href="../pages/index.html">Início</a></li>
-					<li><a href="../pages/asilos.html">Asilos</a></li>
-					<li><a href="../pages/sobre.html"> Sobre </a></li>
-					<li><a href="../pages/contato.html"> Contato </a></li>
-					<li><a href="../pages/cadastro.html"> Cadastro </a></li>
+					<li><a href="../pages/index.php">Início</a></li>
+					<li><a href="../pages/asilos.php">Asilos</a></li>
+					<li><a href="../pages/sobre.php"> Sobre </a></li>
+					<li><a href="../pages/contato.php"> Contato </a></li>
+					<li><a href="../pages/login/register.php"> Cadastro </a></li>
 				</ul>
 			</nav>
 			<div>
