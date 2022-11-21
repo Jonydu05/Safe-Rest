@@ -14,7 +14,8 @@ require_once "config.php";
 $username = $password = $confirm_password = $_SESSION["username"];;
 $username_err = $password_err = $confirm_password_err = "";
 $email = $_SESSION["email"];
-
+$email_err = "";
+ 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Validar nome de usuário
@@ -49,12 +50,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
         $_SESSION["username"] = $username;  
         $_SESSION["email"] = $email;
+
+
         
     }    
     // Fechar conexão
     unset($pdo);
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
