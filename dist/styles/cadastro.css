@@ -123,21 +123,21 @@ input {
 	border-radius: 6px;
 	color: #fff;
 	border: 0;
-	transition: .2s;
+	transition: 0.2s;
 	cursor: pointer;
 }
 
 .action-button:hover {
-	transition: .2s;
+	transition: 0.2s;
 	background-color: var(--azul-escuro);
 }
 
 .card-info {
 	padding: 1rem;
-	font-size: 0.875rem;
+	font-size: 1rem;
 	color: #8597a3;
 	word-wrap: break-word;
-	width: 70%;
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -147,8 +147,24 @@ input {
 	text-decoration: none;
 }
 
+.card-info ul {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-around;
+}
+
+.card-info ul li a:hover {
+	color: #9c6c27;
+	transition: 0.2s;
+}
+
 #card-login .card-title {
 	padding-bottom: 15%;
+}
+
+#btn-redefinir{
+	min-width: 70%;
 }
 
 @media (max-width: 800px) {
@@ -167,14 +183,14 @@ input {
 	}
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
 	.card-title {
 		padding-bottom: 60%;
 	}
-	.action{
+	.action {
 		flex-direction: column;
 	}
-	.action-button{
+	.action-button {
 		margin: 10px;
 		width: 100%;
 	}

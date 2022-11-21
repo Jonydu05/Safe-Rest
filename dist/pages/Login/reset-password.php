@@ -70,50 +70,106 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($pdo);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Redefinir senha</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-  body {
-    font: 14px sans-serif;
-  }
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  .wrapper {
-    width: 360px;
-    padding: 20px;
-  }
-  </style>
+  <link rel="stylesheet" href="../../styles/estilo.css" />
+  <link rel="stylesheet" href="../../styles/cadastro.css" />
+
+  <link rel="icon" href="../../assets/img/logo2.png" />
+
+  <title>Bem Vindo!</title>
 </head>
 
 <body>
-  <div class="wrapper">
-    <h2>Redefinir senha</h2>
-    <p>Por favor, preencha este formulário para redefinir sua senha.</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-      <div class="form-group">
-        <label>Nova senha</label>
-        <input type="password" name="new_password"
-          class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>"
-          value="<?php echo $new_password; ?>">
-        <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
-      </div>
-      <div class="form-group">
-        <label>Confirme a senha</label>
-        <input type="password" name="confirm_password"
-          class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
-        <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-      </div>
-      <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Redefinir">
-        <a class="btn btn-link ml-2" href="welcome.php">Cancelar</a>
-      </div>
-    </form>
-  </div>
+  <header id="header">
+    <!-- prettier-ignore -->
+    <div id="teste">
+      <a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
+      <a href="../index.php">
+        <pre id="safeRest">Safe
+&amp;Rest</pre>
+      </a>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+        <span id="hamburguer"></span>
+      </button>
+      <ul class="menu" role="menu">
+        <li><a href="../index.php">Início</a></li>
+        <li><a href="../asilos.php">Asilos</a></li>
+        <li><a href="../sobre.php">Sobre</a></li>
+        <li><a href="../contato.php">Contato</a></li>
+        <li><a href="./register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="div-cadastro">
+    <!-- Card cadastro -->
+    <div class="card">
+      <section class="card-title">
+        <h2 class="card-heading">
+          <span>Redefina sua senha aqui, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</span>
+        </h2>
+      </section>
+
+      <form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+
+        <section class="input">
+          <input type="password" name="new_password"
+            class="input-field<?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>"
+            value="<?php echo $new_password; ?>" id="new-password" required>
+          <label class="input-label" for="new-password">Nova Senha</label>
+          <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
+        </section>
+
+        <section class="input">
+          <input type="password" id="confirm-password" name="confirm_password" required
+            class="input-field <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"/>
+          <label class="input-label" for="confirm-password">Confirme a senha</label>
+          <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+        </section>
+
+        <section class="action">
+          <input type="submit" class="action-button" id="btn-redefinir" value="Redefinir Senha">
+        </section>
+
+      </form>
+      <section class="card-info">
+        <ul>
+          <li><a href="../index.php">Cancelar</a></li>
+        </ul>
+      </section>
+    </div>
+    <!-- fim card cadastro -->
+  </main>
+
+  <footer>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="../index.php">Início</a></li>
+        <li><a href="../asilos.php">Asilos</a></li>
+        <li><a href="../sobre.php">Sobre</a></li>
+        <li><a href="../contato.php">Contato</a></li>
+        <li><a href="./register.php">Entrar</a></li>
+      </ul>
+    </nav>
+    <div>
+      <img src="../../assets/img/logo3.png" alt="" />
+      <p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados </p>
+    </div>
+  </footer>
+  <!-- fim do rodapé -->
+  <script src="../../../src/menu.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

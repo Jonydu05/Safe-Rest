@@ -55,7 +55,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($pdo);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -96,15 +95,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </ul>
     </nav>
   </header>
-
-
   <main id="div-cadastro">
     <!-- Card cadastro -->
     <div class="card">
       <section class="card-title">
         <h2 class="card-heading">
           <span>Bem-vindo, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</span>
-					<small>Edite aqui suas informações de usuário</small>
+          <small>Edite aqui suas informações de usuário</small>
         </h2>
       </section>
 
@@ -132,14 +129,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </form>
       <section class="card-info">
         <ul>
-          <li><a href="./reset-password.php">Redefina sua senha</a></li>
+          <li><a href="./reset-password.php">Redefinir senha</a></li>
           <li><a href="./logout.php">Sair da conta</a></li>
         </ul>
       </section>
     </div>
     <!-- fim card cadastro -->
   </main>
-  </div>
   <footer>
     <nav class="nav">
       <ul class="menu">
