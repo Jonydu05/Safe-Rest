@@ -108,35 +108,41 @@ input {
 
 .action {
 	margin-top: 2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .action-button {
 	font: inherit;
 	font-size: 1.25rem;
 	padding: 1em;
-	width: 100%;
+	width: 45%;
 	font-weight: 500;
 	background-color: var(--azul-forte);
 	border-radius: 6px;
 	color: #fff;
 	border: 0;
 	transition: .2s;
+	cursor: pointer;
 }
 
 .action-button:hover {
 	transition: .2s;
-	cursor: pointer;
 	background-color: var(--azul-escuro);
 }
 
 .card-info {
-	padding: 1rem 1rem;
-	text-align: center;
+	padding: 1rem;
 	font-size: 0.875rem;
 	color: #8597a3;
+	word-wrap: break-word;
+	width: 70%;
+	justify-content: space-between;
+	align-items: center;
 }
+
 .card-info a {
-	display: block;
 	color: var(--azul-forte);
 	text-decoration: none;
 }
@@ -161,8 +167,15 @@ input {
 	}
 }
 
-@media (max-width: 350px){
+@media (max-width: 400px){
 	.card-title {
 		padding-bottom: 60%;
+	}
+	.action{
+		flex-direction: column;
+	}
+	.action-button{
+		margin: 10px;
+		width: 100%;
 	}
 }

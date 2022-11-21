@@ -1,3 +1,13 @@
+<?php
+// Inicialize a sessão
+session_start();
+ 
+// Verifique se o usuário está logado, se não, redirecione-o para uma página de login
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    $_SESSION["username"] = "Entrar";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -19,22 +29,22 @@
 		<header id="header">
 			<!-- prettier-ignore -->
 			<div id="teste">
-				<a href="../index.html"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-				<a href="../index.html"><pre id="safeRest">Safe
+				<a href="../index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+				<a href="../index.php"><pre id="safeRest">Safe
 &amp;Rest</pre> </a>
 			</div>
 
-			<nav class="nav">
+			<nav class="nav" id="nav">
 				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
 					<span id="hamburguer"></span>
 				</button>
 
 				<ul class="menu" role="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="index.php">Início</a></li>
+					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="sobre.php">Sobre</a></li>
+					<li><a href="contato.php">Contato</a></li>
+					<li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
 				</ul>
 			</nav>
 		</header>
@@ -100,11 +110,11 @@
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="asilos.html">Asilos</a></li>
-					<li><a href="sobre.html">Sobre</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="index.php">Início</a></li>
+					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="sobre.php">Sobre</a></li>
+					<li><a href="contato.php">Contato</a></li>
+					<li><a href="login/register.php">Entrar</a></li>
 				</ul>
 			</nav>
 			<div>

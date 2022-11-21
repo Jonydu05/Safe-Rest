@@ -1,56 +1,66 @@
-.carousel img{
+.carousel img {
 	display: flex;
 	margin: 0 auto;
 	max-width: 100%;
 	cursor: grab;
 }
 
-.carousel img:active{
+.carousel img:active {
 	cursor: grabbing;
 }
 
-.carousel{
+.carousel {
 	margin: 50px;
 	max-width: 50vw;
 }
 
-@media (max-width:800px) {
-	.carousel img{
+@media (max-width: 800px) {
+	.carousel img {
 		max-height: 30vh;
 		width: 100%;
 	}
-	.carousel{
+	.carousel {
 		max-width: 100%;
 	}
 }
 
-.asilos{
+.asilos {
 	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.info {
-	max-width: 60%;
-	padding: 15px;
-	margin: 30px;
-	flex-flow: column;
-	word-wrap: break-word;
-}
-
-.asilos ul{
+.asilos ul {
 	list-style: none;
 	margin: 20px;
 }
 
-.asilos li{
+.asilos li {
 	margin: 10px;
 }
 
-@media (max-width: 600px) {
-	.asilos{
+.info {
+	max-width: 35%;
+	padding: 15px;
+	margin: 30px auto;
+	flex-flow: column;
+	word-wrap: break-word;
+}
+
+.com{
+	margin: 30px;
+}
+
+@media (max-width: 800px) {
+	.asilos {
 		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	.info {
+		max-width: 60%;
 	}
 }
 
-footer{
+footer {
 	clear: both;
 }
