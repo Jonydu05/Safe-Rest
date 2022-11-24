@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 				<ul class="menu" role="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
@@ -76,7 +76,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			</div>
 			<div id="local-contato">
 				<h2>Estamos localizados em:</h2>
-				<span>*Essa é a nossa empresa, não é um asilo</span>
+				<span>*Essa é a nossa empresa, não é uma Residência para idosos</span>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14635.059267066472!2d-46.6599827!3d-23.5049791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1aeba7352c471254!2sEtec%20Albert%20Einstein!5e0!3m2!1spt-BR!2sbr!4v1666620443235!5m2!1spt-BR!2sbr" width="100%" height="300px" style="border: 0" allowfullscreen="" loading="lazyreferrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
@@ -86,7 +86,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<nav class="nav">
 				<ul class="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php">Entrar</a></li>

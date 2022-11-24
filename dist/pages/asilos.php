@@ -17,7 +17,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<link rel="stylesheet" href="../styles/estilo.css" />
 		<link rel="stylesheet" href="../styles/cards.css" />
 		<link rel="icon" href="../assets/img/logo2.png" />
-		<title>Início</title>
+		<title>Residências</title>
 	</head>
 	<body>
 		<header id="header">
@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				<ul class="menu" role="menu">
 					<input type="text" class="form-control search-mobile" placeholder="Buscar..." id="inputMobile" />
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
@@ -56,7 +56,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<nav class="nav">
 				<ul class="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php">Entrar</a></li>

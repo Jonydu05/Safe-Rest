@@ -41,7 +41,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 				<ul class="menu" role="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
@@ -55,7 +55,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				<img src="../assets/img/logo4.png" alt="" id="img-quem" />
 				<p id="txt-quem">
 					O Safe & Rest, é um projeto que teve o início de seu desenvolvimento em 2022, quando um grupo de começavam a fazer seu projeto de TCC. <br>
-					Hoje, propomos um espaço em que todos as pessoas possam ter um contato mais simplificado com asilos e casas de repouso da região, possibilitando uma conexão direta e uma hospedagem segura e
+					Hoje, propomos um espaço em que todos as pessoas possam ter um contato mais simplificado com Residências para terceira idade e casas de repouso da região, possibilitando uma conexão direta e uma hospedagem segura e
 					confiável com os parceiros disponíveis.
 				</p>
 			</div>
@@ -111,7 +111,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<nav class="nav">
 				<ul class="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="login/register.php">Entrar</a></li>

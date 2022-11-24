@@ -72,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <link rel="icon" href="../../assets/img/logo2.png" />
 
-  <title>Bem Vindo!</title>
+  <title>Editar informações</title>
 </head>
 
 <body>
@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </button>
       <ul class="menu" role="menu">
         <li><a href="../index.php">Início</a></li>
-        <li><a href="../asilos.php">Asilos</a></li>
+        <li><a href="../asilos.php">Residências</a></li>
         <li><a href="../sobre.php">Sobre</a></li>
         <li><a href="../contato.php">Contato</a></li>
         <li><a href="./register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
@@ -144,7 +144,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <nav class="nav">
       <ul class="menu">
         <li><a href="../index.php">Início</a></li>
-        <li><a href="../asilos.php">Asilos</a></li>
+        <li><a href="../asilos.php">Residências</a></li>
         <li><a href="../sobre.php">Sobre</a></li>
         <li><a href="../contato.php">Contato</a></li>
         <li><a href="./register.php">Entrar</a></li>
