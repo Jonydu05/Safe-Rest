@@ -42,7 +42,7 @@
 				</button>
 				<ul class="menu" role="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Residêncial</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
@@ -77,10 +77,10 @@
 			<nav class="nav">
 				<ul class="menu">
 					<li><a href="../pages/index.php">Início</a></li>
-					<li><a href="../pages/asilos.php">Residêncial</a></li>
+					<li><a href="../pages/asilos.php">Residências</a></li>
 					<li><a href="../pages/sobre.php"> Sobre </a></li>
 					<li><a href="../pages/contato.php"> Contato </a></li>
-					<li><a href="Login/register.php"> Cadastro </a></li>
+					<li><a href="Login/register.php"> Entrar </a></li>
 				</ul>
 			</nav>
 			<div>

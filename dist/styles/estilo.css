@@ -13,7 +13,6 @@
 
 /* Configuração Inicial */
 body {
-	min-height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: "Montserrat", Arial, sans-serif;
@@ -29,6 +28,10 @@ ul {
 
 p {
 	text-align: justify;
+}
+
+main {
+	min-height: 50vh;
 }
 
 /* Configuração Logo */
@@ -72,7 +75,7 @@ p {
 	font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
-#header a:hover{
+#header a:hover {
 	color: var(--complementar1);
 	transition: 200ms;
 }
@@ -94,8 +97,7 @@ p {
 }
 
 /* Configurações Botão burguer */
-#btn-mobile,
-.search-mobile {
+#btn-mobile {
 	display: none;
 }
 
@@ -166,57 +168,26 @@ p {
 		transform: rotate(-135deg);
 		top: -7px;
 	}
-	header #search {
-		display: none;
-	}
-	.search-mobile {
-		display: block;
-	}
 }
 
 /* barra de pesquisa */
-
 #no-product {
-	min-height: 100px;
+	/* min-height: 50vh; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--complementar1);
-	font-size: 30px;
+	color: #2f5169;
+	font-size: 28px;
 }
 
-#search {
-	margin: 10px;
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.form-control {
-	border: none;
-	border-radius: 10px;
-	width: 50%;
-	height: 40px;
-	font-size: 18px;
-	transition: 1s;
-	padding: 10px;
+#no-product p {
+	text-align: center;
 }
 
 .form-control:focus {
 	transition: 1s;
 	width: 70%;
 	height: 50px;
-}
-
-.search-mobile {
-	margin: 0 1rem;
-	width: 30%;
-}
-
-.search-mobile:focus {
-	width: 50%;
 }
 
 /* configurações link */

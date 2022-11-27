@@ -159,6 +159,11 @@ input {
 	transition: 0.2s;
 }
 
+.invalid-feedback{
+	color: rgb(240, 0, 0);
+	font-size: 12px;
+}
+
 #card-login .card-title {
 	padding-bottom: 15%;
 }

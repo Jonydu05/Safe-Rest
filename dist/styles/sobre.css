@@ -1,123 +1,164 @@
-#info-sobre {
-	margin: 50px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-#div-quem{
-	margin: 0 auto;
-	max-width: 100%;
+.quem-somos ul {
+	list-style: inside "\2574";
+}
+
+h1{
+  font-family: 'montserrat', sans-serif;
+  color: #f6f2fd;
+  font-weight: bold;
+}
+
+h2{
+  font-family: 'montserrat', sans-serif;
+  color: #000;
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  background: #fff;
+}
+
+.container {
+  font-family: 'dm sans', sans-serif;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container *{
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+section.module p {
+  margin-bottom: 40px;
+}
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+section.module.content {
+  padding: 40px 0;
+  background-color: #bfe4fc;
+}
+
+section.module.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 250%);
+}
+
+section.module.parallax-1 {
+  background-image: url(../assets/img/equipe.jpg);
+}
+
+section.module.parallax-2 {
+  background-image: url(../assets/img/logo4.png);
+}
+
+section.module.parallax h1 {
+  text-align: center;
+  font-size: 70px;
+  z-index: 50;
+  text-transform: uppercase;
+}
+
+.area-1, .area-2, .area-3, .area-4{
+  visibility: hidden;
+}
+
+.container-btn{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.btn-asilo{
+  font-size: 1rem;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #000;
+  width: 400px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #014792;
+}
+
+.btn-asilo:hover{
+  background-color: #19537c;
+  cursor: pointer;
+}
+
+.btn-asilo:active{
+  background-color: #0e6fb4;
+}
+
+.btn-asilo a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.btn-asilo a:hover{
+  color: #bfe4fc;
+}
+
+.fotos{
+	border: 1px solid #000;
 	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
+	flex-direction: row;
 	justify-content: space-between;
 }
 
-#txt-quem{
-	font-size: 150%;
-	margin: 50px auto;
-	max-width: 50%;
-}
-
-#img-quem{
-	margin: 0 auto;
-	max-width: 40vw;
-}
-
-.pessoas{
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-}
-
-.card{
-	margin: 30px auto;
-  background-color: #d2e8f8;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 24px;
-	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-	transition: 1s;
-}
-
-.card:hover{
-	transition: 1s;
-	transform: scale(1.1, 1.1);
-	background-size: 310px;
-}
-
-.banner{
-	height: 350px;
-	display: flex;
-	justify-content: center;
-	box-sizing: border-box;
-}
-
-.name{
-    text-align: center;
-    padding: 15px;
-    margin: 0;
-}
-
-@media (min-width: 1510px){
-	.card{
-		margin: 30px;
-	}
-}
-
-@media (max-width: 600px) {
-	#div-quem{
-		flex-flow: column wrap;
-	}
-	#img-quem{
-		max-width: 60vw;
-	}
-	#txt-quem{
-		max-width: 100%;
-	}
-	.banner{
-		height: 200px;
-	}
-}
-
-#guilherme{
-	background: url(../assets/img/pessoas/guilherme.jpg) center/cover no-repeat;
-}
-
-#diego{
-	background: url(../assets/img/pessoas/diego.jpg) center/cover no-repeat;
-}
-
-#henrique{
-	background: url(../assets/img/pessoas/henrique.jpg) center/cover no-repeat;
-}
-
-#joao{
-	background: url(../assets/img/pessoas/joao.jpg) center/cover no-repeat;
-}
-
-#kaique{
-	background: url(../assets/img/pessoas/kaique.jpg) center/cover no-repeat;
-}
-
-#kauan{
-	background: url(../assets/img/pessoas/kauan.jpg) center/cover no-repeat;
-}
-
-#luiz{
-	background: url(../assets/img/pessoas/luiz.jpg) center/cover no-repeat;
-}
-
-#rafael{
-	background: url(../assets/img/pessoas/rafael.jpg) center/cover no-repeat;
-}
-
-#rafaela{
-	background: url(../assets/img/pessoas/rafaela.jpg) center/cover no-repeat;
-}
-
-#vinicius{
-	background: url(../assets/img/pessoas/vinicius.jpg) center/cover no-repeat;
+.img-pessoas{
+	width: 100px;
+	height: 100px;
+	border-radius: 70%;
+	border: 1px solid #000;
 }

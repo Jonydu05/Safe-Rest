@@ -41,7 +41,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 				<ul class="menu" role="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
@@ -49,49 +49,53 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			</nav>
 		</header>
 
-    <div class="wrapper">
-      <main>
-        <section class="module parallax parallax-1">
-          <h1 class="area-1">Safe & Rest</h1>
-        </section>
+    <main>
+      <section class="module parallax parallax-1">
+        <h1 class="area-1">Safe & Rest</h1>
+      </section>
 
-        <section class="module content">
-          <div class="container area-2">
-            <h2>Qual nosso objetivo?</h2>
-            <p>
-							Nosso objetivo é ajudar as pessoas que estão em dúvida, em qual casa de repouso escolher, disponibilizando algumas ferramentas que criamos, para auxiliá-las nesse processo - que acreditamos ser extramamente importante na vida dos idosos - para ter um grande leque de opções e não se arrepender e ter que trocar depois de ter contactado o asilo.
-            </p>
-            <p>
-							Para isso criamos algumas ferramentas, que são, a pesquisa por casas de repouso, avaliações de clientes, entre outros.
-            </p>
+      <section class="module content">
+        <div class="container area-2">
+          <h2>Qual nosso objetivo?</h2>
+          <p>
+            Nosso objetivo é ajudar as pessoas que estão em dúvida, em qual casa de repouso escolher, disponibilizando
+            algumas ferramentas que criamos, para auxiliá-las nesse processo - que acreditamos ser extramamente
+            importante na vida dos idosos - para ter um grande leque de opções e não se arrepender e ter que trocar
+            depois de ter contactado a residência desejada.
+          </p>
+          <p>
+            Para isso criamos algumas ferramentas, que são, a pesquisa por residências, avaliações de clientes, entre
+            outros.
+          </p>
+        </div>
+      </section>
+
+      <section class="module parallax parallax-2">
+        <h1 class="area-3">É gratuito?</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container area-4">
+          <h2>Como acessar?</h2>
+          <p>
+            Sim! É completamente gratuito! Tudo que você tem que fazer é clicar no botão abaixo e já vai poder ver as
+            residências para terceira idade! <br>
+            <span class="texto">PS: lá em cima, na barra de navegação também tem um botão para ver as residências para
+              terceira idade :)</span>
+          </p>
+          <div class="container-btn">
+            <button class="btn-asilo"><a href="asilos.php" class="link-asilos">Acessar</a></button>
           </div>
-        </section>
-
-        <section class="module parallax parallax-2">
-          <h1 class="area-3">É gratuito?</h1>
-        </section>
-
-        <section class="module content">
-          <div class="container area-4">
-            <h2>Como acessar?</h2>
-            <p>
-              Sim! É completamente gratuito! Tudo que você tem que fazer é clicar no botão abaixo e já vai poder ver os asilos! <br>
-							<span class="texto">PS: lá em cima, na barra de navegação também tem um botão para ver os asilos :)</span>
-            </p>
-						<div class="container-btn">
-							<button class="btn-asilo"><a href="asilos.php" class="link-asilos">Ver Asilos!</a></button>
-						</div>
-          </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+    </main>
 
 		<!-- começo do rodapé -->
 		<footer>
 			<nav class="nav">
 				<ul class="menu">
 					<li><a href="index.php">Início</a></li>
-					<li><a href="asilos.php">Asilos</a></li>
+					<li><a href="asilos.php">Residências</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
 					<li><a href="Login/register.php">Entrar</a></li>

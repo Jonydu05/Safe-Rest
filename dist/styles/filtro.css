@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Vollkorn&display=swap");
+
+:root {
+	--fundo: #f6f2fd;
+	--azul-escuro: #2f5169;
+	--azul-bebe: #69b3e7;
+	--azul-claro: #a5d1f1;
+	--branco-gelo: #d2e8f8;
+	--azul-forte: #004998;
+	--complementar1: #9c6c27;
+	--complementar2: #e8b468;
+}
+
+.filtro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	background: #a5d1f1;
+	padding: 10px;
+	border-bottom: 1px solid #2f5169;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-filtro * {
+	margin: 5px;
+	font-family: "dm sans", sans-serif;
+}
+
+.form-filtro select {
+	background: #f6f2fd;
+	outline: none;
+	border: 1px solid #2f5169;
+	border-radius: 3px;
+	height: 30px;
+	width: 170px;
+	transition: all 0.2s ease-in-out;
+}
+
+.form-filtro select:focus {
+	box-shadow: 1px 1px #2f5169, 2px 2px #2f5169, 3px 3px #2f5169;
+	transform: translateX(-3px);
+}
+
+.form-filtro option {
+	background-color: #d2e8f8;
+}
+
+.form-filtro .btn-filtro {
+	background: #f6f2fd;
+	border: 1px solid #2f5169;
+	height: 30px;
+	width: 100px;
+	border-radius: 3px;
+	padding: 0 15px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.form-filtro .btn-filtro:hover {
+	box-shadow: 1px 1px #2f5169, 2px 2px #2f5169, 3px 3px #2f5169;
+	transform: translateX(-3px);
+	background-color: #67b1e6;
+	color: white;
+}
+
+#header {
+	border-bottom: 1px solid #000;
+}
