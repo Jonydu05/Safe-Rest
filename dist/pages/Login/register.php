@@ -163,13 +163,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				<form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 				
 					<div class="input">
-						<input type="text" id="name" name="username" placeholder="José Euclides" required class="input-field <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>"/>
+						<input type="text" id="name" name="username" placeholder="Nome" required class="input-field <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>"/>
 						<label class="input-label" for="name">Nome</label>
 						<span class="invalid-feedback"><?php echo $username_err; ?></span>
 					</div>
 
 					<div class="input">
-						<input type="email" id="email" name="email" placeholder="jose.euclides@email.com" required class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"/>
+						<input type="email" id="email" name="email" placeholder="nome@exemplo.com" required class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"/>
 						<label class="input-label" for="email">Email</label>
 						<span class="invalid-feedback"><?php echo $email_err; ?></span>
 					</div>

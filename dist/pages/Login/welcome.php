@@ -116,8 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </section>
 
         <section class="input">
-          <input type="email" id="email" name="email" placeholder="jose.euclides@email.com" required
-            class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" />
+          <input type="email" id="email" name="email" class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" />
           <label class="input-label" for="email">Email</label>
           <span class="invalid-feedback"><?php echo $email_err; ?></span>
         </section>

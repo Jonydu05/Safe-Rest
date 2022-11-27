@@ -143,7 +143,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 				<form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 					<div class="input">
-						<input type="email" name="email" placeholder="jose.euclides@email.com" required  class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"/>
+						<input type="email" name="email" placeholder="nome@exemplo.com" required  class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"/>
 						<label class="input-label">Email</label>
 						<span class="invalid-feedback"><?php echo $email_err; ?></span>
 					</div>
