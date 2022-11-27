@@ -1,15 +1,16 @@
 <?php
 // Inicialize a sessão
 session_start();
- 
+
 // Verifique se o usuário está logado, se não, redirecione-o para uma página de login
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    $_SESSION["username"] = "Entrar";
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+	$_SESSION["username"] = "Entrar";
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+<<<<<<< Updated upstream
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -63,14 +64,134 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				</ul>
 			</nav>
 			<div>
+=======
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../styles/estilo.css" />
+	<link rel="stylesheet" href="../styles/cards.css" />
+	<link rel="icon" href="../assets/img/logo2.png" />
+	<title>Início</title>
+</head>
+
+<body>
+	<header id="header">
+		<!-- prettier-ignore -->
+		<div id="teste">
+			<a href="index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
+			<a href="index.php">
+				<pre id="safeRest">Safe
+&amp;Rest</pre>
+			</a>
+		</div>
+		<!-- barra de pesquisa -->
+		<div id="search">
+			<input type="text" class="form-control" placeholder="Buscar..." id="searchInput" />
+		</div>
+		<!-- Começo nav -->
+		<nav class="nav">
+			<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+				<span id="hamburguer"></span>
+			</button>
+			<ul class="menu" role="menu">
+				<input type="text" class="form-control search-mobile" placeholder="Buscar..." id="inputMobile" />
+				<li><a href="index.php">Início</a></li>
+				<li><a href="asilos.php">Residências</a></li>
+				<li><a href="sobre.php">Sobre</a></li>
+				<li><a href="contato.php">Contato</a></li>
+				<li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- Começo conteúdo -->
+	<main class="container">
+		<h2>Utilize os filtros abaixo para auxiliar na sua busca por uma residência</h2><br><br>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+			<select name="avaliacao" id="avaliacao">
+				<option value="" selected hidden>Selecione a avaliação</option>
+				<option value="30">Mais de 3 estrela</option>
+				<option value="40">Mais de 4 estrela</option>
+				<option value="50">5 estrelas</option>
+			</select>
+			<select name="regiao" id="regiao">
+				<option value="" selected hidden>Selecione a região</option>
+				<option value="0">Fora de SP</option>
+				<option value="1">Zona Leste</option>
+				<option value="2">Zona Norte</option>
+				<option value="3">Zona Oeste</option>
+				<option value="4">Zona Sul</option>
+			</select>
+			<input type="submit" name="buscardados" value="pesquisar">
+		</form>
+		<?php
+		include_once('Login/config.php');
+		include_once('Login/config.php');
+		$local = ["Fora de SP", "Zona Leste", "Zona Norte", "Zona Oeste", "Zona Sul"];
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			if($_SESSION["username"] != "Entrar"){
+				$aval = $_POST['avaliacao'];
+				$regi = $_POST['regiao'];
+				$erro;
+				if ($aval != "" && $regi != "") {
+					for ($rcont = 0; $rcont < 5; $rcont++) {
+						for ($pcont = 30; $pcont < 60; $pcont++) {
+							if ($aval == $pcont && $regi == $rcont) {
+								$query = "SELECT * FROM `residenciais` WHERE regiao = '$local[$regi]'  AND avaliacao >= '$pcont' ORDER BY `residenciais`.`avaliacao` ASC";
+								include_once('cards.php');
+							}
+						}
+					}
+				} elseif ($aval != "" && $regi == "") {
+					for ($pcont = 30; $pcont < 60; $pcont++) {
+						if ($aval == $pcont) {
+							$query = "SELECT * FROM `residenciais` WHERE avaliacao >= '$pcont' ORDER BY `residenciais`.`avaliacao` ASC";
+							include_once('cards.php');
+						}
+					} 
+				} elseif ($aval == "" && $regi != "") {
+					for ($rcont = 0; $rcont < 5; $rcont++) {
+						if ($regi == $rcont) {
+							$query = "SELECT * FROM `residenciais` WHERE regiao = '$local[$regi]'";
+							include_once('cards.php');
+						}
+					} 
+				} else{
+					echo ('Residência não encontrado');
+				}
+			}else{
+				echo ('Para utilizar os filtros você deve-se cadastrar primeiro');
+			}
+		} else {
+			$query = 'select * from residenciais';
+			include_once('cards.php');
+		}
+		?>
+	</main>
+
+	<!-- começo do rodapé -->
+	<footer>
+		<nav class="nav">
+			<ul class="menu">
+				<li><a href="index.php">Início</a></li>
+				<li><a href="asilos.php">Residências</a></li>
+				<li><a href="sobre.php">Sobre</a></li>
+				<li><a href="contato.php">Contato</a></li>
+				<li><a href="Login/register.php">Cadastro</a></li>
+			</ul>
+		</nav>
+		<div>
+>>>>>>> Stashed changes
 			<img src="../assets/img/logo3.png" alt="" />
 			<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
-			</div>
-		</footer>
-		<!-- fim do rodapé -->
-		<script src="../../src/menu.js"></script>
-		<script src="../app.js"></script>
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-	</body>
+		</div>
+	</footer>
+	<!-- fim do rodapé -->
+	<script src="../../src/menu.js"></script>
+	<script src="../app.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

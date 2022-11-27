@@ -28,6 +28,30 @@ try{
         ";
         $pdo->exec($query);
     }
+    $table2 = 'residenciais';
+    $tableExists = $pdo->query("SHOW TABLES LIKE '$table2'")->rowCount() > 0;
+    if($tableExists != 1){
+        $query="
+        CREATE TABLE `test`.`residenciais` (
+            `id` INT NOT NULL AUTO_INCREMENT , 
+            `nome` VARCHAR(70) NOT NULL , 
+            `descricao` VARCHAR(700) NOT NULL , 
+            `local` VARCHAR(200) NOT NULL , 
+            `regiao` VARCHAR(10) NOT NULL , 
+            `maps` VARCHAR(60) NOT NULL , 
+            `telefone` VARCHAR(16) NOT NULL , 
+            `whatsapp` VARCHAR(16) NOT NULL , 
+            `email` VARCHAR(100) NOT NULL , 
+            `desconto` VARCHAR(2) NOT NULL , 
+            `num_vagas` VARCHAR(3) NOT NULL , 
+            `avaliacao` INT(2) NOT NULL , 
+            `quant_avaliacao` INT(10) NOT NULL , 
+            PRIMARY KEY (`id`)
+            ) 
+            ENGINE = InnoDB;
+        ";
+        $pdo->exec($query);
+    }
 
 } catch(PDOException $e){
     die("ERROR: Não foi possível conectar." . $e->getMessage());
