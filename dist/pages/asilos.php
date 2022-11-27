@@ -33,7 +33,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				<input type="text" class="form-control" placeholder="Buscar..." id="searchInput" />
 			</div>
 			<!-- Começo nav -->
-			<nav class="nav" id="nav">
+			<nav class="nav">
 				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
 					<span id="hamburguer"></span>
 				</button>
@@ -49,8 +49,30 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		</header>
 		<!-- Começo conteúdo -->
 		<main class="container">
-			<div id="list"></div>
+			<?php
+				include_once('Login/insert.php');
+				$Quantlista= count($lista);
+				for($contagem= 0; $contagem < $Quantlista; $contagem++){
+					echo ('<div class="card">
+					<div class="card-header">
+						<img src="../assets/img/'.$contagem.'/foto1.png" />
+					</div>			
+					<div class="card-body">
+						<span class="tag rating"><ion-icon name="star"></ion-icon>'.$lista[$contagem][11].'</span>
+	
+						<h3>'.$lista[$contagem][1].'</h3>
+						
+						<p>'.substr($lista[$contagem][2], 0, 120).'...</p>
+					</div>			
+					<div class="actionsCard">
+						<button class="actions"><a href="http://localhost/Safe-rest/dist/pages/pg-residencial.php?residencial='.$contagem.'" class="link-asilos">Ver mais</a></button>
+						<button class="actions"><a href="'.$lista[$contagem][5].'" target="_blank" class="link-asilos">Ver no Google Maps</a></button>
+					</div>		
+				</div>');
+				}
+			?>
 		</main>
+
 		<!-- começo do rodapé -->
 		<footer>
 			<nav class="nav">
@@ -59,7 +81,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					<li><a href="asilos.php">Asilos</a></li>
 					<li><a href="sobre.php">Sobre</a></li>
 					<li><a href="contato.php">Contato</a></li>
-					<li><a href="Login/register.php">Entrar</a></li>
+					<li><a href="Login/register.php">Cadastro</a></li>
 				</ul>
 			</nav>
 			<div>
