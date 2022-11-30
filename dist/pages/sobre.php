@@ -76,64 +76,75 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <h1 class="area-3">Nossa Equipe</h1>
     </section>
 
-    <section class="module content">
-      <div class="container fotos area-4">
+    <section class="module content section-pessoas">
+      <div class="container area-4">
         <h2>Design e Mídias Sociais</h2>
-        <div>
-          <img src="../assets/img/pessoas/kaique.jpg" alt="Kaique" class="img-pessoas">
-          <span>Kaique</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/rafaela.jpg" alt="Rafaela" class="img-pessoas">
-          <span>Rafaela</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/henrique.jpg" alt="Henrique" class="img-pessoas">
-          <span>Henrique</span>
-        </div>
-      </div>
-
-      <div class="container fotos area-4">
-        <h2>Pesquisa</h2>
-        <div>
-          <img src="../assets/img/pessoas/luiz.jpg" alt="Luiz" class="img-pessoas">
-          <span>Luiz</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/kauan.jpg" alt="Kauan" class="img-pessoas">
-          <span>Kauan</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/guilherme.jpg" alt="Guilherme" class="img-pessoas">
-          <span>Guilherme</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/vinicius.jpg" alt="Vinícius" class="img-pessoas">
-          <span>Vinícius</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/diego.jpg" alt="Diego" class="img-pessoas">
-          <span>Diego</span>
-        </div>
-      </div>
-
-      <div class="container fotos area-4">
-        <h2>Programação</h2>
-        <div>
-          <img src="../assets/img/pessoas/henrique.jpg" alt="Henrique" class="img-pessoas">
-          <span>Henrique</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/rafael.jpg" alt="Rafael" class="img-pessoas">
-          <span>Rafael</span>
-        </div>
-        <div>
-          <img src="../assets/img/pessoas/joao.jpg" alt="João" class="img-pessoas">
-          <span>João</span>
+        <div class="fotos">
+          <div>
+            <img src="../assets/img/pessoas/kaique.jpg" alt="Kaique" class="img-pessoas">
+            <p>Kaique</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/rafaela.jpg" alt="Rafaela" class="img-pessoas">
+            <p>Rafaela</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/henrique.jpg" alt="Henrique" class="img-pessoas">
+            <p>Henrique</p>
+          </div>
         </div>
       </div>
 
     </section>
+
+    <section class="module content section-pessoas">
+      <div class="container area-4">
+        <h2>Pesquisa</h2>
+        <div class="fotos">
+          <div>
+            <img src="../assets/img/pessoas/luiz.jpg" alt="Luiz" class="img-pessoas">
+            <p>Luiz</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/kauan.jpg" alt="Kauan" class="img-pessoas">
+            <p>Kauan</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/guilherme.jpg" alt="Guilherme" class="img-pessoas">
+            <p>Guilherme</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/vinicius.jpg" alt="Vinícius" class="img-pessoas">
+            <p>Vinícius</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/diego.jpg" alt="Diego" class="img-pessoas">
+            <p>Diego</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module content section-pessoas">
+      <div class="container area-4">
+        <h2>Programação</h2>
+        <div class="fotos">
+          <div>
+            <img src="../assets/img/pessoas/henrique.jpg" alt="Henrique" class="img-pessoas">
+            <p>Henrique</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/rafael.jpg" alt="Rafael" class="img-pessoas">
+            <p>Rafael</p>
+          </div>
+          <div>
+            <img src="../assets/img/pessoas/joao.jpg" alt="João" class="img-pessoas">
+            <p>João</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <!-- começo do rodapé -->
   <footer>

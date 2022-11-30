@@ -57,7 +57,7 @@ input {
 	right: 10%;
 	font-size: 1.75rem;
 	font-weight: 700;
-	color: var(--complementar1);
+	color: #1b730b;
 	line-height: 1.222;
 }
 
@@ -159,16 +159,26 @@ input {
 	transition: 0.2s;
 }
 
-.invalid-feedback{
+.invalid-feedback {
 	color: rgb(240, 0, 0);
 	font-size: 12px;
+}
+
+.alert-danger {
+	font-size: 18px;
+	color: rgb(240, 0, 0);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
 }
 
 #card-login .card-title {
 	padding-bottom: 15%;
 }
 
-#btn-redefinir{
+#btn-redefinir {
 	min-width: 70%;
 }
 

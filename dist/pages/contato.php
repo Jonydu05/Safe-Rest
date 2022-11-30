@@ -69,18 +69,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </ul>
     </div>
     <div id="div-msg">
-      <form class="form">
-        <h2>CONTATE NOS</h2>
+      <form class="form" action="mailto:saferestsr@gmail.com">
+        <h2>CONTATE-NOS</h2>
         <p type="Nome:"><input type="text" placeholder="Seu nome..."></p>
         <p type="Email:"><input type="email" placeholder="Alguma forma para te contatar..."></p>
         <p type="Mensagem:"><input placeholder="Sua mensagem..."></p>
         <button type="submit">Enviar mensagem</button>
-        <div>
-          <ul>
-            <li><span class="fa fa-phone"> </span> 11 12345 123</li>
-            <li><span class="fa fa-envelope-o"></span> saferestsr@gmail.com</li>
-          </ul>
-        </div>
       </form>
     </div>
     <div id="local-contato">

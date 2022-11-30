@@ -76,7 +76,7 @@
 	padding: 8px 12px;
 	margin: 8px 0 0;
 	font-family: "dm sans", sans-serif;
-	border: 2px solid #9c6c27;
+	border: 2px solid #009859;
 	background: 0;
 	color: #2f5169;
 	cursor: pointer;
@@ -84,7 +84,7 @@
 	border-radius: 5px;
 }
 .form button:hover {
-	background: #9c6c27;
+	background: #009859;
 	color: #f6f2fd;
 }
 .form div {

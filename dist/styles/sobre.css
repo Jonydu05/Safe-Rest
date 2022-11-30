@@ -1,164 +1,139 @@
 body {
-  margin: 0;
-  padding: 0;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+	margin: 0;
+	padding: 0;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+h1 {
+	font-family: "montserrat", sans-serif;
+	color: #f6f2fd;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: "montserrat", sans-serif;
+	color: #000;
+	font-weight: bold;
 }
 
 .quem-somos ul {
 	list-style: inside "\2574";
 }
 
-h1{
-  font-family: 'montserrat', sans-serif;
-  color: #f6f2fd;
-  font-weight: bold;
-}
-
-h2{
-  font-family: 'montserrat', sans-serif;
-  color: #000;
-  font-weight: bold;
-}
+/* COMEÇO PARALLAX */
 
 .wrapper {
-  width: 100%;
-  margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 main {
-  display: block;
-  background: #fff;
+	display: block;
+	background: #fff;
 }
 
 .container {
-  font-family: 'dm sans', sans-serif;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 20px;
+	font-family: "dm sans", sans-serif;
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
-.container *{
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.container * {
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 }
 
 section.module p {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 section.module:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 section.module h2 {
-  margin-bottom: 40px;
-  font-size: 30px;
+	margin-bottom: 40px;
+	font-size: 30px;
 }
 
 section.module.content {
-  padding: 40px 0;
-  background-color: #bfe4fc;
+	padding: 40px 0;
+	background-color: #bfe4fc;
 }
 
 section.module.parallax {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 85vh !important;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 90vh !important;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 section.module.parallax::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  z-index: 5;
-  position: absolute;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 250%);
+	content: "";
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+	position: absolute;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 250%);
 }
 
 section.module.parallax-1 {
-  background-image: url(../assets/img/equipe.jpg);
+	background-image: url(../assets/img/idosa.jpg);
+  background-position: 0 -30px;
 }
 
 section.module.parallax-2 {
-  background-image: url(../assets/img/logo4.png);
+	background-image: url(../assets/img/velhos1.jpg);
 }
 
 section.module.parallax h1 {
-  text-align: center;
-  font-size: 70px;
-  z-index: 50;
-  text-transform: uppercase;
+	text-align: center;
+	font-size: 70px;
+	z-index: 50;
+	text-transform: uppercase;
 }
 
-.area-1, .area-2, .area-3, .area-4{
-  visibility: hidden;
+.area-1, .area-2, .area-3, .area-4 {
+	visibility: hidden;
 }
 
-.container-btn{
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 0;
-}
+/* FIM PARALLAX */
 
-.btn-asilo{
-  font-size: 1rem;
-  margin: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid #000;
-  width: 400px;
-  height: 100px;
-  border-radius: 20px;
-  background-color: #014792;
-}
-
-.btn-asilo:hover{
-  background-color: #19537c;
-  cursor: pointer;
-}
-
-.btn-asilo:active{
-  background-color: #0e6fb4;
-}
-
-.btn-asilo a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  width: 100%;
-  height: 100%;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.btn-asilo a:hover{
-  color: #bfe4fc;
-}
-
-.fotos{
-	border: 1px solid #000;
+.fotos {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-.img-pessoas{
+.foto {
+  align-items: center;
+  justify-items: center;
+}
+
+.img-pessoas {
 	width: 100px;
 	height: 100px;
 	border-radius: 70%;
 	border: 1px solid #000;
+}
+
+.section-pessoas {
+  padding: 0;
+  margin: 0;
+}
+
+section.module.section-pessoas {
+  padding: 15px 0;
+  margin: 0 auto;
+
 }

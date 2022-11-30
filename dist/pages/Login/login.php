@@ -124,9 +124,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </nav>
   </header>
 
-  <div id="div-cadastro">
-    <!-- card login  -->
-
+  <main id="div-cadastro">
     <div class="card" id="card-login">
       <div class="card-title">
         <h2 class="card-heading">
@@ -134,11 +132,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </h2>
       </div>
 
-      <?php 
+      <div class="alert-danger">
+        <?php
         if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
+            echo '<span class="alert">' . $login_err . '</span>';
         }
         ?>
+      </div>
 
       <form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="input">
@@ -164,8 +164,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
       </div>
     </div>
-    <!-- fim card login -->
-  </div>
+  </main>
 
   <footer>
     <nav class="nav">
