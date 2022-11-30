@@ -82,46 +82,49 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="fotos">
           <div>
             <img src="../assets/img/pessoas/kaique.jpg" alt="Kaique" class="img-pessoas">
-            <p>Kaique</p>
+            <span>Kaique</span>
           </div>
           <div>
             <img src="../assets/img/pessoas/rafaela.jpg" alt="Rafaela" class="img-pessoas">
-            <p>Rafaela</p>
+            <span>Rafaela</span>
           </div>
           <div>
             <img src="../assets/img/pessoas/henrique.jpg" alt="Henrique" class="img-pessoas">
-            <p>Henrique</p>
+            <span>Henrique</span>
           </div>
         </div>
       </div>
 
     </section>
 
-    <section class="module content section-pessoas">
+    <section class="module content section-pessoas" id="section-pesquisa">
       <div class="container area-4">
         <h2>Pesquisa</h2>
         <div class="fotos">
           <div>
             <img src="../assets/img/pessoas/luiz.jpg" alt="Luiz" class="img-pessoas">
-            <p>Luiz</p>
+            <span>Luiz</span>
           </div>
           <div>
             <img src="../assets/img/pessoas/kauan.jpg" alt="Kauan" class="img-pessoas">
-            <p>Kauan</p>
+            <span>Kauan</span>
           </div>
           <div>
             <img src="../assets/img/pessoas/guilherme.jpg" alt="Guilherme" class="img-pessoas">
-            <p>Guilherme</p>
+            <span>Guilherme</span>
           </div>
+        </div>
+        <div class="fotos">
           <div>
             <img src="../assets/img/pessoas/vinicius.jpg" alt="Vinícius" class="img-pessoas">
-            <p>Vinícius</p>
+            <span>Vinícius</span>
           </div>
           <div>
             <img src="../assets/img/pessoas/diego.jpg" alt="Diego" class="img-pessoas">
-            <p>Diego</p>
+            <span>Diego</span>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -131,15 +134,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="fotos">
           <div>
             <img src="../assets/img/pessoas/henrique.jpg" alt="Henrique" class="img-pessoas">
-            <p>Henrique</p>
+            <span>Henrique</span>
           </div>
           <div>
             <img src="../assets/img/pessoas/rafael.jpg" alt="Rafael" class="img-pessoas">
-            <p>Rafael</p>
+            <span>Rafael</span>
           </div>
           <div>
             <img src="../assets/img/pessoas/joao.jpg" alt="João" class="img-pessoas">
-            <p>João</p>
+            <span>João</span>
           </div>
         </div>
       </div>

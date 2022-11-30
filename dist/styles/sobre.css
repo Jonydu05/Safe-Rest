@@ -111,20 +111,28 @@ section.module.parallax h1 {
 
 .fotos {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
 }
 
-.foto {
-  align-items: center;
-  justify-items: center;
+.fotos div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+
+.fotos div span{
+	display: flex;
 }
 
 .img-pessoas {
-	width: 100px;
-	height: 100px;
-	border-radius: 70%;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
 	border: 1px solid #000;
+	transition: all .3s ease-in-out;
 }
 
 .section-pessoas {
@@ -135,5 +143,24 @@ section.module.parallax h1 {
 section.module.section-pessoas {
   padding: 15px 0;
   margin: 0 auto;
+}
 
+@media (max-width: 760px){
+	.img-pessoas{
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media (max-width: 420px) {
+	.fotos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.img-pessoas{
+		width: 100%;
+		height: calc(100% - 100px);
+	}
 }
