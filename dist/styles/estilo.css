@@ -52,11 +52,11 @@ main {
 }
 
 #tipografia{
-	height: 35px;
+	height: 55px;
 }
 
 #teste {
-	width: 320px;
+	width: 240px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
