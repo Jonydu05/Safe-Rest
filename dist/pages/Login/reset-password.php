@@ -88,13 +88,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <body>
   <header id="header">
-    <!-- prettier-ignore -->
     <div id="teste">
       <a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
-      <a href="../index.php">
-        <pre id="safeRest">Safe
-&amp;Rest</pre>
-      </a>
+      <a href="index.php"><img src="../../assets/img/logo5.png" id="tipografia" alt=""></a>
     </div>
 
     <nav class="nav" id="nav">
@@ -132,7 +128,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <section class="input">
           <input type="password" id="confirm-password" name="confirm_password" required
-            class="input-field <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"/>
+            class="input-field <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" />
           <label class="input-label" for="confirm-password">Confirme a senha</label>
           <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
         </section>

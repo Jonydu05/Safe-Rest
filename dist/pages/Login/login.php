@@ -89,99 +89,101 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="../../styles/estilo.css" />
-		<link rel="stylesheet" href="../../styles/cadastro.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="icon" href="../../assets/img/logo2.png" />
+  <link rel="stylesheet" href="../../styles/estilo.css" />
+  <link rel="stylesheet" href="../../styles/cadastro.css" />
 
-		<title>Login</title>
-	</head>
+  <link rel="icon" href="../../assets/img/logo2.png" />
 
-	<body>
-		<header id="header">
-			<!-- prettier-ignore -->
-			<div id="teste">
-				<a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
-				<a href="../index.php"><pre id="safeRest">Safe
-&amp;Rest</pre> </a>
-			</div>
+  <title>Login</title>
+</head>
 
-			<nav class="nav" id="nav">
-				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
-					<span id="hamburguer"></span>
-				</button>
-				<ul class="menu" role="menu">
-					<li><a href="../index.php">Início</a></li>
-					<li><a href="../asilos.php">Residências</a></li>
-					<li><a href="../sobre.php">Sobre</a></li>
-					<li><a href="../contato.php">Contato</a></li>
-					<li><a href="./register.php">Entrar</a></li>
-				</ul>
-			</nav>
-		</header>
+<body>
+  <header id="header">
+    <div id="teste">
+      <a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
+      <a href="index.php"><img src="../../assets/img/logo5.png" id="tipografia" alt=""></a>
+    </div>
 
-		<div id="div-cadastro">
-			<!-- card login  -->
+    <nav class="nav" id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+        <span id="hamburguer"></span>
+      </button>
+      <ul class="menu" role="menu">
+        <li><a href="../index.php">Início</a></li>
+        <li><a href="../asilos.php">Residências</a></li>
+        <li><a href="../sobre.php">Sobre</a></li>
+        <li><a href="../contato.php">Contato</a></li>
+        <li><a href="./register.php">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-			<div class="card" id="card-login">
-				<div class="card-title">
-					<h2 class="card-heading">
-						<span>Bem-vindo de volta!</span>
-					</h2>
-				</div>
+  <div id="div-cadastro">
+    <!-- card login  -->
 
-				<?php 
+    <div class="card" id="card-login">
+      <div class="card-title">
+        <h2 class="card-heading">
+          <span>Bem-vindo de volta!</span>
+        </h2>
+      </div>
+
+      <?php 
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
         }
         ?>
 
-				<form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-					<div class="input">
-						<input type="email" name="email" placeholder="nome@exemplo.com" required  class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"/>
-						<label class="input-label">Email</label>
-						<span class="invalid-feedback"><?php echo $email_err; ?></span>
-					</div>
+      <form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <div class="input">
+          <input type="email" name="email" placeholder="nome@exemplo.com" required
+            class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" />
+          <label class="input-label">Email</label>
+          <span class="invalid-feedback"><?php echo $email_err; ?></span>
+        </div>
 
-					<div class="input">
-						<input type="password" name="password" required class="input-field <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"/>
-						<label class="input-label">Senha</label>
-						<span class="invalid-feedback"><?php echo $password_err; ?></span>
-					</div>
+        <div class="input">
+          <input type="password" name="password" required
+            class="input-field <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" />
+          <label class="input-label">Senha</label>
+          <span class="invalid-feedback"><?php echo $password_err; ?></span>
+        </div>
 
-					<div class="action">
-						<input type="submit" class="action-button" value="Entrar"/>
-					</div>
-				</form>
+        <div class="action">
+          <input type="submit" class="action-button" value="Entrar" />
+        </div>
+      </form>
 
-				<div class="card-info">
-					<p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
-				</div>
-			</div>
-				<!-- fim card login -->
-		</div>
+      <div class="card-info">
+        <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
+      </div>
+    </div>
+    <!-- fim card login -->
+  </div>
 
-    <footer>
-			<nav class="nav">
-				<ul class="menu">
-					<li><a href="../index.php">Início</a></li>
-					<li><a href="../asilos.php">Residências</a></li>
-					<li><a href="../sobre.php">Sobre</a></li>
-					<li><a href="../contato.php">Contato</a></li>
-					<li><a href="./register.php">Entrar</a></li>
-				</ul>
-			</nav>
-			<div>
-			<img src="../../assets/img/logo3.png" alt="" />
-			<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
-			</div>
-		</footer>
-		<!-- fim do rodapé -->
-		<script src="../../../src/menu.js"></script>
-	</body>
+  <footer>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="../index.php">Início</a></li>
+        <li><a href="../asilos.php">Residências</a></li>
+        <li><a href="../sobre.php">Sobre</a></li>
+        <li><a href="../contato.php">Contato</a></li>
+        <li><a href="./register.php">Entrar</a></li>
+      </ul>
+    </nav>
+    <div>
+      <img src="../../assets/img/logo3.png" alt="" />
+      <p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
+    </div>
+  </footer>
+  <!-- fim do rodapé -->
+  <script src="../../../src/menu.js"></script>
+</body>
+
 </html>

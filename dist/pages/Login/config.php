@@ -52,7 +52,17 @@ try{
         ";
         $pdo->exec($query);
     }
-
+    $table3 = 'notas';
+    $tableExists = $pdo->query("SHOW TABLES LIKE '$table3'")->rowCount() > 0;
+    if($tableExists != 1){
+        $query="
+                CREATE TABLE `test`.`notas` (
+                    `id_usuario` INT(4) NOT NULL 
+                    ) 
+                ENGINE = InnoDB;
+            ";
+        $pdo->exec($query);
+    }
 } catch(PDOException $e){
     die("ERROR: Não foi possível conectar." . $e->getMessage());
 }

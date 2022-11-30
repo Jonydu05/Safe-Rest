@@ -4,7 +4,7 @@ session_start();
 
 // Verifique se o usuário está logado, se não, redirecione-o para uma página de login
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-	$_SESSION["username"] = "Entrar";
+  $_SESSION["username"] = "Entrar";
 }
 ?>
 
@@ -24,13 +24,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <body>
   <header id="header">
-    <!-- prettier-ignore -->
     <div id="teste">
       <a href="index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-      <a href="index.php">
-        <pre id="safeRest">Safe
-&amp;Rest</pre>
-      </a>
+      <a href="index.php"><img src="../assets/img/logo5.png" id="tipografia" alt=""></a>
+    </div>
+    <!--Barra de pesquisa-->
+    <div id="div-pesquisa">
+      <form action="" method="get">
+        <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
+        <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
+      </form>
     </div>
     <!-- Começo nav -->
     <nav class="nav" id="nav">
@@ -68,48 +71,63 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <!-- Começo conteúdo -->
   <main class="container">
     <?php
-		include_once('Login/config.php');
-		include_once('Login/config.php');
-		$local = ["Fora de SP", "Zona Leste", "Zona Norte", "Zona Oeste", "Zona Sul"];
-		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			if($_SESSION["username"] != "Entrar"){
-				$aval = $_POST['avaliacao'];
-				$regi = $_POST['regiao'];
-				$erro;
-				if ($aval != "" && $regi != "") {
-					for ($rcont = 0; $rcont < 5; $rcont++) {
-						for ($pcont = 30; $pcont < 60; $pcont++) {
-							if ($aval == $pcont && $regi == $rcont) {
-								$query = "SELECT * FROM `residenciais` WHERE regiao = '$local[$regi]'  AND avaliacao >= '$pcont' ORDER BY `residenciais`.`avaliacao` ASC";
-								include_once('cards.php');
-							}
-						}
-					}
-				} elseif ($aval != "" && $regi == "") {
-					for ($pcont = 30; $pcont < 60; $pcont++) {
-						if ($aval == $pcont) {
-							$query = "SELECT * FROM `residenciais` WHERE avaliacao >= '$pcont' ORDER BY `residenciais`.`avaliacao` ASC";
-							include_once('cards.php');
-						}
-					} 
-				} elseif ($aval == "" && $regi != "") {
-					for ($rcont = 0; $rcont < 5; $rcont++) {
-						if ($regi == $rcont) {
-							$query = "SELECT * FROM `residenciais` WHERE regiao = '$local[$regi]'";
-							include_once('cards.php');
-						}
-					} 
-				} else{
-					echo ('<section id="no-product"> <p> Residência não encontrada </p> </section>');
-				}
-			}else{
-				echo ('<section id="no-product"> <p> Para utilizar os filtros você deve-se cadastrar primeiro </p> </section>');
-			}
-		} else {
-			$query = 'select * from residenciais';
-			include_once('cards.php');
-		}
-		?>
+    include_once('Login/config.php');
+    include_once('Login/insert.php');
+    $close = '';
+    $session['visual'] = "";
+
+    if (isset($_GET['Buscar'])) {
+      $close = '1';
+      $nome = "%" . trim($_GET['residencia']) . "%";
+      $query = "SELECT * FROM `residenciais` WHERE `nome` LIKE '$nome'";
+      echo ('<div class="pesquisa"><h2>Resultado da busca: </h2></div>');
+      include('cards.php');
+      if ($lista == null) {
+        echo ('<div class="pesquisa"><p>Não foram encontrados resultados pelo termo buscado.</p></div>');
+      }
+    }
+
+    $local = ["Fora de SP", "Zona Leste", "Zona Norte", "Zona Oeste", "Zona Sul"];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if ($_SESSION["username"] != "Entrar") {
+        $aval = $_POST['avaliacao'];
+        $regi = $_POST['regiao'];
+        if ($aval != "" && $regi != "") {
+          for ($rcont = 0; $rcont < 5; $rcont++) {
+            for ($pcont = 30; $pcont < 60; $pcont++) {
+              if ($aval == $pcont && $regi == $rcont) {
+                $query = "SELECT * FROM `residenciais` WHERE regiao = '$local[$regi]'  AND avaliacao >= '$pcont' ORDER BY `residenciais`.`avaliacao` ASC";
+                include('cards.php');
+              }
+            }
+          }
+        } elseif ($aval != "" && $regi == "") {
+          for ($pcont = 30; $pcont < 60; $pcont++) {
+            if ($aval == $pcont) {
+              $query = "SELECT * FROM `residenciais` WHERE avaliacao >= '$pcont' ORDER BY `residenciais`.`avaliacao` ASC";
+              include('cards.php');
+            }
+          }
+        } elseif ($aval == "" && $regi != "") {
+          for ($rcont = 0; $rcont < 5; $rcont++) {
+            if ($regi == $rcont) {
+              $query = "SELECT * FROM `residenciais` WHERE regiao = '$local[$regi]'";
+              include('cards.php');
+            }
+          }
+        } else {
+          echo ('<section id="no-product"> <p> Residência não encontrada </p> </section>');
+        }
+      } else {
+        echo ('<section id="no-product"> <p> Para utilizar os filtros você deve-se cadastrar primeiro </p> </section>');
+      }
+    } else {
+      if ($close != '1') {
+        $query = 'select * from residenciais';
+        include('cards.php');
+      }
+    }
+    ?>
   </main>
   <!-- começo do rodapé -->
   <footer>
@@ -132,6 +150,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>

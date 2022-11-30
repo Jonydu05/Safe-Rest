@@ -113,108 +113,113 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="../../styles/estilo.css" />
-		<link rel="stylesheet" href="../../styles/cadastro.css" />
-		<link rel="stylesheet" href="../../styles/perfil.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="icon" href="../../assets/img/logo2.png" />
+  <link rel="stylesheet" href="../../styles/estilo.css" />
+  <link rel="stylesheet" href="../../styles/cadastro.css" />
+  <link rel="stylesheet" href="../../styles/perfil.css" />
 
-		<title>Cadastro</title>
-	</head>
+  <link rel="icon" href="../../assets/img/logo2.png" />
 
-	<body>
-		<header id="header">
-			<!-- prettier-ignore -->
-			<div id="teste">
-				<a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
-				<a href="../index.php"><pre id="safeRest">Safe
-&amp;Rest</pre> </a>
-			</div>
+  <title>Cadastro</title>
+</head>
 
-			<nav class="nav" id="nav">
-				<button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
-					<span id="hamburguer"></span>
-				</button>
-				<ul class="menu" role="menu">
-					<li><a href="../index.php">Início</a></li>
-					<li><a href="../asilos.php">Residências</a></li>
-					<li><a href="../sobre.php">Sobre</a></li>
-					<li><a href="../contato.php">Contato</a></li>
-					<li><a href="./register.php">Entrar</a></li>
-				</ul>
-			</nav>
-		</header>
+<body>
+  <header id="header">
+    <div id="teste">
+      <a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
+      <a href="index.php"><img src="../../assets/img/logo5.png" id="tipografia" alt=""></a>
+    </div>
 
-    <main id="div-cadastro">
-			<!-- Card cadastro -->
-			<div class="card">
-				<div class="card-title">
-					<h2 class="card-heading">
-						<span>Vamos começar,</span>
-						<small>Deixe-nos criar sua conta :)</small>
-					</h2>
-				</div>
+    <nav class="nav" id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+        <span id="hamburguer"></span>
+      </button>
+      <ul class="menu" role="menu">
+        <li><a href="../index.php">Início</a></li>
+        <li><a href="../asilos.php">Residências</a></li>
+        <li><a href="../sobre.php">Sobre</a></li>
+        <li><a href="../contato.php">Contato</a></li>
+        <li><a href="./register.php">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-				<form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-				
-					<div class="input">
-						<input type="text" id="name" name="username" placeholder="Nome" required class="input-field <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>"/>
-						<label class="input-label" for="name">Nome</label>
-						<span class="invalid-feedback"><?php echo $username_err; ?></span>
-					</div>
+  <main id="div-cadastro">
+    <!-- Card cadastro -->
+    <div class="card">
+      <div class="card-title">
+        <h2 class="card-heading">
+          <span>Vamos começar,</span>
+          <small>Deixe-nos criar sua conta :)</small>
+        </h2>
+      </div>
 
-					<div class="input">
-						<input type="email" id="email" name="email" placeholder="nome@exemplo.com" required class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"/>
-						<label class="input-label" for="email">Email</label>
-						<span class="invalid-feedback"><?php echo $email_err; ?></span>
-					</div>
+      <form class="card-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-					<div class="input">
-						<input type="password" id="password" name="password" required class="input-field"/>
-						<label class="input-label" for="password">Senha</label>
-					</div>
-					
-					<div class="input">
-						<input type="password" id="confirm-password" name="confirm_password" required class="input-field <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>"/>
-						<label class="input-label" for="confirm-password">Confirme a senha</label>
-						<span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-					</div>
+        <div class="input">
+          <input type="text" id="name" name="username" placeholder="Nome" required
+            class="input-field <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+            value="<?php echo $username; ?>" />
+          <label class="input-label" for="name">Nome</label>
+          <span class="invalid-feedback"><?php echo $username_err; ?></span>
+        </div>
 
-					<div class="action">
-						<input type="submit" class="action-button" id="btn-criar" value="Criar Conta"/>
-						<input type="reset" class="action-button" id="btn-apagar" value="Apagar Dados">
-					</div>
+        <div class="input">
+          <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required
+            class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" />
+          <label class="input-label" for="email">Email</label>
+          <span class="invalid-feedback"><?php echo $email_err; ?></span>
+        </div>
 
-				</form>
-				<div class="card-info">
-					<p>Ao se cadastrar, você concorda com nossos <a href="#">Termos e Condições</a></p>
-					<p>Já tem uma conta? <a href="./login.php">Entre aqui</a></p>
-				</div>
-			</div>
-			<!-- fim card cadastro -->
-		</main>
+        <div class="input">
+          <input type="password" id="password" name="password" required class="input-field" />
+          <label class="input-label" for="password">Senha</label>
+        </div>
 
-    <footer>
-			<nav class="nav">
-				<ul class="menu">
-					<li><a href="../index.php">Início</a></li>
-					<li><a href="../asilos.php">Residências</a></li>
-					<li><a href="../sobre.php">Sobre</a></li>
-					<li><a href="../contato.php">Contato</a></li>
-					<li><a href="./register.php">Entrar</a></li>
-				</ul>
-			</nav>
-			<div>
-			<img src="../../assets/img/logo3.png" alt="" />
-			<p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
-			</div>
-		</footer>
-		<!-- fim do rodapé -->
-		<script src="../../../src/menu.js"></script>
-	</body>
+        <div class="input">
+          <input type="password" id="confirm-password" name="confirm_password" required
+            class="input-field <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
+            value="<?php echo $confirm_password; ?>" />
+          <label class="input-label" for="confirm-password">Confirme a senha</label>
+          <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+        </div>
+
+        <div class="action">
+          <input type="submit" class="action-button" id="btn-criar" value="Criar Conta" />
+          <input type="reset" class="action-button" id="btn-apagar" value="Apagar Dados">
+        </div>
+
+      </form>
+      <div class="card-info">
+        <p>Ao se cadastrar, você concorda com nossos <a href="#">Termos e Condições</a></p>
+        <p>Já tem uma conta? <a href="./login.php">Entre aqui</a></p>
+      </div>
+    </div>
+    <!-- fim card cadastro -->
+  </main>
+
+  <footer>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="../index.php">Início</a></li>
+        <li><a href="../asilos.php">Residências</a></li>
+        <li><a href="../sobre.php">Sobre</a></li>
+        <li><a href="../contato.php">Contato</a></li>
+        <li><a href="./register.php">Entrar</a></li>
+      </ul>
+    </nav>
+    <div>
+      <img src="../../assets/img/logo3.png" alt="" />
+      <p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
+    </div>
+  </footer>
+  <!-- fim do rodapé -->
+  <script src="../../../src/menu.js"></script>
+</body>
+
 </html>

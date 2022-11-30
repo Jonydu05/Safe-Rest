@@ -14,6 +14,7 @@ require_once "config.php";
 $username = $password = $confirm_password = $_SESSION["username"];;
 $username_err = $password_err = $confirm_password_err = "";
 $email = $_SESSION["email"];
+$email_err= "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
@@ -73,13 +74,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <body>
   <header id="header">
-    <!-- prettier-ignore -->
     <div id="teste">
       <a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
-      <a href="../index.php">
-        <pre id="safeRest">Safe
-&amp;Rest</pre>
-      </a>
+      <a href="index.php"><img src="../../assets/img/logo5.png" id="tipografia" alt=""></a>
     </div>
 
     <nav class="nav" id="nav">
@@ -116,7 +113,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </section>
 
         <section class="input">
-          <input type="email" id="email" name="email" class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" />
+          <input type="email" id="email" name="email"
+            class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" />
           <label class="input-label" for="email">Email</label>
           <span class="invalid-feedback"><?php echo $email_err; ?></span>
         </section>

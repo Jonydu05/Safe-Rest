@@ -27,13 +27,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <body>
   <header id="header">
-    <!-- prettier-ignore -->
     <div id="teste">
       <a href="index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
-      <a href="index.php">
-        <pre id="safeRest">Safe
-&amp;Rest</pre>
-      </a>
+      <a href="index.php"><img src="../assets/img/logo5.png" id="tipografia" alt=""></a>
     </div>
 
     <nav class="nav" id="nav">

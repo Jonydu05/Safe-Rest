@@ -136,16 +136,16 @@ section.module.parallax h1 {
   width: 350px;
   height: 100px;
   border-radius: 10px;
-  background-color: #36E617; /*#2AB312*/
+  background-color: #009859; /*#2AB312*/
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
   border: 1px solid #19537c;
 }
 
 .btn-asilo:hover{
-  background-color: #218A0E;
+  background-color: #00663C;
   transform: scale(1.07) translateX(-20px);
-  box-shadow: 6px 6px #36E617, 7px 7px #36E617, 8px 8px #36E617;
+  box-shadow: 6px 6px #003a22, 7px 7px #003a22, 8px 8px #003a22;
 }
 
 .btn-asilo:active{
