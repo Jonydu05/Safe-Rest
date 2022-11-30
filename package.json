@@ -31,6 +31,6 @@
     "@babel/preset-env": "^7.19.4",
     "babel-loader": "^9.0.0",
     "live-server": "^1.2.2",
-    "prettier": "^2.7.1",
+    "prettier": "^2.7.1"
   }
 }
