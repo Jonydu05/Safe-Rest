@@ -24,6 +24,7 @@ body,
 ul {
 	margin: 0px;
 	padding: 0px;
+	list-style: none;
 }
 
 p {
@@ -51,7 +52,7 @@ main {
 	line-height: 25px;
 }
 
-#tipografia{
+#tipografia {
 	height: 55px;
 }
 
@@ -81,7 +82,7 @@ main {
 }
 
 #header a:hover {
-	color: var(--complementar1);
+	color: #009859;
 	transition: 200ms;
 }
 
@@ -97,7 +98,7 @@ main {
 }
 
 .nav a:hover {
-	color: var(--complementar1);
+	color: #009859 !important;
 	transition: 200ms;
 }
 
@@ -200,37 +201,70 @@ main {
 	font-family: "dm sans", arial, sans-serif;
 	text-decoration: none;
 	color: var(--azul-forte);
+	transition: all 0.2s;
 }
 
 .link-asilos:hover {
-	color: var(--complementar1);
+	color: #009859;
 }
 
 /*Rodapé*/
 
-footer {
-	justify-content: space-between;
+#footer {
+	box-sizing: border-box;
 	display: flex;
 	align-items: center;
-	flex-flow: column;
+	justify-content: center;
 	background-color: #004998;
 	padding: 20px 0 30px 0;
 	color: #d2e8f8;
+	flex-direction: column;
 }
 
-footer a {
-	box-sizing: border-box;
-	color: #d2e8f8;
-	text-decoration: none;
-	font-family: "Montserrat", Arial, Helvetica, sans-serif;
-}
-
-footer div {
+.menu-footer {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: row;
+	gap: 1rem;
 }
 
-footer img {
+.link-footer {
+	text-decoration: none;
+	color: #d2e8f8;
+	transition: all 0.2s;
+}
+
+.link-footer:hover {
+	color: #009859;
+}
+
+.span-dashboard {
+	font-size: 16px;
+	margin: 10px;
+}
+
+
+#link-dashboard {
+	color: #2AB312;
+	text-decoration: none;
+	transition: all .2s;
+}
+
+#link-dashboard:hover {
+	color: #e8b468;
+}
+
+#info-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#section-footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.img-footer {
 	width: 7rem;
 }

@@ -55,7 +55,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <section class="module content">
       <div class="container area-2">
         <h2>Como começou?</h2>
-        <p>O Safe & Rest, é um projeto que teve o início de seu desenvolvimento em 2022, quando um grupo de começavam a
+        <p>O Safe & Rest, é um projeto que teve o início de seu desenvolvimento em 2022, quando um grupo de alunos da
+          ETEC Albert Einstein começavam a
           fazer seu projeto de TCC. Hoje, propomos um espaço em que todos as pessoas possam ter um contato mais
           simplificado com Residências para terceira idade e casas de repouso da região, possibilitando uma conexão
           direta e uma hospedagem segura e confiável com os parceiros disponíveis.</p>
@@ -150,21 +151,32 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
   </main>
   <!-- começo do rodapé -->
-  <footer>
-    <nav class="nav">
-      <ul class="menu">
-        <li><a href="index.php">Início</a></li>
-        <li><a href="asilos.php">Residências</a></li>
-        <li><a href="sobre.php">Sobre</a></li>
-        <li><a href="contato.php">Contato</a></li>
-        <li><a href="login/register.php">Entrar</a></li>
+  <footer id="footer">
+    <nav class="nav-footer">
+      <ul class="menu-footer">
+        <li><a href="index.php" class="link-footer">Início</a></li>
+        <li><a href="asilos.php" class="link-footer">Residências</a></li>
+        <li><a href="sobre.php" class="link-footer">Sobre</a></li>
+        <li><a href="contato.php" class="link-footer">Contato</a></li>
       </ul>
     </nav>
-    <div>
-      <img src="../assets/img/logo3.png" alt="" />
-      <p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
+    <div id="info-footer">
+      <div>
+        <img src="../assets/img/logo3.png" alt="" class="img-footer">
+      </div>
+      <section id="section-footer">
+        <div class="span-dashboard">
+          <span>Tem uma Residência e quer cadastra-la?
+            <a href="dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+          </span>
+        </div>
+        <div class="span-dashboard">
+          <span>2022 - Safe&amp;Rest &copy; Todos os direitos reservados.</span>
+        </div>
+      </section>
     </div>
   </footer>
+  
   <!-- fim do rodapé -->
   <script src="../../src/scroll.js"></script>
   <script src="../../src/menu.js"></script>

@@ -203,19 +203,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!-- fim card cadastro -->
   </main>
 
-  <footer>
-    <nav class="nav">
-      <ul class="menu">
-        <li><a href="../index.php">Início</a></li>
-        <li><a href="../asilos.php">Residências</a></li>
-        <li><a href="../sobre.php">Sobre</a></li>
-        <li><a href="../contato.php">Contato</a></li>
-        <li><a href="./register.php">Entrar</a></li>
+  <footer id="footer">
+    <nav class="nav-footer">
+      <ul class="menu-footer">
+        <li><a href="../index.php" class="link-footer">Início</a></li>
+        <li><a href="../asilos.php" class="link-footer">Residências</a></li>
+        <li><a href="../sobre.php" class="link-footer">Sobre</a></li>
+        <li><a href="../contato.php" class="link-footer">Contato</a></li>
       </ul>
     </nav>
-    <div>
-      <img src="../../assets/img/logo3.png" alt="" />
-      <p>2022 - Safe&amp;Rest &copy; Todos os direitos reservados</p>
+    <div id="info-footer">
+      <div>
+        <img src="../../assets/img/logo3.png" alt="" class="img-footer">
+      </div>
+      <section id="section-footer">
+        <div class="span-dashboard">
+          <span>Tem uma Residência e quer cadastra-la?
+            <a href="../dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+          </span>
+        </div>
+        <div class="span-dashboard">
+          <span>2022 - Safe&amp;Rest &copy; Todos os direitos reservados.</span>
+        </div>
+      </section>
     </div>
   </footer>
   <!-- fim do rodapé -->
