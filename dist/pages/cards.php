@@ -15,11 +15,11 @@
                     <h3>' . $lista[$contagem][1] . '</h3>
                     
                     <p>' . substr($lista[$contagem][2], 0, 120) . '...</p>
-                </div>			
+                </div>
                 <div class="actionsCard">
                     <button class="actions"><a href="http://localhost/Safe-rest/dist/pages/pg-residencial.php?residencial=' . $lista[$contagem][0] . '" class="link-asilos">Ver mais</a></button>
                     <button class="actions"><a href="' . $lista[$contagem][5] . '" target="_blank" class="link-asilos">Ver no Google Maps</a></button>
-                </div>		
+                </div>
             </div>');
     }
 ?>

@@ -18,7 +18,7 @@ h2 {
 }
 
 .quem-somos ul {
-	list-style: inside "\2574";
+	list-style: inside disc;
 }
 
 /* COMEÇO PARALLAX */

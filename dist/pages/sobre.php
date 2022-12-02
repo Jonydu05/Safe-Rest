@@ -61,7 +61,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           simplificado com Residências para terceira idade e casas de repouso da região, possibilitando uma conexão
           direta e uma hospedagem segura e confiável com os parceiros disponíveis.</p>
       </div>
-      <div class="container area-2">
+      <div class="container area-2 quem-somos">
         <p>E para fazermos isso, agimos com base em:
         <ul>
           <li>Respeito</li>

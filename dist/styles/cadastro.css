@@ -182,25 +182,39 @@ input {
 	min-width: 70%;
 }
 
-@media (max-width: 800px) {
+main{
+	min-height: 90vh;
+}
+
+@media (max-width: 768px) {
 	.card-title {
-		padding-bottom: 40%;
-	}
-	#div-cadastro {
-		display: block;
+		padding-bottom: 10%;
 	}
 	.card {
 		margin: 20px auto;
 		max-width: 90%;
 	}
 	#card-login .card-title {
-		padding-bottom: 35%;
+		padding-bottom: 10%;
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
 	.card-title {
-		padding-bottom: 60%;
+		padding-bottom: 30%;
+	}
+	.action {
+		flex-direction: column;
+	}
+	.action-button {
+		margin: 10px;
+		width: 100%;
+	}
+}
+
+@media (max-width: 330px) {
+	.card-title {
+		padding-bottom: 50%;
 	}
 	.action {
 		flex-direction: column;

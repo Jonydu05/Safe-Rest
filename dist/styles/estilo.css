@@ -57,7 +57,8 @@ main {
 }
 
 #teste {
-	width: 240px;
+	width: 28%;
+	max-width: 240px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -107,7 +108,7 @@ main {
 	display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 760px) {
 	.menu {
 		display: block;
 		position: absolute;
@@ -173,6 +174,25 @@ main {
 	.nav.active #hamburguer::after {
 		transform: rotate(-135deg);
 		top: -7px;
+	}
+
+	#logo {
+		max-width: 60px;
+		max-height: 60px;
+		width: auto;
+		height: auto;
+		user-select: none;
+	}
+
+	#tipografia {
+		height: 40px;
+	}
+
+	#teste {
+		width: 40%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 }
 
@@ -242,11 +262,10 @@ main {
 	margin: 10px;
 }
 
-
 #link-dashboard {
-	color: #2AB312;
+	color: #2ab312;
 	text-decoration: none;
-	transition: all .2s;
+	transition: all 0.2s;
 }
 
 #link-dashboard:hover {
@@ -259,7 +278,7 @@ main {
 	justify-content: space-around;
 }
 
-#section-footer{
+#section-footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -267,4 +286,48 @@ main {
 
 .img-footer {
 	width: 7rem;
+	transition: 0.2s;
+}
+
+@media (max-width: 420px) {
+	#footer {
+		font-size: 15px;
+	}
+	.img-footer {
+		width: 4rem;
+	}
+	.menu-footer {
+		flex-wrap: wrap;
+		padding: 10px;
+		justify-content: center;
+	}
+	.span-dashboard {
+		font-size: 14px;
+		margin: 10px;
+		box-sizing: border-box;
+	}
+	#info-footer {
+		margin: 20px;
+	}
+}
+
+@media (max-width: 325px) {
+	#logo {
+		max-width: 65px;
+		max-height: 65px;
+		width: auto;
+		height: auto;
+		user-select: none;
+	}
+
+	#tipografia {
+		height: 45px;
+	}
+
+	#teste {
+		width: 60%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
