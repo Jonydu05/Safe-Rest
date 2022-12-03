@@ -84,13 +84,9 @@
 .limpar-filtro a {
 	text-decoration: none;
 	color: black;
+	font-family: "dm sans", sans-serif;
 }
 
 .limpar-filtro:hover a{
 	color: white;
 }
-
-#header {
-	border-bottom: 1px solid #000;
-}
-

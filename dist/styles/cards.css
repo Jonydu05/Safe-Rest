@@ -8,7 +8,7 @@
 	display: none;
 }
 
-#pesquisa-mobile {
+#search-mobile {
 	display: none;
 }
 
@@ -67,6 +67,7 @@
 	width: 15%;
 	border: 1px solid #69b3e7;
 	border-radius: 5px;
+	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
 

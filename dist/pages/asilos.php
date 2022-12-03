@@ -29,7 +29,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <a href="index.php"><img src="../assets/img/logo5.png" id="tipografia" alt=""></a>
     </div>
     <!--Barra de pesquisa-->
-    <div class="div-pesquisa">
+    <div class="div-pesquisa" id="search-desktop">
       <form action="" method="get">
         <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
         <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
@@ -47,34 +47,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <li><a href="contato.php">Contato</a></li>
         <li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
       </ul>
-      <section>
-        <div class="div-pesquisa" id="pesquisa-mobile">
-          <form action="" method="get">
-            <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
-            <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
-          </form>
-        </div>
-        <div class="filtro" id="filtro-mobile">
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
-            <select name="avaliacao" id="avaliacao">
-              <option value="" selected hidden>Selecione a avaliação</option>
-              <option value="30">Mais de 3 estrela</option>
-              <option value="40">Mais de 4 estrela</option>
-              <option value="50">5 estrelas</option>
-            </select>
-            <select name="regiao" id="regiao">
-              <option value="" selected hidden>Selecione a região</option>
-              <option value="0">Fora de SP</option>
-              <option value="1">Zona Leste</option>
-              <option value="2">Zona Norte</option>
-              <option value="3">Zona Oeste</option>
-              <option value="4">Zona Sul</option>
-            </select>
-            <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
-            <button type="submit" class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
-          </form>
-        </div>
-      </section>
+      <div class="div-pesquisa" id="search-mobile">
+        <form action="" method="get">
+          <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
+          <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
+        </form>
+      </div>
+      <div class="filtro" id="filtro-mobile">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
+          <select name="avaliacao" id="avaliacao">
+            <option value="" selected hidden>Selecione a avaliação</option>
+            <option value="30">Mais de 3 estrela</option>
+            <option value="40">Mais de 4 estrela</option>
+            <option value="50">5 estrelas</option>
+          </select>
+          <select name="regiao" id="regiao">
+            <option value="" selected hidden>Selecione a região</option>
+            <option value="0">Fora de SP</option>
+            <option value="1">Zona Leste</option>
+            <option value="2">Zona Norte</option>
+            <option value="3">Zona Oeste</option>
+            <option value="4">Zona Sul</option>
+          </select>
+          <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
+          <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
+        </form>
+      </div>
     </nav>
   </header>
   <div class="filtro">
@@ -94,8 +92,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <option value="4">Zona Sul</option>
       </select>
       <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
-      <button type="submit" class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
     </form>
+    <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
   </div>
   <!-- Começo conteúdo -->
   <main class="container">
