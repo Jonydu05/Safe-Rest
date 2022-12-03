@@ -77,8 +77,15 @@
 	box-shadow: 3px 3px #a5d1f1, 4px 4px #a5d1f1, 5px 5px #a5d1f1;
 }
 
+#no-product {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #2f5169;
+	font-size: 28px;
+}
+
 .container {
-	margin-top: 50px;
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
@@ -86,13 +93,15 @@
 
 .pesquisa-retorno {
 	display: flex;
+	justify-content: center;
+	width: 100vw;
 }
 
 .card {
 	cursor: context-menu;
 	font-size: 1.3rem;
 	margin: 20px;
-	margin-bottom: 45px;
+	margin-bottom: 10vh;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);

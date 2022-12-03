@@ -197,17 +197,6 @@ main {
 }
 
 /* barra de pesquisa */
-#no-product {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #2f5169;
-	font-size: 28px;
-}
-
-#no-product p {
-	text-align: center;
-}
 
 .form-control:focus {
 	transition: 1s;

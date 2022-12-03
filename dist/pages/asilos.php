@@ -71,6 +71,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               <option value="4">Zona Sul</option>
             </select>
             <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
+            <button type="submit" class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
           </form>
         </div>
       </section>
@@ -93,6 +94,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <option value="4">Zona Sul</option>
       </select>
       <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
+      <button type="submit" class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
     </form>
   </div>
   <!-- Começo conteúdo -->
@@ -110,7 +112,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       echo ('<div class="pesquisa-retorno"><h2>Resultado da busca: </h2></div>');
       include('cards.php');
       if ($lista == null) {
-        echo ('<div class="pesquisa-retorno"><span>Não foram encontrados resultados pelo termo buscado.</span></div>');
+        echo ('<div class="pesquisa-retorno"><span>Não foi encontrado nenhum resultado pelo termo buscado.</span></div>');
       }
     }
 
@@ -143,7 +145,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             }
           }
         } else {
-          echo ('<section id="no-product"> <p> Residência não encontrada </p> </section>');
+          echo ('<section id="no-product"> <p> Nenhuma Residência não encontrada </p> </section>');
         }
       } else {
         echo ('<section id="no-product"> <p> Para utilizar os filtros você deve-se cadastrar primeiro </p> </section>');
