@@ -4,11 +4,11 @@
 	box-sizing: border-box;
 }
 
-#filtro-mobile{
+#filtro-mobile {
 	display: none;
 }
 
-#pesquisa-mobile{
+#pesquisa-mobile {
 	display: none;
 }
 
@@ -50,7 +50,7 @@
 	transition: all 0.3s ease-in-out;
 }
 
-#input-pesquisa:hover{
+#input-pesquisa:hover {
 	width: calc(40% + 30px);
 	height: calc(70% + 5px);
 }
@@ -67,10 +67,10 @@
 	width: 15%;
 	border: 1px solid #69b3e7;
 	border-radius: 5px;
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
-#btn-search:hover{
+#btn-search:hover {
 	height: 70%;
 	width: 20%;
 	transform: translateX(-2px);
@@ -82,6 +82,10 @@
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
+}
+
+.pesquisa-retorno {
+	display: flex;
 }
 
 .card {
@@ -132,10 +136,12 @@
 	padding: 2px 10px;
 	text-transform: uppercase;
 }
+
 .rating {
 	background-color: #f6f2fd;
 	color: #9c6c27;
 }
+
 /* Configurações ActioncsCard */
 
 .actionsCard {

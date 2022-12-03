@@ -107,10 +107,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       $close = '1';
       $nome = "%" . trim($_GET['residencia']) . "%";
       $query = "SELECT * FROM `residenciais` WHERE `nome` LIKE '$nome'";
-      echo ('<div class="pesquisa"><h2>Resultado da busca: </h2></div>');
+      echo ('<div class="pesquisa-retorno"><h2>Resultado da busca: </h2></div>');
       include('cards.php');
       if ($lista == null) {
-        echo ('<div class="pesquisa"><p>Não foram encontrados resultados pelo termo buscado.</p></div>');
+        echo ('<div class="pesquisa-retorno"><span>Não foram encontrados resultados pelo termo buscado.</span></div>');
       }
     }
 

@@ -1,7 +1,7 @@
 {
   "name": "safe-rest",
   "version": "1.0.0",
-  "description": "Tcc",
+  "description": "TCC",
   "keywords": [
     "asilos",
     "residências para terceira idade",
@@ -27,9 +27,6 @@
     "jquery": "^3.6.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.6",
-    "@babel/preset-env": "^7.19.4",
-    "babel-loader": "^9.0.0",
     "live-server": "^1.2.2",
     "prettier": "^2.7.1"
   }
