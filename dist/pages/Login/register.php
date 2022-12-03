@@ -121,7 +121,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <link rel="stylesheet" href="../../styles/estilo.css" />
   <link rel="stylesheet" href="../../styles/cadastro.css" />
-  <link rel="stylesheet" href="../../styles/perfil.css" />
 
   <link rel="icon" href="../../assets/img/logo2.png" />
 
