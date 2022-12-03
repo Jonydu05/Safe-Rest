@@ -70,8 +70,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <option value="4">Zona Sul</option>
           </select>
           <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
-          <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
         </form>
+        <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
       </div>
     </nav>
   </header>

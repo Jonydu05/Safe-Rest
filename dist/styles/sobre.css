@@ -30,12 +30,12 @@ h2 {
 
 main {
 	display: block;
-	background: #fff;
+	background: #bfe4fc;
 }
 
 .container {
 	font-family: "dm sans", sans-serif;
-	max-width: 760px;
+	max-width: 70%;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -113,10 +113,12 @@ section.module.parallax h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .fotos div{
 	display: flex;
+	max-width: 25%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -128,8 +130,8 @@ section.module.parallax h1 {
 }
 
 .img-pessoas {
-	width: 150px;
-	height: 150px;
+	width: 100%;
+	max-width: 200px;
 	border-radius: 50%;
 	border: 1px solid #000;
 	transition: all .3s ease-in-out;
@@ -147,21 +149,20 @@ section.module.section-pessoas {
 
 @media (max-width: 760px){
 	.img-pessoas{
-		width: 100px;
-		height: 100px;
+		max-width: 150px;
+	}
+	.fotos div{
+		max-width: 50%;
+
 	}
 }
 
 @media (max-width: 420px) {
-	.fotos {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-	}
 	.img-pessoas{
-		width: 100%;
-		height: calc(100% - 100px);
+		max-width: none;
+	}
+	.fotos div{
+		max-width: none;
 	}
 	section.module.parallax-1 {
 		background-color: #309075;
