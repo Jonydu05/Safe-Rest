@@ -100,7 +100,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     <section class="module content section-pessoas" id="section-pesquisa">
       <div class="container area-4">
-        <h2>Pesquisa</h2>
+        <h2>Analista</h2>
         <div class="fotos">
           <div>
             <img src="../assets/img/pessoas/luiz.jpg" alt="Luiz" class="img-pessoas">

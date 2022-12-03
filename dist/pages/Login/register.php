@@ -132,7 +132,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <header id="header">
     <div id="teste">
       <a href="../index.php"><img src="../../assets/img/logo2.png" alt="" id="logo" /></a>
-      <a href="index.php"><img src="../../assets/img/logo5.png" id="tipografia" alt=""></a>
+      <a href="../index.php"><img src="../../assets/img/logo5.png" id="tipografia" alt=""></a>
     </div>
 
     <nav class="nav" id="nav">
