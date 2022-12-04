@@ -230,5 +230,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <!-- fim do rodapé -->
   <script src="../../../src/menu.js"></script>
 </body>
-
-</html>

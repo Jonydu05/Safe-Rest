@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap");
+
 body {
 	margin: 0;
 	padding: 0;
@@ -89,7 +91,7 @@ section.module.parallax::after {
 
 section.module.parallax-1 {
 	background-image: url(../assets/img/idosa.jpg);
-  background-position: 0 -30px;
+	background-position: 0 -30px;
 }
 
 section.module.parallax-2 {
@@ -103,7 +105,10 @@ section.module.parallax h1 {
 	text-transform: uppercase;
 }
 
-.area-1, .area-2, .area-3, .area-4 {
+.area-1,
+.area-2,
+.area-3,
+.area-4 {
 	visibility: hidden;
 }
 
@@ -116,7 +121,7 @@ section.module.parallax h1 {
 	flex-wrap: wrap;
 }
 
-.fotos div{
+.fotos div {
 	display: flex;
 	max-width: 25%;
 	flex-direction: column;
@@ -125,7 +130,7 @@ section.module.parallax h1 {
 	margin: 20px;
 }
 
-.fotos div span{
+.fotos div span {
 	display: flex;
 }
 
@@ -134,34 +139,33 @@ section.module.parallax h1 {
 	max-width: 200px;
 	border-radius: 50%;
 	border: 1px solid #000;
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .section-pessoas {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 section.module.section-pessoas {
-  padding: 15px 0;
-  margin: 0 auto;
+	padding: 15px 0;
+	margin: 0 auto;
 }
 
-@media (max-width: 760px){
-	.img-pessoas{
+@media (max-width: 760px) {
+	.img-pessoas {
 		max-width: 150px;
 	}
-	.fotos div{
+	.fotos div {
 		max-width: 50%;
-
 	}
 }
 
 @media (max-width: 420px) {
-	.img-pessoas{
+	.img-pessoas {
 		max-width: none;
 	}
-	.fotos div{
+	.fotos div {
 		max-width: none;
 	}
 	section.module.parallax-1 {

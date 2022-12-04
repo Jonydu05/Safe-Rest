@@ -1,15 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-
-:root {
-	--fundo: #f6f2fd;
-	--azul-escuro: #2f5169;
-	--azul-bebe: #69b3e7;
-	--azul-claro: #a5d1f1;
-	--branco-gelo: #d2e8f8;
-	--azul-forte: #004998;
-	--complementar1: #9c6c27;
-	--complementar2: #e8b468;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
 
 *,
 *:after,
@@ -99,10 +88,10 @@ input {
 .input-field:focus,
 .input-field:valid {
 	outline: none;
-	border-bottom-color: var(--azul-forte);
+	border-bottom-color: #004998;
 }
 .input-label {
-	color: var(--azul-forte);
+	color: #004998;
 	transform: translateY(-1.5rem);
 }
 
@@ -119,7 +108,7 @@ input {
 	padding: 1em;
 	width: 45%;
 	font-weight: 500;
-	background-color: var(--azul-forte);
+	background-color: #004998;
 	border-radius: 6px;
 	color: #fff;
 	border: 0;
@@ -129,7 +118,7 @@ input {
 
 .action-button:hover {
 	transition: 0.2s;
-	background-color: var(--azul-escuro);
+	background-color: #2f5169;
 }
 
 .card-info {
@@ -143,18 +132,11 @@ input {
 }
 
 .card-info a {
-	color: var(--azul-forte);
+	color: #004998;
 	text-decoration: none;
 }
 
-.card-info ul {
-	list-style: none;
-	display: flex;
-	gap: 1rem;
-	justify-content: space-around;
-}
-
-.card-info ul li a:hover {
+.card-info a:hover {
 	color: #1b730b;
 	transition: 0.2s;
 }
@@ -182,8 +164,8 @@ input {
 	min-width: 70%;
 }
 
-main{
-	min-height: 90vh;
+#titulo-recuperar{
+	padding-bottom: 40%;
 }
 
 @media (max-width: 768px) {

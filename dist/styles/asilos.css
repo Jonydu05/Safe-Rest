@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap");
+
 .carousel img {
 	display: flex;
 	margin: 0 auto;
@@ -47,10 +49,6 @@
 	word-wrap: break-word;
 }
 
-.com{
-	margin: 30px;
-}
-
 @media (max-width: 800px) {
 	.asilos {
 		flex-direction: column;
@@ -59,8 +57,4 @@
 	.info {
 		max-width: 60%;
 	}
-}
-
-footer {
-	clear: both;
 }

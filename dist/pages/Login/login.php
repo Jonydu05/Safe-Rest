@@ -161,6 +161,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </form>
 
       <div class="card-info">
+        <p><a href="recover.php">Esqueceu a sua senha?</a></p>
         <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
       </div>
     </div>

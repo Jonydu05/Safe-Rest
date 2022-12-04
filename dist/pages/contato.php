@@ -1,10 +1,10 @@
 <?php
 // Inicialize a sessão
 session_start();
- 
+
 // Verifique se o usuário está logado, se não, redirecione-o para uma página de login
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    $_SESSION["username"] = "Entrar";
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  $_SESSION["username"] = "Entrar";
 }
 ?>
 
@@ -16,8 +16,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="../styles/estilo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/estilo.css" />
   <link rel="stylesheet" href="../styles/contato.css" />
+
   <link rel="icon" href="../assets/img/logo2.png" />
 
   <script src="https://kit.fontawesome.com/da55f0765a.js" crossorigin="anonymous"></script>
@@ -42,7 +43,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <li><a href="asilos.php">Residências</a></li>
         <li><a href="sobre.php">Sobre</a></li>
         <li><a href="contato.php">Contato</a></li>
-        <li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+        <li><a href="Login/register.php">
+            <?php echo htmlspecialchars($_SESSION["username"]); ?>
+          </a></li>
       </ul>
     </nav>
   </header>

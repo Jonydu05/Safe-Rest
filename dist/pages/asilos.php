@@ -15,10 +15,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="stylesheet" href="../styles/estilo.css" />
   <link rel="stylesheet" href="../styles/cards.css" />
   <link rel="stylesheet" href="../styles/filtro.css">
+
   <link rel="icon" href="../assets/img/logo2.png" />
+
   <title>Residências</title>
 </head>
 
@@ -45,15 +48,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <li><a href="asilos.php">Residências</a></li>
         <li><a href="sobre.php">Sobre</a></li>
         <li><a href="contato.php">Contato</a></li>
-        <li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+        <li><a href="Login/register.php">
+            <?php echo htmlspecialchars($_SESSION["username"]); ?>
+          </a></li>
+        <li>
+          <div class="div-pesquisa" id="search-mobile">
+            <form action="" method="get">
+              <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
+              <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
+            </form>
+          </div>
+        </li>
       </ul>
-      <div class="div-pesquisa" id="search-mobile">
-        <form action="" method="get">
-          <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
-          <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
-        </form>
-      </div>
-      <div class="filtro" id="filtro-mobile">
+
+      <!-- <div class="filtro" id="filtro-mobile">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
           <select name="avaliacao" id="avaliacao">
             <option value="" selected hidden>Selecione a avaliação</option>
@@ -72,10 +80,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
         </form>
         <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
-      </div>
+      </div> -->
     </nav>
   </header>
-  <div class="filtro">
+  <!-- Fim header -->
+  <section class="filtro">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
       <select name="avaliacao" id="avaliacao">
         <option value="" selected hidden>Selecione a avaliação</option>
@@ -94,7 +103,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
     </form>
     <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
-  </div>
+  </section>
   <!-- Começo conteúdo -->
   <main class="container">
     <?php
@@ -107,10 +116,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       $close = '1';
       $nome = "%" . trim($_GET['residencia']) . "%";
       $query = "SELECT * FROM `residenciais` WHERE `nome` LIKE '$nome'";
-      echo ('<div class="pesquisa-retorno"><h2>Resultado da busca: </h2></div>');
+      echo ('<section class="pesquisa-retorno"><h2>Resultado da busca: </h2></section>');
       include('cards.php');
       if ($lista == null) {
-        echo ('<div class="pesquisa-retorno"><span>Não foi encontrado nenhum resultado pelo termo buscado.</span></div>');
+        echo ('<section class="pesquisa-retorno"><span>Não foi encontrado nenhum resultado pelo termo buscado.</span></section>');
       }
     }
 

@@ -1,10 +1,10 @@
 <?php
 // Inicialize a sessão
 session_start();
- 
+
 // Verifique se o usuário está logado, se não, redirecione-o para uma página de login
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    $_SESSION["username"] = "Entrar";
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  $_SESSION["username"] = "Entrar";
 }
 ?>
 
@@ -43,10 +43,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <li><a href="asilos.php">Residências</a></li>
         <li><a href="sobre.php">Sobre</a></li>
         <li><a href="contato.php">Contato</a></li>
-        <li><a href="Login/register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+        <li><a href="Login/register.php">
+            <?php echo htmlspecialchars($_SESSION["username"]); ?>
+          </a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section class="module parallax parallax-1">
       <h1 class="area-1">Quem Somos?</h1>
@@ -176,7 +179,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </section>
     </div>
   </footer>
-  
+
   <!-- fim do rodapé -->
   <script src="../../src/scroll.js"></script>
   <script src="../../src/menu.js"></script>

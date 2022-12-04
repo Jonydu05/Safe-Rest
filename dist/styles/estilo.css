@@ -1,15 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Vollkorn&display=swap");
-
-:root {
-	--fundo: #f6f2fd;
-	--azul-escuro: #2f5169;
-	--azul-bebe: #69b3e7;
-	--azul-claro: #a5d1f1;
-	--branco-gelo: #d2e8f8;
-	--azul-forte: #004998;
-	--complementar1: #9c6c27;
-	--complementar2: #e8b468;
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap");
 
 /* Configuração Inicial */
 body {
@@ -62,7 +51,7 @@ main {
 	box-sizing: border-box;
 	height: 120px;
 	padding: 1rem;
-	background-color: var(--azul-forte);
+	background-color: #004998;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -193,7 +182,7 @@ main {
 .link-asilos {
 	font-family: "dm sans", arial, sans-serif;
 	text-decoration: none;
-	color: var(--azul-forte);
+	color: #004998;
 	transition: all 0.2s;
 }
 
@@ -285,7 +274,6 @@ main {
 }
 
 @media (max-width: 325px) {
-
 	#tipografia {
 		height: 45px;
 	}
