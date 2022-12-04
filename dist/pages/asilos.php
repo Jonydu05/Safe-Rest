@@ -60,49 +60,31 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           </div>
         </li>
       </ul>
-
-      <!-- <div class="filtro" id="filtro-mobile">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
-          <select name="avaliacao" id="avaliacao">
-            <option value="" selected hidden>Selecione a avaliação</option>
-            <option value="30">Mais de 3 estrela</option>
-            <option value="40">Mais de 4 estrela</option>
-            <option value="50">5 estrelas</option>
-          </select>
-          <select name="regiao" id="regiao">
-            <option value="" selected hidden>Selecione a região</option>
-            <option value="0">Fora de SP</option>
-            <option value="1">Zona Leste</option>
-            <option value="2">Zona Norte</option>
-            <option value="3">Zona Oeste</option>
-            <option value="4">Zona Sul</option>
-          </select>
-          <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
-        </form>
-        <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
-      </div> -->
     </nav>
   </header>
   <!-- Fim header -->
   <section class="filtro">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
-      <select name="avaliacao" id="avaliacao">
-        <option value="" selected hidden>Selecione a avaliação</option>
-        <option value="30">Mais de 3 estrela</option>
-        <option value="40">Mais de 4 estrela</option>
-        <option value="50">5 estrelas</option>
-      </select>
-      <select name="regiao" id="regiao">
-        <option value="" selected hidden>Selecione a região</option>
-        <option value="0">Fora de SP</option>
-        <option value="1">Zona Leste</option>
-        <option value="2">Zona Norte</option>
-        <option value="3">Zona Oeste</option>
-        <option value="4">Zona Sul</option>
-      </select>
-      <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
-    </form>
-    <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
+    <button id="btn-filtro-mobile" class="limpar-filtro"> Filtros </button>
+    <div id="filtro-desktop">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
+        <select name="avaliacao" id="avaliacao">
+          <option value="" selected hidden>Selecione a avaliação</option>
+          <option value="30">Mais de 3 estrela</option>
+          <option value="40">Mais de 4 estrela</option>
+          <option value="50">5 estrelas</option>
+        </select>
+        <select name="regiao" id="regiao">
+          <option value="" selected hidden>Selecione a região</option>
+          <option value="0">Fora de SP</option>
+          <option value="1">Zona Leste</option>
+          <option value="2">Zona Norte</option>
+          <option value="3">Zona Oeste</option>
+          <option value="4">Zona Sul</option>
+        </select>
+        <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
+      </form>
+      <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
+    </div>
   </section>
   <!-- Começo conteúdo -->
   <main class="container">

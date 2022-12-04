@@ -154,6 +154,15 @@
 	font-size: 28px;
 }
 
+#filtro-desktop{
+	display: flex;
+	align-items: center;
+}
+
+#btn-filtro-mobile{
+	display: none;
+}
+
 #filtro-mobile {
 	display: none;
 }
@@ -165,5 +174,8 @@
 @media (max-width: 800px) {
 	#search-mobile {
 		display: flex;
+	}
+	#search-desktop, #filtro-desktop{
+		display: none;
 	}
 }
