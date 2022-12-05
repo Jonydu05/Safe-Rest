@@ -5,6 +5,7 @@
 	margin: 0 auto;
 	max-width: 100%;
 	cursor: grab;
+	border-radius: 25px;
 }
 
 .carousel img:active {
@@ -14,16 +15,6 @@
 .carousel {
 	margin: 50px;
 	max-width: 50vw;
-}
-
-@media (max-width: 800px) {
-	.carousel img {
-		max-height: 30vh;
-		width: 100%;
-	}
-	.carousel {
-		max-width: 100%;
-	}
 }
 
 .asilos {
@@ -49,12 +40,23 @@
 	word-wrap: break-word;
 }
 
-@media (max-width: 800px) {
+.contato {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 950px) {
 	.asilos {
 		flex-direction: column;
 		flex-wrap: nowrap;
 	}
 	.info {
-		max-width: 60%;
+		max-width: 75%;
+	}
+	.carousel img {
+		height: 100%;
+	}
+	.carousel {
+		max-width: 100%;
 	}
 }

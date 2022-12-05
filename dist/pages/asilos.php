@@ -38,9 +38,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       </button>
       <ul class="menu" role="menu">
         <li>
-          <form method="get" class="div-pesquisa">
+          <form method="get" class="div-pesquisa" autocomplete="off">
             <input type="search" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
-            <button type="submit" name="Buscar" id="btn-search"><ion-icon name="search-outline"></ion-icon></button>
+            <button type="submit" name="Buscar" id="btn-search">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
           </form>
         </li>
         <li><a href="index.php">Início</a></li>
@@ -56,32 +58,33 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <!-- Fim header -->
   <section class="filtro">
 
-    <button onclick="dropdown()" id="btn-filtro" class="limpar-filtro">
-      Filtros<ion-icon name="chevron-down-outline"></ion-icon>
-    </button>
+    <button id="btn-filtro" class="limpar-filtro"> Filtros<ion-icon name="chevron-down-outline"></ion-icon></button>
 
-    <div id="dropdown-filtro" class="dropdown-content">
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro"
-        id="filtro-desktop">
 
-        <select name="avaliacao" id="avaliacao">
-          <option value="" selected hidden>Selecione a avaliação</option>
-          <option value="30">Mais de 3 estrela</option>
-          <option value="40">Mais de 4 estrela</option>
-          <option value="50">5 estrelas</option>
-        </select>
+    <div id="modal" class="dropdown-content">
+      <div id="backdrop"></div>
+      <div id="modal-content">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
 
-        <select name="regiao" id="regiao">
-          <option value="" selected hidden>Selecione a região</option>
-          <option value="0">Fora de SP</option>
-          <option value="1">Zona Leste</option>
-          <option value="2">Zona Norte</option>
-          <option value="3">Zona Oeste</option>
-          <option value="4">Zona Sul</option>
-        </select>
-        <input type="submit" name="buscardados" value="Filtrar" class="btn-filtro">
-      </form>
-    </div>
+          <select name="avaliacao" id="avaliacao">
+            <option value="" selected hidden>Selecione a avaliação</option>
+            <option value="30">Mais de 3 estrela</option>
+            <option value="40">Mais de 4 estrela</option>
+            <option value="50">5 estrelas</option>
+          </select>
+
+          <select name="regiao" id="regiao">
+            <option value="" selected hidden>Selecione a região</option>
+            <option value="0">Fora de SP</option>
+            <option value="1">Zona Leste</option>
+            <option value="2">Zona Norte</option>
+            <option value="3">Zona Oeste</option>
+            <option value="4">Zona Sul</option>
+          </select>
+          <input type="submit" name="buscardados" value="Filtrar" class="btn-filtro">
+        </form>
+        <button id="fechar-modal" onclick="closeModal()">Fechar</button>
+      </div>
     </div>
     <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
   </section>

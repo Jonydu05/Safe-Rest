@@ -4,14 +4,12 @@ $('.carousel').slick({
 	autoplay: true,
   autoplaySpeed: 2000,
 	infinite: true,
-	dots: true,
   adaptiveHeight: true,
 	responsive: [
     {
       breakpoint: 1024,
       settings: {
-        infinite: true,
-        dots: true
+        infinite: true
       }
     },
     {

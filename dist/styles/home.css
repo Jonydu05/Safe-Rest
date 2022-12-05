@@ -73,6 +73,7 @@ section.module.parallax {
 	background-position: 50% 50%;
 	background-attachment: fixed;
 	background-size: cover;
+	font-size: 70px;
 }
 
 section.module.parallax::after {
@@ -97,6 +98,7 @@ section.module.parallax h1 {
 	font-size: 70px;
 	z-index: 50;
 	text-transform: uppercase;
+	word-break: keep-all;
 }
 
 .area-1,
@@ -161,4 +163,10 @@ section.module.parallax h1 {
 	position: fixed;
 	z-index: 99999999999;
 	width: 100%;
+}
+
+@media (max-width: 430px){
+	#gratuito {
+		font-size: 70%;
+	}
 }

@@ -72,7 +72,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </section>
 
     <section class="module parallax parallax-2">
-      <h1 class="area-3">É gratuito?</h1>
+      <h1 class="area-3" id="gratuito">É gratuito?</h1>
     </section>
 
     <section class="module content">

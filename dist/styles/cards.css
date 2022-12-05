@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -44,13 +44,14 @@
 	min-height: 0px;
 }
 
-.card-body h3{
+.card-body h3 {
+	margin: 20px 0 0;
 	font-weight: 500;
 }
 
 .card-body p {
 	font-size: 16px;
-	margin: 0 0 0px;
+	margin: 20px 0 0;
 }
 
 .tag {
@@ -72,6 +73,9 @@
 
 .actionsCard {
 	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .actions {
@@ -81,8 +85,8 @@
 }
 
 /* Configurações outras*/
-/* @media (max-width: 0px) {
+@media (max-width: 540px) {
 	.card {
-		width: 85%;
+		width: 80%;
 	}
-} */
+}

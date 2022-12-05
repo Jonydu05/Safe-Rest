@@ -25,26 +25,14 @@ $casa = $lista[$dado][0];
 
 	<link rel="stylesheet" href="../styles/estilo.css" />
 	<link rel="stylesheet" href="../styles/asilos.css" />
+	<link rel="stylesheet" href="../styles/comentarios.css" />
 
 	<link rel="icon" href="../assets/img/logo2.png" />
 
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-	<style>
-		.estrelas input[type=radio] {
-			display: none;
-		}
-
-		.estrelas label i.fa:before {
-			content: '\f005';
-			color: rgb(255, 255, 0);
-		}
-
-		.estrelas input[type=radio]:checked~label i.fa:before {
-			color: rgb(207, 207, 207);
-		}
-	</style>
+	<script src="https://kit.fontawesome.com/da55f0765a.js" crossorigin="anonymous"></script>
 
 	<title>
 		<?php echo $lista[$dado][1]; ?>
@@ -93,21 +81,26 @@ $casa = $lista[$dado][0];
 
 		<section class="info">
 
-			<form method="POST" action="" enctype="multipart/form-data">
+			<form method="POST" action="" enctype="multipart/form-data" id="form-estrela">
 				<div class="estrelas">
 					<input type="radio" id="vazio" name="estrela" value="" checked>
+
 					<label for="estrela_um"><i class="fa"></i></label>
 					<input type="radio" id="estrela_um" name="estrela" value="1">
+
 					<label for="estrela_dois"><i class="fa"></i></label>
 					<input type="radio" id="estrela_dois" name="estrela" value="2">
+
 					<label for="estrela_tres"><i class="fa"></i></label>
 					<input type="radio" id="estrela_tres" name="estrela" value="3">
+
 					<label for="estrela_quatro"><i class="fa"></i></label>
 					<input type="radio" id="estrela_quatro" name="estrela" value="4">
+
 					<label for="estrela_cinco"><i class="fa"></i></label>
-					<input type="radio" id="estrela_cinco" name="estrela" value="5"><br><br>
-					<input type="submit" name="Cadastrar" value="Avaliar">
+					<input type="radio" id="estrela_cinco" name="estrela" value="5">
 				</div>
+				<input type="submit" name="Cadastrar" value="Avaliar" id="avaliar">
 			</form>
 
 			<?php
@@ -125,7 +118,7 @@ $casa = $lista[$dado][0];
 			      $estrela = $_POST['estrela'];
 			      $query = "UPDATE `avaliar` SET `$nome` = '$estrela' WHERE `avaliar`.`id_usuario` = '$theuser'";
 			      $pdo->exec($query);
-			      $_SESSION['msg'] = "<span class='invalid-feedback'>Avaliação cadastrada com sucesso. Sua nota foi " . $estrela . " estrelas.</span>";
+			      $_SESSION['msg'] = "<span class='success-feedback'>Avaliação cadastrada com sucesso. Sua nota foi " . $estrela . " estrelas.</span>";
 			      $_SESSION['nota'] = "Sim";
 		      } else {
 			      $_SESSION['msg'] = "<span class='invalid-feedback'>Necessário selecionar pelo menos 1 estrela.</span>";
@@ -157,7 +150,7 @@ $casa = $lista[$dado][0];
 			<p class="descricao">
 				<?php echo $lista[$dado][2]; ?>
 			</p>
-			<div class="contato">
+			<section class="contato">
 				<p class="localizacao"><strong> Localização: </strong>
 					<?php echo $lista[$dado][3]; ?>
 				</p>
@@ -175,40 +168,44 @@ $casa = $lista[$dado][0];
 						<?php echo $lista[$dado][8]; ?> <br />
 					</li>
 				</ul>
-			</div>
+			</section>
 		</section>
 		<section class="comentarios">
 			<h2>Comentários</h2>
-			<p>Escreva aqui a sua opinião sobre essa casa de repouso.</p>
-			<form action="" method="post">
-				<textarea name="comentario" id="comentario"></textarea>
-				<input type="submit" name="Enviar" value="Enviar">
+			<p>Compartilhe com os outros a sua opinião sobre esse Residêncial.</p>
+			<form action="" method="post" autocomplete="off">
+				<textarea name="comentario" id="comentario" required maxlength=""></textarea>
+				<button type="submit" name="Enviar">
+					<ion-icon name="send-sharp" id="btn-ion"></ion-icon>
+				</button>
 			</form>
+			<div class="secao-usuarios">
+				<?php
+        if (isset($_POST['Enviar'])) {
+	        if ($_SESSION["username"] != "Entrar") {
+		        $logado = $_SESSION["username"];
+		        $residencia = $lista[$dado][1];
+		        $comentario = $_POST['comentario'];
+		        $query = "INSERT INTO `comentar`(`usuario`, `$residencia`) VALUES ('$logado','$comentario')";
+		        $pdo->exec($query);
+		        echo "<br>";
+	        } else {
+		        echo "<span class='invalid-feedback'>É necessário se cadastrar primeiro para comentar.</span>";
+	        }
+        }
+        $query = "SELECT * FROM `comentar`";
+        $stmt = $pdo->query($query);
+        $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+        $Quantlista = count($lista);
+        for ($contagem = 0; $contagem < $Quantlista; $contagem++) {
+	        if ($lista[$contagem][$casa] != null) {
+		        echo "<div class='foto-nome'> <i class='fa-regular fa-user'></i> <b>" . $lista[$contagem][0] . "</b> </div> ";
+		        echo "<div class='comentario-feito'> <span>" . $lista[$contagem][$casa] . "</span></div>";
+	        }
+        }
+        ?>
+			</div>
 		</section>
-		<?php
-      if (isset($_POST['Enviar'])) {
-	      if ($_SESSION["username"] != "Entrar") {
-		      $logado = $_SESSION["username"];
-		      $residencia = $lista[$dado][1];
-		      $comentario = $_POST['comentario'];
-		      $query = "INSERT INTO `comentar`(`usuario`, `$residencia`) VALUES ('$logado','$comentario')";
-		      $pdo->exec($query);
-		      echo "<br>";
-	      } else {
-		      echo "<span>É necessário se cadastrar primeiro para comentar.</span>";
-	      }
-      }
-      $query = "SELECT * FROM `comentar`";
-      $stmt = $pdo->query($query);
-      $lista = $stmt->fetchAll(PDO::FETCH_NUM);
-      $Quantlista = count($lista);
-      for ($contagem = 0; $contagem < $Quantlista; $contagem++) {
-	      if ($lista[$contagem][$casa] != null) {
-		      echo "<img style='height: 20px; width: 20px' src='https://img1.gratispng.com/20180325/buq/kisspng-user-profile-get-em-cardiovascular-disease-zingah-avatar-5ab7520468bc16.870439461521963524429.jpg'> <b>" . $lista[$contagem][0] . "</b> - " . $lista[$contagem][16] . "<br>";
-		      echo $lista[$contagem][$casa] . "<hr>";
-	      }
-      }
-      ?>
 	</main>
 	<!-- começo do rodapé -->
 	<footer id="footer">
