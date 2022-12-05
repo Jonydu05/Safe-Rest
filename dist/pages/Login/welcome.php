@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <link rel="icon" href="../../assets/img/logo2.png" />
 
-  <title>Bem Vindo!</title>
+  <title><?php echo htmlspecialchars($_SESSION["username"]); ?></title>
 </head>
 
 <body>

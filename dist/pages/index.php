@@ -22,7 +22,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
   <link rel="icon" href="../assets/img/logo2.png" />
 
-  <script src="https://kit.fontawesome.com/da55f0765a.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>Início</title>
 </head>

@@ -31,19 +31,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <a href="index.php"><img src="../assets/img/logo2.png" alt="" id="logo" /></a>
       <a href="index.php"><img src="../assets/img/logo5.png" id="tipografia" alt=""></a>
     </div>
-    <!--Barra de pesquisa-->
-    <div class="div-pesquisa" id="search-desktop">
-      <form action="" method="get">
-        <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
-        <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
-      </form>
-    </div>
     <!-- Começo nav -->
     <nav class="nav" id="nav">
       <button aria-label="Abrir Menu" id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
         <span id="hamburguer"></span>
       </button>
       <ul class="menu" role="menu">
+        <li>
+          <form method="get" class="div-pesquisa">
+            <input type="search" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
+            <button type="submit" name="Buscar" id="btn-search"><ion-icon name="search-outline"></ion-icon></button>
+          </form>
+        </li>
         <li><a href="index.php">Início</a></li>
         <li><a href="asilos.php">Residências</a></li>
         <li><a href="sobre.php">Sobre</a></li>
@@ -51,28 +50,27 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <li><a href="Login/register.php">
             <?php echo htmlspecialchars($_SESSION["username"]); ?>
           </a></li>
-        <li>
-          <div class="div-pesquisa" id="search-mobile">
-            <form action="" method="get">
-              <input type="text" name="residencia" placeholder="Insira o nome da residência" id="input-pesquisa">
-              <input type="submit" name="Buscar" value="Buscar" id="btn-search" />
-            </form>
-          </div>
-        </li>
       </ul>
     </nav>
   </header>
   <!-- Fim header -->
   <section class="filtro">
-    <button id="btn-filtro-mobile" class="limpar-filtro"> Filtros </button>
-    <div id="filtro-desktop">
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro">
+
+    <button onclick="dropdown()" id="btn-filtro" class="limpar-filtro">
+      Filtros<ion-icon name="chevron-down-outline"></ion-icon>
+    </button>
+
+    <div id="dropdown-filtro" class="dropdown-content">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form-filtro"
+        id="filtro-desktop">
+
         <select name="avaliacao" id="avaliacao">
           <option value="" selected hidden>Selecione a avaliação</option>
           <option value="30">Mais de 3 estrela</option>
           <option value="40">Mais de 4 estrela</option>
           <option value="50">5 estrelas</option>
         </select>
+
         <select name="regiao" id="regiao">
           <option value="" selected hidden>Selecione a região</option>
           <option value="0">Fora de SP</option>
@@ -81,10 +79,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <option value="3">Zona Oeste</option>
           <option value="4">Zona Sul</option>
         </select>
-        <input type="submit" name="buscardados" value="Pesquisar" class="btn-filtro">
+        <input type="submit" name="buscardados" value="Filtrar" class="btn-filtro">
       </form>
-      <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
     </div>
+    </div>
+    <button class="limpar-filtro"><a href="asilos.php" class="link-asilo">Limpar filtro</a></button>
   </section>
   <!-- Começo conteúdo -->
   <main class="container">
@@ -134,10 +133,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             }
           }
         } else {
-          echo ('<section id="no-product"> <p> Nenhuma Residência não encontrada </p> </section>');
+          echo ('<section id="no-product"> <span> Nenhuma Residência encontrada </span> </section>');
         }
       } else {
-        echo ('<section id="no-product"> <p> Para utilizar os filtros você deve-se cadastrar primeiro </p> </section>');
+        echo ('<section id="no-product"> <span> Para utilizar os filtros você deve-se cadastrar primeiro </span> </section>');
       }
     } else {
       if ($close != '1') {
@@ -174,13 +173,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
   </footer>
   <!-- fim do rodapé -->
-  <script src="../../src/menu.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../../src/menu.js"></script>
+  <script src="../../src/dropdown.js"></script>
 </body>
 
 </html>

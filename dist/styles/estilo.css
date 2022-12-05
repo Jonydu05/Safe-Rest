@@ -75,6 +75,11 @@ main {
 	gap: 1rem;
 }
 
+.menu li{
+	display: flex;
+	align-items: center;
+}
+
 .menu a {
 	display: block;
 	padding: 0.5rem;
@@ -90,7 +95,7 @@ main {
 	display: none;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 940px) {
 	.menu {
 		display: block;
 		position: absolute;
