@@ -101,7 +101,7 @@
         [
             'Lar e Residencial Reluz', 
             'Somos profissionais da área de saúde. Somos pais, filhos, netos, sobrinhos, pessoas comuns, que vivem as angústias e os prazeres do convívio com seus familiares mais velhos. Desejamos acolher aqueles que cuidaram de nós e abrir espaço para reflexões, informações e novas atitudes no que diz respeito à maturidade. Somos cuidadores do amor, sentimos na pele as imensas dificuldades para encontrar soluções e oferecer aos nossos idosos espaços de cuidados especiais, profissionais adequados, a melhor forma de dar mais conforto, segurança, bem-estar.',
-            'Rua Franco Paulista, 181 - Água Fria - São Paulo - Zona Norte',
+            'Rua Franco Paulista, 181 - água Fria - São Paulo - Zona Norte',
             'Zona Norte',
             'https://goo.gl/maps/15jx69MkLS1tahwg8',
             '(11) 2950-5497',
@@ -129,7 +129,7 @@
         [
             'Residencial Vila dos Sonhos', 
             'Conheça a Casa de Repouso Residencial Vila dos Sonhos, nosso foco é atender você com serviços inovadores, entre em contato e confira os serviços e profissionais. Contamos com profissionais experientes e treinados periodicamente e por isso, estamos crescendo a cada dia mais.',
-            'Av. Eng. Caetano Álvares, 6705 – Mandaqui, SP - Zona Norte',
+            'Av. Eng. Caetano Álvares, 6705 – Mandaqui, SP -  Zona Norte',
             'Zona Norte',
             'https://goo.gl/maps/AgGkoUQgcEssCS9Y9',
             '(11) 2283-2934',
@@ -157,7 +157,7 @@
         [
             'São Judas Residence', 
             'A São Judas Residence é um espaço totalmente dedicado para idosos e oferece um conceito diferenciado, com ambiente acolhedor e equipe especializada. Localizado em Santo André, um município brasileiro da Região do Grande ABC, localizado na Zona Sudeste da Grande São Paulo, parte da Região Metropolitana de São Paulo.',
-            'Rua Vitória Régia, 1204 – Santo André – SP',
+            'Rua Vitória Régia, 1204 - 09080-320 – Santo André – SP',
             'Fora de SP',
             'https://goo.gl/maps/zThfYVB58r9BRwnb7',
             '(11) 4473-2630',
@@ -197,8 +197,8 @@
             11
         ],
         [
-            'Nostra Casa', 
-            'A Nostra Casa esta preparada para receber com muito amor, respeito e cuidado a seus residentes. Em um ambiente espaçoso e moderno que une o conforto e o carinho que sentimos dentro da nossa casa, com a infraestrutura e atendimento de um hotel alto padrão, tudo completo e preparado para atender a todas as necessidades que o residente venha a ter.',
+            'Vovó Zilda', 
+            'A Vovó Zilda esta preparada para receber com muito amor, respeito e cuidado a seus residentes. Em um ambiente espaçoso e moderno que une o conforto e o carinho que sentimos dentro da nossa casa, com a infraestrutura e atendimento de um hotel alto padrão, tudo completo e preparado para atender a todas as necessidades que o residente venha a ter.',
             'R. Alvarenga, 2333 – Butantã, São Paulo',
             'Zona Oeste',
             'https://goo.gl/maps/C588TgYmcdyy7myZA',
@@ -209,6 +209,6 @@
             14,
             50,
             5
-        ],
+        ]        
     ];
 ?>

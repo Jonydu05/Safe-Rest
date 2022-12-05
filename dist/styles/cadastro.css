@@ -35,7 +35,7 @@ input {
 }
 
 .card-title {
-	padding-bottom: 25%;
+	padding-bottom: 30%;
 	position: relative;
 }
 
@@ -182,9 +182,6 @@ input {
 }
 
 @media (max-width: 425px) {
-	.card-title {
-		padding-bottom: 30%;
-	}
 	.action {
 		flex-direction: column;
 	}

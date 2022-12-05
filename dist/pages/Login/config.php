@@ -21,6 +21,7 @@ try{
             `username` VARCHAR(50) NOT NULL , 
             `email` VARCHAR(100) NOT NULL , 
             `password` VARCHAR(255) NOT NULL , 
+            `cpf` INT(20) NOT NULL ,
             `created_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP , 
             PRIMARY KEY (`id`)
             ) 
@@ -52,17 +53,28 @@ try{
         ";
         $pdo->exec($query);
     }
-    $table3 = 'notas';
+    $table3 = 'comentar';
     $tableExists = $pdo->query("SHOW TABLES LIKE '$table3'")->rowCount() > 0;
     if($tableExists != 1){
         $query="
-                CREATE TABLE `test`.`notas` (
-                    `id_usuario` INT(4) NOT NULL 
+                CREATE TABLE `test`.`comentar` (
+                    `usuario` VARCHAR(50) NOT NULL 
                     ) 
                 ENGINE = InnoDB;
             ";
         $pdo->exec($query);
     }
+    $table4 = 'avaliar';
+    $tableExists = $pdo->query("SHOW TABLES LIKE '$table4'")->rowCount() > 0;
+    if($tableExists != 1){
+        $query="
+                CREATE TABLE `test`.`avaliar` (
+                    `id_usuario` VARCHAR(50) NOT NULL 
+                    ) 
+                ENGINE = InnoDB;
+            ";
+        $pdo->exec($query);
+    }   
 } catch(PDOException $e){
     die("ERROR: Não foi possível conectar." . $e->getMessage());
 }

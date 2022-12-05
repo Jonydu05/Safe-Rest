@@ -31,9 +31,25 @@ $casa = $lista[$dado][0];
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+	<style>
+		.estrelas input[type=radio] {
+			display: none;
+		}
+
+		.estrelas label i.fa:before {
+			content: '\f005';
+			color: rgb(255, 255, 0);
+		}
+
+		.estrelas input[type=radio]:checked~label i.fa:before {
+			color: rgb(207, 207, 207);
+		}
+	</style>
+
 	<title>
 		<?php echo $lista[$dado][1]; ?>
 	</title>
+
 </head>
 
 <body>
@@ -76,6 +92,65 @@ $casa = $lista[$dado][0];
 		</section>
 
 		<section class="info">
+
+			<form method="POST" action="" enctype="multipart/form-data">
+				<div class="estrelas">
+					<input type="radio" id="vazio" name="estrela" value="" checked>
+					<label for="estrela_um"><i class="fa"></i></label>
+					<input type="radio" id="estrela_um" name="estrela" value="1">
+					<label for="estrela_dois"><i class="fa"></i></label>
+					<input type="radio" id="estrela_dois" name="estrela" value="2">
+					<label for="estrela_tres"><i class="fa"></i></label>
+					<input type="radio" id="estrela_tres" name="estrela" value="3">
+					<label for="estrela_quatro"><i class="fa"></i></label>
+					<input type="radio" id="estrela_quatro" name="estrela" value="4">
+					<label for="estrela_cinco"><i class="fa"></i></label>
+					<input type="radio" id="estrela_cinco" name="estrela" value="5"><br><br>
+					<input type="submit" name="Cadastrar" value="Avaliar">
+				</div>
+			</form>
+
+			<?php
+      $query = 'select * from residenciais';
+      $stmt = $pdo->query($query);
+      $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+      $qnota = $lista[$dado][12];
+      $tnona = $lista[$dado][11];
+      $id_residencia = $lista[$dado][0];
+      $nome = $lista[$dado][1];
+
+      if (isset($_POST['Cadastrar'])) {
+	      if ($_SESSION["username"] != "Entrar") {
+		      if (!empty($_POST['estrela'])) {
+			      $estrela = $_POST['estrela'];
+			      $query = "UPDATE `avaliar` SET `$nome` = '$estrela' WHERE `avaliar`.`id_usuario` = '$theuser'";
+			      $pdo->exec($query);
+			      $_SESSION['msg'] = "<span class='invalid-feedback'>Avaliação cadastrada com sucesso. Sua nota foi " . $estrela . " estrelas.</span>";
+			      $_SESSION['nota'] = "Sim";
+		      } else {
+			      $_SESSION['msg'] = "<span class='invalid-feedback'>Necessário selecionar pelo menos 1 estrela.</span>";
+		      }
+		      $query = "SELECT * FROM `avaliar` WHERE id_usuario = '$theuser'";
+		      $stmt = $pdo->query($query);
+		      $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+		      $notinha = $lista[0][$id_residencia];
+		      $notafinal = (($qnota * $tnona) + ($notinha * 10)) / ($qnota + 1);
+		      $notafinal = number_format($notafinal);
+		      $qnotafinal = ($qnota + 1);
+		      $query = "UPDATE `residenciais` 
+									SET `avaliacao` = '$notafinal', `quant_avaliacao` = '$qnotafinal' 
+									WHERE `residenciais`.`id` = '$id_residencia'";
+		      $pdo->exec($query);
+		      echo $_SESSION['msg'] . "<br>";
+		      unset($_SESSION['msg']);
+	      } else {
+		      echo "<span class='invalid-feedback'>É necessário se cadastrar primeiro para comentar.</span>";
+	      }
+      }
+      $query = 'select * from residenciais';
+      $stmt = $pdo->query($query);
+      $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+      ?>
 			<h2 class="titulo">
 				<?php echo $lista[$dado][1]; ?>
 			</h2>
@@ -83,35 +158,34 @@ $casa = $lista[$dado][0];
 				<?php echo $lista[$dado][2]; ?>
 			</p>
 			<div class="contato">
-				<p class="localizacao">
-					<strong> Localização: </strong>
+				<p class="localizacao"><strong> Localização: </strong>
 					<?php echo $lista[$dado][3]; ?>
 				</p>
 				<ul>
 					<li>
 						<ion-icon name="call-outline"></ion-icon>
-						<?php echo $lista[$dado][6]; ?>
+						<?php echo $lista[$dado][6]; ?> <br />
 					</li>
 					<li>
 						<ion-icon name="logo-whatsapp"></ion-icon>
-						<?php echo $lista[$dado][7]; ?>
+						<?php echo $lista[$dado][7]; ?> <br />
 					</li>
 					<li>
 						<ion-icon name="mail-outline"></ion-icon>
-						<?php echo $lista[$dado][8]; ?>
+						<?php echo $lista[$dado][8]; ?> <br />
 					</li>
 				</ul>
 			</div>
 		</section>
-
 		<section class="comentarios">
 			<h2>Comentários</h2>
 			<p>Escreva aqui a sua opinião sobre essa casa de repouso.</p>
 			<form action="" method="post">
-				<textarea name="comentario" id="comentario" cols="50" rows="8"></textarea>
-				<input type="submit" name="Enviar" value="Enviar" />
+				<textarea name="comentario" id="comentario"></textarea>
+				<input type="submit" name="Enviar" value="Enviar">
 			</form>
-			<?php
+		</section>
+		<?php
       if (isset($_POST['Enviar'])) {
 	      if ($_SESSION["username"] != "Entrar") {
 		      $logado = $_SESSION["username"];
@@ -130,12 +204,11 @@ $casa = $lista[$dado][0];
       $Quantlista = count($lista);
       for ($contagem = 0; $contagem < $Quantlista; $contagem++) {
 	      if ($lista[$contagem][$casa] != null) {
-		      echo "<b>" . $lista[$contagem][0] . "</b> - " . $lista[$contagem][16] . "<br>";
-		      echo $lista[$contagem][$casa] . "<br><hr>";
+		      echo "<img style='height: 20px; width: 20px' src='https://img1.gratispng.com/20180325/buq/kisspng-user-profile-get-em-cardiovascular-disease-zingah-avatar-5ab7520468bc16.870439461521963524429.jpg'> <b>" . $lista[$contagem][0] . "</b> - " . $lista[$contagem][16] . "<br>";
+		      echo $lista[$contagem][$casa] . "<hr>";
 	      }
       }
       ?>
-		</section>
 	</main>
 	<!-- começo do rodapé -->
 	<footer id="footer">
