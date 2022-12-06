@@ -6,8 +6,7 @@ body {
 	padding: 0;
 	font-family: "Montserrat", Arial, sans-serif;
 	font-size: 18px;
-	background: #d2e8f8;
-/* ;linear-gradient(#f6f2fd, #69b3e7) */
+	background: linear-gradient(#f6f2fd, #69b3e7);
 }
 
 body,
@@ -313,7 +312,7 @@ main {
 }
 
 @media (max-width: 500px) {
-	body{
+	body {
 		font-size: 16px;
 	}
 }

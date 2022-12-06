@@ -6,6 +6,7 @@ session_start();
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   $_SESSION["username"] = "Entrar";
 }
+include_once('login/src/ocultarErro.php');
 ?>
 
 <!DOCTYPE html>
@@ -102,7 +103,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <section class="module content section-pessoas" id="section-pesquisa">
       <div class="container area-4">
-        <h2>Analista</h2>
+        <h2>Analistas</h2>
         <div class="fotos">
           <div>
             <img src="../assets/img/pessoas/luiz.jpg" alt="Luiz" class="img-pessoas">
@@ -169,7 +170,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <section id="section-footer">
         <div class="span-dashboard">
           <span>Tem uma Residência e quer cadastra-la?
-            <a href="dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+            <a href="dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
           </span>
         </div>
         <div class="span-dashboard">

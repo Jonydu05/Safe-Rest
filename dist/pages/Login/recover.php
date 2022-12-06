@@ -1,55 +1,56 @@
 <?php
-    session_start();
-    require_once('src/PHPMailer.php');
-    require_once('src/SMTP.php');
-    require_once('src/Exception.php');
-    include_once('config.php');
-		// include_once('src/ocultarErro.php');
-    
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
+session_start();
+require_once('src/PHPMailer.php');
+require_once('src/SMTP.php');
+require_once('src/Exception.php');
+include_once('config.php');
+// include_once('src/ocultarErro.php');
 
-    $mail = new PHPMailer(true);
-    $now = date("His");
-    $codigo = md5($now);
-    $_SESSION['npass']= $codigo;
-    $erro= "";
-    
-    if (isset($_POST['Enviar'])){
-        $email= $_POST['email']; 
-        $_SESSION['emailcad']= $email;
-        $query= "SELECT email, id FROM users WHERE email = '$email'";
-        $stmt = $pdo->query($query);
-        $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-        if($lista == null){
-            $erro= "Email não cadastrado";
-        }else{
-            try {
-                $mail->isSMTP();
-                $mail->Host = 'smtp-mail.outlook.com';
-                $mail->SMTPAuth = true;
-                $mail->Username = 'SafeRestSR@outlook.com';
-                $mail->Password = 'DescansoSeguro';
-                $mail->Port = 587;    
-                $mail->setFrom('SafeRestSR@outlook.com');
-                $mail->addAddress($email);    
-                $mail->isHTML(true);
-                $mail->Subject = 'Recuperacao de senha - Safe & Rest';
-                $mail->Body = 'Nova senha: <b>'.$codigo.'</b>';
-                $mail->AltBody = 'Nova senha: '.$codigo;
-            
-                if($mail->send()) {
-                    header("location: thepass.php");
-                } else {
-                    echo 'Email nao enviado';
-                }
-            } catch (Exception $e) {
-                echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
-            }
-        }
+$mail = new PHPMailer(true);
+$now = date("His");
+$codigo = md5($now);
+$_SESSION['npass'] = $codigo;
+$erro = "";
+
+if (isset($_POST['Enviar'])) {
+  $email = $_POST['email'];
+  $_SESSION['emailcad'] = $email;
+  $query = "SELECT email, id FROM users WHERE email = '$email'";
+  $stmt = $pdo->query($query);
+  $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+
+  if ($lista == null) {
+    $erro = "Email não cadastrado";
+  } else {
+    try {
+      $mail->isSMTP();
+      $mail->Host = 'smtp-mail.outlook.com';
+      $mail->SMTPAuth = true;
+      $mail->Username = 'SafeRestSR@outlook.com';
+      $mail->Password = 'DescansoSeguro';
+      $mail->Port = 587;
+      $mail->setFrom('SafeRestSR@outlook.com');
+      $mail->addAddress($email);
+      $mail->isHTML(true);
+      $mail->Subject = 'Recuperacao de senha - Safe & Rest';
+      $mail->Body = 'Nova senha: <b>' . $codigo . '</b>';
+      $mail->AltBody = 'Nova senha: ' . $codigo;
+
+      if ($mail->send()) {
+        header("location: thepass.php");
+      } else {
+        echo 'Email nao enviado';
+      }
+    } catch (Exception $e) {
+      echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
     }
+  }
+}
+include_once('login/src/ocultarErro.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -102,7 +103,9 @@
         <section class="input">
           <input type="email" id="email" name="email" required class="input-field" />
           <label class="input-label" for="email">Digite o email cadastrado</label>
-          <span class="invalid-feedback"><?php echo $erro ?></span>
+          <span class="invalid-feedback">
+            <?php echo $erro ?>
+          </span>
         </section>
 
         <section class="action">
@@ -135,7 +138,7 @@
       <section id="section-footer">
         <div class="span-dashboard">
           <span>Tem uma Residência e quer cadastra-la?
-            <a href="../dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+            <a href="../dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
           </span>
         </div>
         <div class="span-dashboard">

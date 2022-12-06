@@ -165,7 +165,7 @@ section.module.parallax h1 {
 	width: 100%;
 }
 
-@media (max-width: 430px){
+@media (max-width: 430px) {
 	#gratuito {
 		font-size: 70%;
 	}

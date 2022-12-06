@@ -1,74 +1,75 @@
 <?php
 // Inicialize a sessão
 session_start();
- 
+
 // Verifique se o usuário está logado, caso contrário, redirecione para a página de login
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  header("location: login.php");
+  exit;
 }
- 
+
 // Incluir arquivo de configuração
 require_once "config.php";
- 
+
 // Defina variáveis e inicialize com valores vazios
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
- 
-// Processando dados do formulário quando o formulário é enviado
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Validar nova senha
-    if(empty(trim($_POST["new_password"]))){
-        $new_password_err = "Por favor insira a nova senha.";     
-    } elseif(strlen(trim($_POST["new_password"])) < 6){
-        $new_password_err = "A senha deve ter pelo menos 6 caracteres.";
-    } else{
-        $new_password = trim($_POST["new_password"]);
-    }
-    
-    // Validar e confirmar a senha
-    if(empty(trim($_POST["confirm_password"]))){
-        $confirm_password_err = "Por favor, confirme a senha.";
-    } else{
-        $confirm_password = trim($_POST["confirm_password"]);
-        if(empty($new_password_err) && ($new_password != $confirm_password)){
-            $confirm_password_err = "A senha não confere.";
-        }
-    }
-        
-    // Verifique os erros de entrada antes de atualizar o banco de dados
-    if(empty($new_password_err) && empty($confirm_password_err)){
-        // Prepare uma declaração de atualização
-        $sql = "UPDATE users SET password = :password WHERE id = :id";
-        
-        if($stmt = $pdo->prepare($sql)){
-            // Vincule as variáveis à instrução preparada como parâmetros
-            $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
-            $stmt->bindParam(":id", $param_id, PDO::PARAM_INT);
-            
-            // Definir parâmetros
-            $param_password = password_hash($new_password, PASSWORD_DEFAULT);
-            $param_id = $_SESSION["id"];
-            
-            // Tente executar a declaração preparada
-            if($stmt->execute()){
-                // Senha atualizada com sucesso. Destrua a sessão e redirecione para a página de login
-                session_destroy();
-                header("location: login.php");
-                exit();
-            } else{
-                echo "Ops! Algo deu errado. Por favor, tente novamente mais tarde.";
-            }
 
-            // Fechar declaração
-            unset($stmt);
-        }
+// Processando dados do formulário quando o formulário é enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  // Validar nova senha
+  if (empty(trim($_POST["new_password"]))) {
+    $new_password_err = "Por favor insira a nova senha.";
+  } elseif (strlen(trim($_POST["new_password"])) < 6) {
+    $new_password_err = "A senha deve ter pelo menos 6 caracteres.";
+  } else {
+    $new_password = trim($_POST["new_password"]);
+  }
+
+  // Validar e confirmar a senha
+  if (empty(trim($_POST["confirm_password"]))) {
+    $confirm_password_err = "Por favor, confirme a senha.";
+  } else {
+    $confirm_password = trim($_POST["confirm_password"]);
+    if (empty($new_password_err) && ($new_password != $confirm_password)) {
+      $confirm_password_err = "A senha não confere.";
     }
-    
-    // Fechar conexão
-    unset($pdo);
+  }
+
+  // Verifique os erros de entrada antes de atualizar o banco de dados
+  if (empty($new_password_err) && empty($confirm_password_err)) {
+    // Prepare uma declaração de atualização
+    $sql = "UPDATE users SET password = :password WHERE id = :id";
+
+    if ($stmt = $pdo->prepare($sql)) {
+      // Vincule as variáveis à instrução preparada como parâmetros
+      $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
+      $stmt->bindParam(":id", $param_id, PDO::PARAM_INT);
+
+      // Definir parâmetros
+      $param_password = password_hash($new_password, PASSWORD_DEFAULT);
+      $param_id = $_SESSION["id"];
+
+      // Tente executar a declaração preparada
+      if ($stmt->execute()) {
+        // Senha atualizada com sucesso. Destrua a sessão e redirecione para a página de login
+        session_destroy();
+        header("location: login.php");
+        exit();
+      } else {
+        echo "Ops! Algo deu errado. Por favor, tente novamente mais tarde.";
+      }
+
+      // Fechar declaração
+      unset($stmt);
+    }
+  }
+
+  // Fechar conexão
+  unset($pdo);
 }
+include_once('login/src/ocultarErro.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -102,7 +103,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <li><a href="../asilos.php">Residências</a></li>
         <li><a href="../sobre.php">Sobre</a></li>
         <li><a href="../contato.php">Contato</a></li>
-        <li><a href="./register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+        <li><a href="./register.php">
+            <?php echo htmlspecialchars($_SESSION["username"]); ?>
+          </a></li>
       </ul>
     </nav>
   </header>
@@ -112,7 +115,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="card">
       <section class="card-title">
         <h2 class="card-heading">
-          <span>Redefina sua senha aqui, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</span>
+          <span>Redefina sua senha aqui,
+            <?php echo htmlspecialchars($_SESSION["username"]); ?>!
+          </span>
         </h2>
       </section>
 
@@ -123,14 +128,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             class="input-field<?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>"
             value="<?php echo $new_password; ?>" id="new-password" required>
           <label class="input-label" for="new-password">Nova Senha</label>
-          <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
+          <span class="invalid-feedback">
+            <?php echo $new_password_err; ?>
+          </span>
         </section>
 
         <section class="input">
           <input type="password" id="confirm-password" name="confirm_password" required
             class="input-field <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" />
           <label class="input-label" for="confirm-password">Confirme a senha</label>
-          <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+          <span class="invalid-feedback">
+            <?php echo $confirm_password_err; ?>
+          </span>
         </section>
 
         <section class="action">
@@ -163,7 +172,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <section id="section-footer">
         <div class="span-dashboard">
           <span>Tem uma Residência e quer cadastra-la?
-            <a href="../dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+            <a href="../dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
           </span>
         </div>
         <div class="span-dashboard">

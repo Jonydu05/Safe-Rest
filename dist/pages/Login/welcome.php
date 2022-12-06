@@ -1,60 +1,64 @@
 <?php
 // Inicialize a sessão
 session_start();
- 
+
 // Verifique se o usuário está logado, se não, redirecione-o para uma página de login
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  header("location: login.php");
+  exit;
 }
- 
+
 require_once "config.php";
 
 // Defina variáveis e inicialize com valores vazios
-$username = $password = $confirm_password = $_SESSION["username"];;
+$username = $password = $confirm_password = $_SESSION["username"];
+;
 $username_err = $password_err = $confirm_password_err = "";
 $email = $_SESSION["email"];
-$email_err= "";
+$email_err = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Validar nome de usuário
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Por favor coloque um nome de usuário.";
-    } elseif(!preg_match('/^[a-zA-Z_ ]+$/', trim($_POST["username"]))){
-        $username_err = "O nome de usuário pode conter apenas letras";
-    } else{
-        $username = trim($_POST["username"]);
-    }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Validar email
-    $email = $_POST["email"];
-    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    if(empty(trim($_POST["email"]))){
-        $email_err = "Por favor insira um email.";     
-    } elseif(filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $email = trim($_POST["email"]);
-    } else {
-        $email_err = "O email é inválido";
-    }
-    
-    // Verifique os erros de entrada antes de inserir no banco de dados
-    if(empty($username_err) && empty($email_err)){
-        
-        $stmt = $pdo->prepare('UPDATE users SET username = :username, email = :email WHERE id = :id');
-        $stmt->execute(array(
-            ':id'   => $_SESSION["id"],
-            ':username' => $username,
-            ':email' => $email
-        ));
-        
-        $_SESSION["username"] = $username;  
-        $_SESSION["email"] = $email;
-        
-    }    
-    // Fechar conexão
-    unset($pdo);
+  // Validar nome de usuário
+  if (empty(trim($_POST["username"]))) {
+    $username_err = "Por favor coloque um nome de usuário.";
+  } elseif (!preg_match('/^[a-zA-Z_ ]+$/', trim($_POST["username"]))) {
+    $username_err = "O nome de usuário pode conter apenas letras";
+  } else {
+    $username = trim($_POST["username"]);
+  }
+
+  // Validar email
+  $email = $_POST["email"];
+  $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+  if (empty(trim($_POST["email"]))) {
+    $email_err = "Por favor insira um email.";
+  } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $email = trim($_POST["email"]);
+  } else {
+    $email_err = "O email é inválido";
+  }
+
+  // Verifique os erros de entrada antes de inserir no banco de dados
+  if (empty($username_err) && empty($email_err)) {
+
+    $stmt = $pdo->prepare('UPDATE users SET username = :username, email = :email WHERE id = :id');
+    $stmt->execute(
+      array(
+        ':id' => $_SESSION["id"],
+        ':username' => $username,
+        ':email' => $email
+      )
+    );
+
+    $_SESSION["username"] = $username;
+    $_SESSION["email"] = $email;
+
+  }
+  // Fechar conexão
+  unset($pdo);
 }
+include_once('login/src/ocultarErro.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -69,7 +73,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <link rel="icon" href="../../assets/img/logo2.png" />
 
-  <title><?php echo htmlspecialchars($_SESSION["username"]); ?></title>
+  <title>
+    <?php echo htmlspecialchars($_SESSION["username"]); ?>
+  </title>
 </head>
 
 <body>
@@ -88,7 +94,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <li><a href="../asilos.php">Residências</a></li>
         <li><a href="../sobre.php">Sobre</a></li>
         <li><a href="../contato.php">Contato</a></li>
-        <li><a href="./register.php"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+        <li><a href="./register.php">
+            <?php echo htmlspecialchars($_SESSION["username"]); ?>
+          </a></li>
       </ul>
     </nav>
   </header>
@@ -97,7 +105,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="card">
       <section class="card-title">
         <h2 class="card-heading">
-          <span>Bem-vindo, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</span>
+          <span>Bem-vindo,
+            <?php echo htmlspecialchars($_SESSION["username"]); ?>!
+          </span>
           <small>Edite aqui suas informações de usuário</small>
         </h2>
       </section>
@@ -109,14 +119,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             class="input-field <?php echo (!empty($username_err)) ? 'is-invalid' : ""; ?>"
             value="<?php echo $username; ?>" id="name">
           <label class="input-label" for="name">Nome</label>
-          <span class="invalid-feedback"><?php echo $username_err; ?></span>
+          <span class="invalid-feedback">
+            <?php echo $username_err; ?>
+          </span>
         </section>
 
         <section class="input">
           <input type="email" id="email" name="email"
             class="input-field <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" />
           <label class="input-label" for="email">Email</label>
-          <span class="invalid-feedback"><?php echo $email_err; ?></span>
+          <span class="invalid-feedback">
+            <?php echo $email_err; ?>
+          </span>
         </section>
 
         <section class="action">
@@ -149,7 +163,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <section id="section-footer">
         <div class="span-dashboard">
           <span>Tem uma Residência e quer cadastra-la?
-            <a href="../dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+            <a href="../dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
           </span>
         </div>
         <div class="span-dashboard">

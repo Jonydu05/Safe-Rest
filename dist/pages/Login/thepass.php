@@ -1,20 +1,21 @@
 <?php
-    session_start();
-    include_once('config.php');
-    $_SESSION['npass'];
-    $emailcadastrado= $_SESSION['emailcad'];
-    $success= "";
-    if (isset($_POST['Enviar'])){
-        $nova= $_POST['newpassword']; 
-        if($nova == $_SESSION['npass']){
-            $query= "UPDATE users SET password = '$nova' WHERE email = '$emailcadastrado'";
-            if($pdo->query($query)){
-                $success= "Senha alterada";
-            }
-        }else{
-            $success= "ERRO: Código diferente do que o enviado.";
-        }
+session_start();
+include_once('config.php');
+$_SESSION['npass'];
+$emailcadastrado = $_SESSION['emailcad'];
+$success = "";
+if (isset($_POST['Enviar'])) {
+  $nova = $_POST['newpassword'];
+  if ($nova == $_SESSION['npass']) {
+    $query = "UPDATE users SET password = '$nova' WHERE email = '$emailcadastrado'";
+    if ($pdo->query($query)) {
+      $success = "Senha alterada";
     }
+  } else {
+    $success = "ERRO: Código diferente do que o enviado.";
+  }
+}
+include_once('login/src/ocultarErro.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -65,7 +66,7 @@
       <form class="card-form" method="post">
 
         <section class="input">
-          <input type="password" id="newpassword" name="newpassword" class="input-field" required/>
+          <input type="password" id="newpassword" name="newpassword" class="input-field" required />
           <label class="input-label" for="newpassword">Digite a senha enviada:</label>
         </section>
 
@@ -74,13 +75,13 @@
         </section>
       </form>
 
-			<?php 
-            if($success == "Senha alterada"){
-                echo "<br><br>".$success;
-                sleep(10);
-                header("location: login.php");
-            }
-        ?>
+      <?php
+      if ($success == "Senha alterada") {
+        echo "<br><br>" . $success;
+        sleep(10);
+        header("location: login.php");
+      }
+      ?>
 
       <section class="card-info">
         <ul>
@@ -108,7 +109,7 @@
       <section id="section-footer">
         <div class="span-dashboard">
           <span>Tem uma Residência e quer cadastra-la?
-            <a href="../dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+            <a href="../dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
           </span>
         </div>
         <div class="span-dashboard">

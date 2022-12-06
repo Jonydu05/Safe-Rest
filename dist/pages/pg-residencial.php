@@ -13,6 +13,7 @@ $query = 'select * from residenciais';
 $stmt = $pdo->query($query);
 $lista = $stmt->fetchAll(PDO::FETCH_NUM);
 $casa = $lista[$dado][0];
+include_once('login/src/ocultarErro.php');
 ?>
 
 <!DOCTYPE html>
@@ -224,7 +225,7 @@ $casa = $lista[$dado][0];
 			<section id="section-footer">
 				<div class="span-dashboard">
 					<span>Tem uma Residência e quer cadastra-la?
-						<a href="dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+						<a href="dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
 					</span>
 				</div>
 				<div class="span-dashboard">

@@ -139,6 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Fechar conexão
 	unset($pdo);
 }
+include_once('login/src/ocultarErro.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -262,7 +263,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<section id="section-footer">
 				<div class="span-dashboard">
 					<span>Tem uma Residência e quer cadastra-la?
-						<a href="../dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+						<a href="../dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
 					</span>
 				</div>
 				<div class="span-dashboard">

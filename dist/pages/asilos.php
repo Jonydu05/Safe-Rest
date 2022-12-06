@@ -6,6 +6,7 @@ session_start();
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   $_SESSION["username"] = "Entrar";
 }
+include_once('login/src/ocultarErro.php');
 ?>
 
 <!DOCTYPE html>
@@ -166,7 +167,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <section id="section-footer">
         <div class="span-dashboard">
           <span>Tem uma Residência e quer cadastra-la?
-            <a href="dashboard/login-asilo.html" id="link-dashboard">Acesse aqui</a>
+            <a href="dashboard/login-asilo.php" id="link-dashboard">Acesse aqui</a>
           </span>
         </div>
         <div class="span-dashboard">

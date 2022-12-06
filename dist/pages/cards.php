@@ -1,11 +1,11 @@
 <?php
-    $stmt = $pdo->query($query);
-    $lista = $stmt->fetchAll(PDO::FETCH_NUM);
-    $Quantlista = count($lista);
-    for ($contagem = 0; $contagem < $Quantlista; $contagem++) {
-        $lista[$contagem][11] = $lista[$contagem][11] / 10;
-        $lista[$contagem][0]= $lista[$contagem][0]-1;
-        echo ('
+$stmt = $pdo->query($query);
+$lista = $stmt->fetchAll(PDO::FETCH_NUM);
+$Quantlista = count($lista);
+for ($contagem = 0; $contagem < $Quantlista; $contagem++) {
+    $lista[$contagem][11] = $lista[$contagem][11] / 10;
+    $lista[$contagem][0] = $lista[$contagem][0] - 1;
+    echo ('
         <div class="card">
             <div class="card-header">
                 <img src="../assets/img/' . $lista[$contagem][0] . '/foto1.png" />
@@ -23,5 +23,5 @@
             </div>
         </div>
             ');
-    }
+}
 ?>

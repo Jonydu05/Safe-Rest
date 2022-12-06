@@ -5,17 +5,17 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'test');
- 
+
 /* Tentativa de conexão com o banco de dados MySQL */
-try{
+try {
     $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
     // Defina o modo de erro PDO para exceção
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $table = 'users';
     $tableExists = $pdo->query("SHOW TABLES LIKE '$table'")->rowCount() > 0;
-    if($tableExists != 1){
-        $query="
+    if ($tableExists != 1) {
+        $query = "
         CREATE TABLE `test`.`users` (
             `id` INT NOT NULL AUTO_INCREMENT , 
             `username` VARCHAR(50) NOT NULL , 
@@ -31,8 +31,8 @@ try{
     }
     $table2 = 'residenciais';
     $tableExists = $pdo->query("SHOW TABLES LIKE '$table2'")->rowCount() > 0;
-    if($tableExists != 1){
-        $query="
+    if ($tableExists != 1) {
+        $query = "
         CREATE TABLE `test`.`residenciais` (
             `id` INT NOT NULL AUTO_INCREMENT , 
             `nome` VARCHAR(70) NOT NULL , 
@@ -55,8 +55,8 @@ try{
     }
     $table3 = 'comentar';
     $tableExists = $pdo->query("SHOW TABLES LIKE '$table3'")->rowCount() > 0;
-    if($tableExists != 1){
-        $query="
+    if ($tableExists != 1) {
+        $query = "
                 CREATE TABLE `test`.`comentar` (
                     `usuario` VARCHAR(50) NOT NULL 
                     ) 
@@ -66,16 +66,16 @@ try{
     }
     $table4 = 'avaliar';
     $tableExists = $pdo->query("SHOW TABLES LIKE '$table4'")->rowCount() > 0;
-    if($tableExists != 1){
-        $query="
+    if ($tableExists != 1) {
+        $query = "
                 CREATE TABLE `test`.`avaliar` (
                     `id_usuario` VARCHAR(50) NOT NULL 
                     ) 
                 ENGINE = InnoDB;
             ";
         $pdo->exec($query);
-    }   
-} catch(PDOException $e){
+    }
+} catch (PDOException $e) {
     die("ERROR: Não foi possível conectar." . $e->getMessage());
 }
 ?>
